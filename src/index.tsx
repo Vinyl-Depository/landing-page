@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './i18n/config';
 import './styles/custom.scss';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 ReactDOM.render(
 	<React.StrictMode>
