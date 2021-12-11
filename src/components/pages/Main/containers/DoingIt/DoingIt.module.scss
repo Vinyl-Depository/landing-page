@@ -1,0 +1,93 @@
+@import '../../../../../styles/variables.scss';
+
+.doingItSectionContainer {
+	margin-top: 30px;
+	padding: 0 map-get($sizes, minimal-padding);
+
+	.doingItSection {
+		margin: 0 auto;
+		max-width: map-get($sizes, sub-web-width);
+		display: flex;
+		flex-direction: column;
+
+		&__header {
+			font-weight: 800;
+			font-size: 4.5rem;
+			text-align: center;
+			color: map-get($colors, text-color);
+		}
+
+		.doingItFirstRow {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 20px 0;
+		}
+
+		.doingItSecondRow {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.doingItItem {
+			width: 30%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&--withMargin {
+				margin-right: 5%;
+			}
+
+			&__img {
+				height: 235px;
+				object-fit: contain;
+			}
+
+			&__title {
+				text-align: center;
+				color: map-get($colors, text-color);
+				margin: 7px 0 3px 0;
+				font-weight: 600;
+				font-size: 2.4rem;
+				white-space: nowrap;
+			}
+
+			&__text {
+				text-align: center;
+				font-size: 1.6rem;
+				height: 100px;
+			}
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.doingItSectionContainer {
+		margin-top: 50px;
+		padding: 0 40px;
+
+		.doingItSection {
+			max-width: map-get($sizes, ipad-width);
+
+			&__header {
+				font-size: 3.4rem;
+			}
+		}
+
+		.doingItItem__title {
+			font-size: 2rem;
+		}
+		.doingItItem__text {
+			font-size: 1.3rem;
+			line-height: 21px;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.doingItSectionContainer {
+		order: 4;
+	}
+}

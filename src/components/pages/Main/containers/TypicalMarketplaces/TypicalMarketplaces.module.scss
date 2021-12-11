@@ -1,0 +1,110 @@
+@import '../../../../../styles/variables.scss';
+
+.typicalMarketplacesSectionContainer {
+	margin-top: 20px;
+	padding: 0 map-get($sizes, minimal-padding);
+
+	.typicalMarketplacesSection {
+		max-width: map-get($sizes, sub-web-width);
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+
+		&__header {
+			color: map-get($colors, text-color);
+			font-weight: 800;
+			font-size: 4.5rem;
+			text-align: center;
+		}
+
+		.typicalMarketplacesTextContainer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 5px;
+
+			&__text {
+				width: 580px;
+				font-size: 1.6rem;
+				line-height: 1.7;
+			}
+
+			&__img {
+				width: 360px;
+				object-fit: contain;
+			}
+
+			&__mobileImg {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.typicalMarketplacesSectionContainer {
+		padding: 0 40px;
+
+		.typicalMarketplacesSection {
+			max-width: map-get($sizes, ipad-width);
+
+			&__header {
+				font-size: 3.4rem;
+			}
+			.typicalMarketplacesTextContainer {
+				margin-top: 15px;
+				justify-content: space-between;
+
+				&__text {
+					font-size: 1.9rem;
+					line-height: 31px;
+				}
+
+				// &__Img {
+				// 	need to be fixed -> make the image bigger
+				// }
+
+				&__mobileImg {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.typicalMarketplacesSectionContainer {
+		max-width: map-get($sizes, main-mobile-width);
+		order: 2;
+		padding: 0px;
+
+		.typicalMarketplacesSection {
+			// max-width: map-get($sizes, sub-mobile-width);
+
+			&__header {
+				width: 100%;
+				font-size: 2.5rem;
+			}
+			.typicalMarketplacesTextContainer {
+				flex-direction: column;
+				justify-content: center;
+
+				&__text {
+					width: 100%;
+					padding: 0 20px;
+
+					font-size: 1.4rem;
+					line-height: 23px;
+				}
+				&__img {
+					display: none;
+				}
+				&__mobileImg {
+					display: block;
+					width: 100%;
+					object-fit: contain;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,143 @@
+@import '../../../styles/variables.scss';
+
+.headerContainer {
+	padding: 0 map-get($sizes, minimal-padding);
+	border-bottom: 1px solid #dddbdb;
+
+	.header {
+		margin: 0 auto;
+		max-width: map-get($sizes, main-web-width);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.mobileHeadrMenu {
+			display: none;
+		}
+
+		.leftHeader {
+			display: flex;
+			align-items: center;
+		}
+
+		.rightHeader {
+			display: flex;
+			align-items: center;
+
+			&__text {
+				font-weight: 700;
+				font-size: 1.8rem;
+				color: map-get($colors, text-color);
+				white-space: nowrap;
+			}
+
+			.rightHeaderButton {
+				&--android {
+					margin: 0 10px;
+				}
+
+				&__img {
+					object-fit: contain;
+					width: 135px;
+				}
+			}
+		}
+
+		.headerLogo {
+			&__img {
+				height: 64px;
+				object-fit: contain;
+			}
+		}
+
+		.headerContact {
+			margin-left: 30px;
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 1.4rem;
+			color: map-get($colors, text-color);
+			white-space: nowrap;
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.headerContainer {
+		border-bottom-color: transparent;
+		padding-top: 10px;
+
+		.header {
+			max-width: map-get($sizes, ipad-width);
+
+			.mobileHeadrMenu {
+				display: block;
+				width: 145px;
+
+				&__icon {
+					height: 30px;
+					width: auto;
+				}
+			}
+
+			.rightHeader {
+				flex-direction: column;
+
+				&__text {
+					display: none;
+				}
+
+				.rightHeaderButton {
+					&--android {
+						margin: 0 0 5px 0;
+					}
+
+					&__img {
+						width: 145px;
+					}
+				}
+			}
+
+			.headerContact {
+				display: none;
+			}
+
+			.headerLogo {
+				&__img {
+					height: 77px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.headerContainer {
+		.header {
+			max-width: map-get($sizes, main-mobile-width);
+
+			.mobileHeadrMenu {
+				width: 72px;
+
+				&__icon {
+					height: 16px;
+					width: auto;
+				}
+			}
+
+			.rightHeader {
+				.rightHeaderButton {
+					&__img {
+						width: 72px;
+					}
+				}
+			}
+		}
+
+		.headerLogo {
+			&__img {
+				width: 122px;
+				object-fit: contain;
+			}
+		}
+	}
+}

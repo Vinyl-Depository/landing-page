@@ -1,0 +1,200 @@
+@import '../../../../../styles/variables.scss';
+
+.recommenderAppSection {
+	margin-top: 25px;
+	padding: 40px map-get($sizes, minimal-padding);
+	background-color: #afb3da;
+
+	.recommenderAppSectionInner {
+		margin: 0 auto;
+		display: flex;
+		width: map-get($sizes, main-web-width);
+
+		&__firstPhone {
+			height: 450px;
+			object-fit: contain;
+			position: relative;
+			bottom: 80px;
+			margin: 0 10px;
+		}
+
+		&__secondPhone {
+			height: 450px;
+			object-fit: contain;
+			position: relative;
+			top: 80px;
+		}
+
+		&__groupPhone-ipad {
+			display: none;
+		}
+		&__groupPhone-mobile {
+			display: none;
+		}
+	}
+
+	.recommenderAppSectionDataContainer {
+		display: flex;
+		flex-direction: column;
+
+		&__title {
+			font-weight: 800;
+			font-size: 4.8rem;
+		}
+
+		&__text {
+			margin: 12px 0;
+			font-size: 1.8rem;
+			line-height: 32px;
+		}
+
+		&__getAppText {
+			font-weight: 500;
+			font-size: 1.8rem;
+		}
+	}
+
+	.getTheAppContainer {
+		display: flex;
+		align-items: center;
+
+		.getTheAppLinksContainer {
+			display: flex;
+			align-items: center;
+		}
+
+		.getTheAppContainerButton {
+			height: 40px;
+
+			&--apple {
+				margin: 0 40px 0 8px;
+			}
+
+			&__img {
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+
+		&__logo {
+			width: 150px;
+			object-fit: contain;
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.recommenderAppSection {
+		padding: 40px 40px 30px 40px;
+
+		.recommenderAppSectionInner {
+			max-width: map-get($sizes, ipad-width);
+			justify-content: space-between;
+
+			&__firstPhone {
+				display: none;
+			}
+			&__secondPhone {
+				display: none;
+			}
+			&__groupPhone-ipad {
+				display: block;
+				height: 540px;
+				position: relative;
+				bottom: 70px;
+				right: 30px;
+				margin: 0 10px;
+			}
+			&__groupPhone-mobile {
+				display: none;
+			}
+		}
+		.recommenderAppSectionDataContainer {
+			width: 360px;
+			&__title {
+				font-size: 2.7rem;
+			}
+
+			&__text {
+				font-size: 2rem;
+				line-height: 30px;
+			}
+
+			&__getAppText {
+				display: none;
+			}
+		}
+		.getTheAppContainer {
+			flex-direction: column;
+
+			.getTheAppLinksContainer {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+			}
+
+			.getTheAppContainerButton {
+				height: 50px;
+
+				&--apple {
+					margin: 0 0 0 10px;
+				}
+			}
+		}
+
+		.getTheAppContainer__logo {
+			margin-top: 30px;
+			border-radius: 8px;
+			position: relative;
+			left: 50%;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.recommenderAppSection {
+		order: 3;
+		margin-top: 50px;
+		padding: 0;
+
+		.recommenderAppSectionInner {
+			max-width: map-get($sizes, main-mobile-width);
+			flex-direction: column;
+			justify-content: center;
+			order: 0;
+
+			&__groupPhone-ipad {
+				display: none;
+			}
+
+			&__groupPhone-mobile {
+				display: block;
+				width: 100%;
+				object-fit: contain;
+				position: relative;
+				bottom: 40px;
+			}
+		}
+		.recommenderAppSectionDataContainer {
+			order: 1;
+			width: 100%;
+			padding: 0 20px;
+
+			&__title {
+				font-size: 2.4rem;
+			}
+
+			&__text {
+				font-size: 1.8rem;
+			}
+		}
+		.getTheAppContainer {
+			order: 2;
+		}
+
+		.getTheAppContainer__logo {
+			order: 3;
+			left: 0;
+		}
+	}
+}
