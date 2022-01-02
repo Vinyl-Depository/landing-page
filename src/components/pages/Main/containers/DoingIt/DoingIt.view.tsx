@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 import browseImg from '../../../../../assets/images/doing-it-browse.jpg';
 import searchImg from '../../../../../assets/images/doing-it-search.jpg';
@@ -21,29 +21,31 @@ const DoingItView: React.FC<Props> = () => {
 					<div className={classes['doingItItem']}>
 						<img className={classes['doingItItem__img']} src={browseImg} alt="doing it browse" />
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.browse.title')}</h4>
-						<p className={classes['doingItItem__text']}>{t('doingIt.browse.description')}</p>
+						<span className={classes['doingItItem__text']}>
+							<Trans i18nKey="doingIt.browse.description" />
+						</span>
 					</div>
 					<div className={classes['doingItItem']}>
 						<img className={classes['doingItItem__img']} src={searchImg} alt="doing it search" />
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.search.title')}</h4>
-						<p className={classes['doingItItem__text']}>{t('doingIt.search.description')}</p>
+						<span className={classes['doingItItem__text']}>{t('doingIt.search.description')}</span>
 					</div>
 					<div className={classes['doingItItem']}>
 						<img className={classes['doingItItem__img']} src={pileUpImg} alt="doing it pilu up and choose" />
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.pileUp.title')}</h4>
-						<p className={classes['doingItItem__text']}>{t('doingIt.pileUp.description')}</p>
+						<span className={classes['doingItItem__text']}>{t('doingIt.pileUp.description')}</span>
 					</div>
 				</div>
 				<div className={classes['doingItSecondRow']}>
 					<div className={`${classes['doingItItem']} ${classes['doingItItem--withMargin']}`}>
 						<img className={classes['doingItItem__img']} src={personalizedImg} alt="doing it personalized" />
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.personalizedExperience.title')}</h4>
-						<p className={classes['doingItItem__text']}>{t('doingIt.personalizedExperience.description')}</p>
+						<span className={classes['doingItItem__text']}>{t('doingIt.personalizedExperience.description')}</span>
 					</div>
 					<div className={classes['doingItItem']}>
 						<img className={classes['doingItItem__img']} src={sellerImg} />
 						<h2 className={classes['doingItItem__title']}>{t('doingIt.trustedSellers.title')}</h2>
-						<p className={classes['doingItItem__text']}>{t('doingIt.trustedSellers.description')}</p>
+						<span className={classes['doingItItem__text']}>{t('doingIt.trustedSellers.description')}</span>
 					</div>
 				</div>
 			</section>

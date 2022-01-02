@@ -11,7 +11,7 @@
 	.sellersSectionInner {
 		display: flex;
 		justify-content: space-between;
-		width: map-get($sizes, main-web-width);
+		max-width: map-get($sizes, main-web-width);
 		margin: 0 auto;
 	}
 
@@ -35,6 +35,7 @@
 	}
 
 	.sellersSectionForm {
+		margin-left: 30px;
 		width: 500px;
 		display: flex;
 		flex-direction: column;
@@ -61,6 +62,7 @@
 		}
 
 		.sellersSectionFormSelect {
+			margin-left: 0;
 			padding: 14px 10px 14px 16px;
 			width: 200px;
 			display: flex;

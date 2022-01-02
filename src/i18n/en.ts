@@ -5,8 +5,8 @@ const en = {
 	},
 	intro: {
 		mainHeader: 'Experience the record store on any screen, everywhere.',
-		waitListDescription: ' Join 6969 more people in the waitlist',
-		waitListDescriptionCounter: '',
+		waitListFirstPartDescription: 'Join',
+		waitListSecondPartDescription: 'more people in the waitlist',
 		waitListDescriptionSub: 'hell, we might even send you a beta invite',
 		wishListFormPlaceHolder: 'Your email address',
 		wishListFormButton: 'Join the waitlist',
@@ -46,7 +46,7 @@ const en = {
 		getTheApp: 'Get the App',
 	},
 	joinWishlist: {
-		header: ' Join 598 more people in the<br/>waitlist for a better experience.',
+		header: ' Join 598 more people in the waitlist for a better experience.',
 		formPlaceholder: 'Your email address',
 		button: 'Join the waitlist',
 	},

@@ -90,7 +90,7 @@
 				border-radius: 0px 5px 5px 0px;
 			}
 
-			.introInputMobile {
+			&__submitIpad {
 				display: none;
 			}
 		}
@@ -99,54 +99,42 @@
 
 @media (max-width: 850px) {
 	.introSectionContainer {
-		max-width: map-get($sizes, ipad-width);
 		margin-top: 45px;
 		padding: 0px;
 
-		.introSection__header {
-			font-size: 5rem;
-			line-height: 50px;
-		}
+		.introSection {
+			&__header {
+				padding: 0 map-get($sizes, minimal-padding);
+				font-size: 5rem;
+			}
 
-		.introSection__ipadImg {
-			display: block;
-			margin: 15px 0 15px 0;
-			width: 100%;
-			object-fit: contain;
-		}
+			&__ipadImg {
+				display: initial;
+				margin: 15px 0;
+				width: 100%;
+				object-fit: contain;
+			}
 
-		.introSection__mobileImg {
-			display: none;
-		}
-
-		.introSection__webImg {
-			display: none;
+			&__webImg {
+				display: none;
+			}
 		}
 
 		.introWishlistContainer {
 			margin-top: 0;
 
 			.introWishlistTextContainer {
-				display: flex;
 				flex-direction: column;
 				align-items: center;
-				line-height: 27px;
 
 				&__main {
-					margin-right: 3px;
+					margin: 0 3px 5px 0;
 					font-weight: 600;
 					font-size: 2.5rem;
-					color: #1b20a2;
-				}
-
-				&__counter {
-					color: map-get($colors, text-color);
 				}
 
 				&__sub {
-					font-weight: 600;
 					font-size: 1.8rem;
-					color: #b8b8b8;
 				}
 			}
 
@@ -162,8 +150,8 @@
 					display: none;
 				}
 
-				.introInputMobile {
-					display: block;
+				&__submitIpad {
+					display: initial;
 					width: 58px;
 					height: 100%;
 					border-radius: 4.8px;
@@ -176,29 +164,29 @@
 
 @media (max-width: 500px) {
 	.introSectionContainer {
-		max-width: map-get($sizes, main-mobile-width);
 		order: 1;
 		margin-top: 20px;
 
-		.introSection__header {
-			font-size: 2.5rem;
-			line-height: 27px;
-		}
-		.introSection__ipadImg {
-			display: none;
-		}
+		.introSection {
+			&__header {
+				font-size: 2.5rem;
+				line-height: 27px;
+			}
 
-		.introSection__mobileImg {
-			display: block;
-			margin: 30px 0 38px 0;
-			width: 100%;
-			object-fit: contain;
+			&__ipadImg {
+				display: none;
+			}
+
+			&__mobileImg {
+				display: initial;
+				margin: 30px 0 38px 0;
+				width: 100%;
+				object-fit: contain;
+			}
 		}
 
 		.introWishlistContainer {
 			.introWishlistTextContainer {
-				line-height: 19px;
-
 				&__main {
 					font-size: 1.8rem;
 					font-weight: 700;
@@ -211,8 +199,9 @@
 			}
 			.introWishlistFormContainer {
 				margin-bottom: 10px;
+
 				&__input {
-					width: 343px;
+					width: 100%;
 					font-size: 1.6rem;
 				}
 			}

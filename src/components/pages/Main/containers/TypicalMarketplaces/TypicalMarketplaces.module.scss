@@ -42,65 +42,53 @@
 }
 
 @media (max-width: 850px) {
-	.typicalMarketplacesSectionContainer {
-		padding: 0 40px;
+	.typicalMarketplacesSection {
+		&__header {
+			font-size: 3.4rem;
+		}
 
-		.typicalMarketplacesSection {
-			max-width: map-get($sizes, ipad-width);
+		.typicalMarketplacesTextContainer {
+			margin-top: 15px;
 
-			&__header {
-				font-size: 3.4rem;
+			&__text {
+				font-size: 1.9rem;
+				line-height: 31px;
 			}
-			.typicalMarketplacesTextContainer {
-				margin-top: 15px;
-				justify-content: space-between;
 
-				&__text {
-					font-size: 1.9rem;
-					line-height: 31px;
-				}
-
-				// &__Img {
-				// 	need to be fixed -> make the image bigger
-				// }
-
-				&__mobileImg {
-					display: none;
-				}
+			&__img {
+				width: 400px !important;
 			}
 		}
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 	.typicalMarketplacesSectionContainer {
-		max-width: map-get($sizes, main-mobile-width);
 		order: 2;
 		padding: 0px;
 
 		.typicalMarketplacesSection {
-			// max-width: map-get($sizes, sub-mobile-width);
-
 			&__header {
-				width: 100%;
 				font-size: 2.5rem;
+				padding: 0 20px;
 			}
+
 			.typicalMarketplacesTextContainer {
 				flex-direction: column;
 				justify-content: center;
 
 				&__text {
-					width: 100%;
-					padding: 0 20px;
-
 					font-size: 1.4rem;
 					line-height: 23px;
+					padding: 0 20px;
 				}
+
 				&__img {
 					display: none;
 				}
+
 				&__mobileImg {
-					display: block;
+					display: initial;
 					width: 100%;
 					object-fit: contain;
 				}
