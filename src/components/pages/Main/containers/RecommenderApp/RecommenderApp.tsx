@@ -2,9 +2,9 @@ import React from 'react';
 
 import RecommenderAppView from './RecommenderApp.view';
 
-interface Props {}
+interface IProps {}
 
-const RecommenderApp: React.FC<Props> = () => {
+const RecommenderApp: React.FC<IProps> = () => {
 	return <RecommenderAppView></RecommenderAppView>;
 };
 

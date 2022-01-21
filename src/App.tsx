@@ -2,9 +2,9 @@ import React from 'react';
 
 import AppView from './App.view';
 
-interface Props {}
+interface IProps {}
 
-const App: React.FC<Props> = () => {
+const App: React.FC<IProps> = () => {
 	return <AppView />;
 };
 

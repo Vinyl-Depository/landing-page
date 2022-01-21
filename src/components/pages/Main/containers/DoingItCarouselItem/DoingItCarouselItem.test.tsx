@@ -2,15 +2,15 @@ import React from 'react';
 import { configure, shallow, ShallowWrapper } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import App from './App';
+import DoingItCarouselItem from './DoingItCarouselItem';
 
 configure({ adapter: new Adapter() });
 
-describe('<App>', () => {
+describe('<DoingItCarouselItem>', () => {
 	let wrapper: ShallowWrapper;
 
 	beforeEach(() => {
-		wrapper = shallow(<App></App>);
+		wrapper = shallow(<DoingItCarouselItem></DoingItCarouselItem>);
 	});
 
 	it('mounts without crashing', () => {

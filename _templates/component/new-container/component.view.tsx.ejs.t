@@ -6,9 +6,9 @@ import { Trans, useTranslation } from 'react-i18next';
 
 import classes from './<%= h.changeCase.pascalCase(name) %>.module.scss';
 
-interface Props {}
+interface IProps {}
 
-const <%= h.changeCase.pascalCase(name) %>View: React.FC<Props> = (props: React.PropsWithChildren<Props>) => {
+const <%= h.changeCase.pascalCase(name) %>View: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
   const { t } = useTranslation();
 
   return <React.Fragment></React.Fragment>;

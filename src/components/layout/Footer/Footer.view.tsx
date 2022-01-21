@@ -5,9 +5,9 @@ import brandLogo from '../../../assets/images/brand-logo-white.png';
 
 import classes from './Footer.module.scss';
 
-interface Props {}
+interface IProps {}
 
-const FooterView: React.FC<Props> = () => {
+const FooterView: React.FC<IProps> = () => {
 	return (
 		<footer className={classes['footer']}>
 			<img className={classes['footer__logo']} src={brandLogo} alt="Vinyl Depository" />

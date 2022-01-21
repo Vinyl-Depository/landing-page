@@ -9,9 +9,9 @@ import sellerImg from '../../../../../assets/images/doing-it-seller.jpg';
 
 import classes from './DoingIt.module.scss';
 
-interface Props {}
+interface IProps {}
 
-const DoingItView: React.FC<Props> = () => {
+const DoingItView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 	return (
 		<div className={classes['doingItSectionContainer']}>

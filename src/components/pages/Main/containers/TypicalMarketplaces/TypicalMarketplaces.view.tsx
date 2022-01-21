@@ -6,9 +6,9 @@ import marketplaceMobileImg from '../../../../../assets/images/marketplace-mobil
 
 import classes from './TypicalMarketplaces.module.scss';
 
-interface Props {}
+interface IProps {}
 
-const TypicalMarketplacesView: React.FC<Props> = () => {
+const TypicalMarketplacesView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 	return (
 		<div className={classes['typicalMarketplacesSectionContainer']}>

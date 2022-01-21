@@ -7,9 +7,9 @@ import appStoreLogo from '../../../assets/images/app-store.png';
 
 import classes from './Header.module.scss';
 
-interface Props {}
+interface IProps {}
 
-const HeaderView: React.FC<Props> = () => {
+const HeaderView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 
 	return (

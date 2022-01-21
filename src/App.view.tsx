@@ -2,9 +2,9 @@ import React from 'react';
 
 import Main from './components/pages/Main/Main';
 import { Fragment } from 'react';
-interface Props {}
+interface IProps {}
 
-const AppView: React.FC<Props> = () => {
+const AppView: React.FC<IProps> = () => {
 	return (
 		<Fragment>
 			<Main></Main>

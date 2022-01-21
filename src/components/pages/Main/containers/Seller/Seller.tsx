@@ -2,9 +2,9 @@ import React from 'react';
 
 import SellerView from './Seller.view';
 
-interface Props {}
+interface IProps {}
 
-const Seller: React.FC<Props> = () => {
+const Seller: React.FC<IProps> = () => {
 	return <SellerView></SellerView>;
 };
 

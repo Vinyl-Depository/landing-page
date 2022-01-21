@@ -2,9 +2,9 @@ import React from 'react';
 
 import HeaderView from './Header.view';
 
-interface Props {}
+interface IProps {}
 
-const HeaderOne: React.FC<Props> = () => {
+const HeaderOne: React.FC<IProps> = () => {
 	return <HeaderView></HeaderView>;
 };
 
