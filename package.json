@@ -27,7 +27,8 @@
 		"template:page": "hygen component new-page",
 		"template:container": "hygen component new-container",
 		"template:layout": "hygen component new-layout",
-		"template:ui": "hygen component new-ui"
+		"template:ui": "hygen component new-ui",
+		"fff": "Fffff"
 	},
 	"eslintConfig": {
 		"extends": [
