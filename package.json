@@ -24,7 +24,6 @@
 		"eject": "react-scripts eject",
 		"lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
 		"format": "prettier --write \"src/**/*.{ts,tsx}\"",
-		"prepare": "husky install && chmod ug+x .husky/*",
 		"template:page": "hygen component new-page",
 		"template:container": "hygen component new-container",
 		"template:layout": "hygen component new-layout",
