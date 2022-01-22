@@ -103,11 +103,13 @@
 				display: none;
 			}
 			&__groupPhone-ipad {
+				// overflow: hidden;
 				display: block;
 				height: 540px;
 				position: relative;
 				bottom: 70px;
-				right: 30px;
+				left: 13px;
+				// right: 30px;
 				margin: 0 10px;
 			}
 			&__groupPhone-mobile {
