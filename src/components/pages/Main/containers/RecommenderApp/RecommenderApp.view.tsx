@@ -11,9 +11,9 @@ import groupPhoneMobile from '../../../../../assets/images/group-Phone-mobile.pn
 
 import classes from './RecommenderApp.module.scss';
 
-interface Props {}
+interface IProps {}
 
-const RecommenderAppView: React.FC<Props> = () => {
+const RecommenderAppView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 	return (
 		<section className={classes['recommenderAppSection']}>

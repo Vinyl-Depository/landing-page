@@ -2,46 +2,76 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { useTranslation } from 'react-i18next';
 
+import { concatClasses } from '../../../../../utils/component';
+
 import browseImg from '../../../../../assets/images/doing-it-browse.jpg';
 import searchImg from '../../../../../assets/images/doing-it-search.jpg';
 import pileUpImg from '../../../../../assets/images/doing-it-pileup.jpg';
 import personalizedImg from '../../../../../assets/images/doing-it-personalized.jpg';
 import sellerImg from '../../../../../assets/images/doing-it-seller.jpg';
 
+import DoingItCarouselItem from '../DoingItCarouselItem/DoingItCarouselItem';
+import VSvg from '../../../../ui/VSvg/VSvg';
+
 import classes from './DoingItCarousel.module.scss';
 
-interface Props {}
+interface IProps {
+	readonly selectedItemIndex: number;
+	readonly setSelectedItemIndex: (_: number) => void;
+}
 
-const DoingItCarouselView: React.FC<Props> = () => {
+const DoingItCarouselView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const { t } = useTranslation();
 
+	const renderIndicator = (_: (e: React.MouseEvent | React.KeyboardEvent) => void, isSelected: boolean, index: number) => {
+		if (isSelected) {
+			return <button className={concatClasses(classes, 'indicator', 'indicator--selected')} type="button" role="button"></button>;
+		}
+
+		return (
+			<button className={classes['indicator']} onClick={() => props.setSelectedItemIndex(index)} type="button" role="button"></button>
+		);
+	};
+
+	const renderArrowPrev = (clickHandler: () => void, hasPrev: boolean) => {
+		if (!hasPrev) {
+			return null;
+		}
+
+		return <VSvg className={concatClasses(classes, 'arrow', 'arrow--prev')} name="carouselArrow" onClick={clickHandler} />;
+	};
+
+	const renderArrowNext = (clickHandler: () => void, hasNext: boolean) => {
+		if (!hasNext) {
+			return null;
+		}
+
+		return <VSvg className={concatClasses(classes, 'arrow', 'arrow--next')} name="carouselArrow" onClick={clickHandler} />;
+	};
+
 	return (
-		<Carousel showThumbs={false} infiniteLoop={true}>
-			<div className={classes['doingItItem']}>
-				<img className={classes['doingItItem__img']} src={browseImg} alt="doing it browse" />
-				<h4 className={classes['doingItItem__title']}>{t('doingIt.browse.title')}</h4>
-				<p className={classes['doingItItem__text']}>{t('doingIt.browse.description')}</p>
-			</div>
-			<div className={classes['doingItItem']}>
-				<img className={classes['doingItItem__img']} src={searchImg} alt="doing it search" />
-				<h4 className={classes['doingItItem__title']}>{t('doingIt.search.title')}</h4>
-				<p className={classes['doingItItem__text']}>{t('doingIt.search.description')}</p>
-			</div>
-			<div className={classes['doingItItem']}>
-				<img className={classes['doingItItem__img']} src={pileUpImg} alt="doing it pilu up and choose" />
-				<h4 className={classes['doingItItem__title']}>{t('doingIt.pileUp.title')}</h4>
-				<p className={classes['doingItItem__text']}>{t('doingIt.pileUp.description')}</p>
-			</div>
-			<div className={`${classes['doingItItem']} ${classes['doingItItem--withMargin']}`}>
-				<img className={classes['doingItItem__img']} src={personalizedImg} alt="doing it personalized" />
-				<h4 className={classes['doingItItem__title']}>{t('doingIt.personalizedExperience.title')}</h4>
-				<p className={classes['doingItItem__text']}>{t('doingIt.personalizedExperience.description')}</p>
-			</div>
-			<div className={classes['doingItItem']}>
-				<img className={classes['doingItItem__img']} src={sellerImg} />
-				<h2 className={classes['doingItItem__title']}>{t('doingIt.trustedSellers.title')}</h2>
-				<p className={classes['doingItItem__text']}>{t('doingIt.trustedSellers.description')}</p>
-			</div>
+		<Carousel
+			className={classes['carousel']}
+			selectedItem={props.selectedItemIndex}
+			showThumbs={false}
+			showStatus={false}
+			renderIndicator={renderIndicator}
+			renderArrowPrev={renderArrowPrev}
+			renderArrowNext={renderArrowNext}
+		>
+			<DoingItCarouselItem image={browseImg} title={t('doingIt.browse.title')} text={t('doingIt.browse.description')} />
+			<DoingItCarouselItem image={searchImg} title={t('doingIt.search.title')} text={t('doingIt.search.description')} />
+			<DoingItCarouselItem image={pileUpImg} title={t('doingIt.pileUp.title')} text={t('doingIt.pileUp.description')} />
+			<DoingItCarouselItem
+				image={personalizedImg}
+				title={t('doingIt.personalizedExperience.title')}
+				text={t('doingIt.personalizedExperience.description')}
+			/>
+			<DoingItCarouselItem
+				image={sellerImg}
+				title={t('doingIt.trustedSellers.title')}
+				text={t('doingIt.trustedSellers.description')}
+			/>
 		</Carousel>
 	);
 };

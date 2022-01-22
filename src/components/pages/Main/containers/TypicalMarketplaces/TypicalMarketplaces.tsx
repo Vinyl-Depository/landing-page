@@ -2,9 +2,9 @@ import React from 'react';
 
 import TypicalMarketplacesView from './TypicalMarketplaces.view';
 
-interface Props {}
+interface IProps {}
 
-const TypicalMarketplaces: React.FC<Props> = () => {
+const TypicalMarketplaces: React.FC<IProps> = () => {
 	return <TypicalMarketplacesView></TypicalMarketplacesView>;
 };
 

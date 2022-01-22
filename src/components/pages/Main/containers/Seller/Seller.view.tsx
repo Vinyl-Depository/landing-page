@@ -5,9 +5,9 @@ import VSvg from '../../../../ui/VSvg/VSvg';
 
 import classes from './Seller.module.scss';
 
-interface Props {}
+interface IProps {}
 
-const SellerView: React.FC<Props> = () => {
+const SellerView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 
 	return (

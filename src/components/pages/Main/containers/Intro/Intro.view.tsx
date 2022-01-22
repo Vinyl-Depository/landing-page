@@ -9,9 +9,9 @@ import introImgWebResponsive from '../../../../../assets/images/intro-logo-web.j
 
 import classes from './Intro.module.scss';
 
-interface Props {}
+interface IProps {}
 
-const IntroView: React.FC<Props> = () => {
+const IntroView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 
 	return (

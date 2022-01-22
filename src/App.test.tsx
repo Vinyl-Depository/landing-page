@@ -1,9 +1,18 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { configure, shallow, ShallowWrapper } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
 import App from './App';
 
-test('renders learn react link', () => {
-	render(<App />);
-	const linkElement = screen.getByText(/learn react/i);
-	expect(linkElement).toBeInTheDocument();
+configure({ adapter: new Adapter() });
+
+describe('<App>', () => {
+	let wrapper: ShallowWrapper;
+
+	beforeEach(() => {
+		wrapper = shallow(<App></App>);
+	});
+
+	it('mounts without crashing', () => {
+		wrapper.unmount();
+	});
 });
