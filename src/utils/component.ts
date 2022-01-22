@@ -1,5 +1,5 @@
 /**
- * The function creates the mapped class names list
+ * The function returns the mapped class names list
  * @param classes The object of classes mapping
  * @param args The list of classes to get mapped
  * @returns THe result string of the class names
