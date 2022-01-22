@@ -9,7 +9,7 @@
 		align-items: center;
 		padding: 50px 25px;
 		margin: 0 auto;
-		width: min-content;
+		max-width: 1100px;
 		background-image: url('../../../../../assets/images/join-wishlist-background.png');
 		background-repeat: no-repeat;
 		background-position: center;
@@ -40,7 +40,7 @@
 			color: #fff;
 			font-weight: 800;
 			font-size: 4rem;
-			white-space: nowrap;
+			// white-space: nowrap;
 
 			&__counter {
 				color: #000;

@@ -1,21 +1,24 @@
 @import '../../../../../styles/variables.scss';
 
 .recommenderAppSection {
-	margin-top: 25px;
+	margin-top: 100px;
 	padding: 40px map-get($sizes, minimal-padding);
 	background-color: #afb3da;
 
 	.recommenderAppSectionInner {
+		max-width: map-get($sizes, main-web-width);
+
 		margin: 0 auto;
 		display: flex;
-		width: map-get($sizes, main-web-width);
 
 		&__firstPhone {
 			height: 450px;
 			object-fit: contain;
 			position: relative;
 			bottom: 80px;
-			margin: 0 10px;
+			margin: 0 20px;
+			border-radius: 40px;
+			box-shadow: 10px 15px 30px rgba(41, 41, 42, 0.5);
 		}
 
 		&__secondPhone {
@@ -23,6 +26,8 @@
 			object-fit: contain;
 			position: relative;
 			top: 80px;
+			border-radius: 40px;
+			box-shadow: 10px 15px 30px rgba(41, 41, 42, 0.5);
 		}
 
 		&__groupPhone-ipad {

@@ -20,14 +20,12 @@
 		.doingItFirstRow {
 			display: flex;
 			justify-content: space-between;
-			align-items: center;
 			margin: 20px 0;
 		}
 
 		.doingItSecondRow {
 			display: flex;
 			justify-content: center;
-			align-items: center;
 		}
 
 		.doingItItem {
@@ -42,7 +40,9 @@
 
 			&__img {
 				height: 235px;
+				width: 100%;
 				object-fit: contain;
+				object-position: bottom;
 			}
 
 			&__title {
@@ -51,13 +51,12 @@
 				margin: 7px 0 3px 0;
 				font-weight: 600;
 				font-size: 2.4rem;
-				white-space: nowrap;
+				// white-space: nowrap;
 			}
 
 			&__text {
 				text-align: center;
 				font-size: 1.6rem;
-				height: 100px;
 			}
 		}
 	}
@@ -83,11 +82,5 @@
 			font-size: 1.3rem;
 			line-height: 21px;
 		}
-	}
-}
-
-@media (max-width: 500px) {
-	.doingItSectionContainer {
-		order: 4;
 	}
 }
