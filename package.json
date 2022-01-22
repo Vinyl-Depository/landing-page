@@ -59,7 +59,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.5.0",
 		"@typescript-eslint/parser": "^5.5.0",
 		"commitizen": "^4.2.4",
-		"cz-conventional-changelog": "^3.3.0",
+		"cz-emoji": "^1.3.1",
 		"eslint-plugin-react": "^7.27.1",
 		"husky": "^7.0.4",
 		"hygen": "^6.1.0",
@@ -91,7 +91,102 @@
 	},
 	"config": {
 		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
+			"path": "cz-emoji"
+		},
+		"cz-emoji": {
+			"types": [
+			  {
+				"emoji": "✨",
+				"code": ":sparkles:",
+				"description": "A new feature",
+				"name": "feature"
+			  },
+			  {
+				"emoji": "🐛",
+				"code": ":bug:",
+				"description": "Bug fix",
+				"name": "bug"
+			  },
+			  {
+				"emoji": "📝",
+				"code": ":memo:",
+				"description": "Documentation update",
+				"name": "documentation"
+			  },
+			  {
+				"emoji": "♻️",
+				"code": ":recycle:",
+				"description": "Refactor",
+				"name": "refactor"
+			  },
+			  {
+				"emoji": "🚧",
+				"code": ":construction:",
+				"description": "Work in progress",
+				"name": "work in progress"
+			  },
+			  {
+				"emoji": "✅",
+				"code": ":white_check_mark:",
+				"description": "Add, update tests",
+				"name": "tests"
+			  },
+			  {
+				"emoji": "⚡️",
+				"code": ":zap:",
+				"description": "Performance improvements",
+				"name": "performance"
+			  },
+			  {
+				"emoji": "🔥",
+				"code": ":fire:",
+				"description": "Remove code or files",
+				"name": "removal"
+			  },
+			  {
+				"emoji": "🚀",
+				"code": ":rocket:",
+				"description": "Deployment",
+				"name": "deployment"
+			  },
+			  {
+				"emoji": "💄",
+				"code": ":lipstick:",
+				"description": "UI styles",
+				"name": "UI"
+			  },
+			  {
+				"emoji": "🔒️",
+				"code": ":lock:",
+				"description": "Fix security issues",
+				"name": "security"
+			  },
+			  {
+				"emoji": "📈",
+				"code": ":chart_with_upwards_trend:",
+				"description": "Add or update analytics or track code.",
+				"name": "analytics"
+			  },
+			  {
+				"emoji": "💩",
+				"code": ":poop:",
+				"description": "Improve bad code",
+				"name": "bad code"
+			  },
+			  {
+				"emoji": "🔍️",
+				"code": ":mag:",
+				"description": "Improve SEO",
+				"name": "SEO"
+			  },
+			  {
+				"emoji": "🧑‍💻",
+				"code": ":technologist:",
+				"description": "Improve developer experience",
+				"name": "developer experience"
+			  }
+			],
+			"skipQuestions": ["scope", "issues", "breaking", "body"]
 		}
 	}
 }
