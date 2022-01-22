@@ -1,6 +1,4 @@
 {
-	"auto_format_on_save": true,
-	"auto_format_on_save_excludes": ["*.js"],
 	"tabWidth": 4,
 	"printWidth": 140,
 	"useTabs": true,
