@@ -21,7 +21,7 @@ module.exports = {
 				'header-match-team-pattern': (parsed) => {
 					const { emoji, ticket, subject } = parsed;
 					if (emoji === null && ticket === null && subject === null) {
-						return [false, "header must be in format '✅ [VD-4605] Add tests' or '✅ Add tests'"];
+						return [false, "commit message must be in format '✅ [VD-4605] Add tests' or '✅ Add tests'"];
 					}
 					return [true, ''];
 				},
