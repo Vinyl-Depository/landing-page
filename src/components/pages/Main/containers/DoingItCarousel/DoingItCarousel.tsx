@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import DoingItCarouselView from './DoingItCarousel.view';
 
-interface Props {}
+interface IProps {}
 
-const DoingItCarousel: React.FC<Props> = () => {
-	return <DoingItCarouselView></DoingItCarouselView>;
+const DoingItCarousel: React.FC<IProps> = () => {
+	const [selectedItemIndexState, setSelectedItemIndexState] = useState<number>(0);
+
+	const setSelectedItemIndex = (index: number) => setSelectedItemIndexState(() => index);
+
+	return (
+		<DoingItCarouselView selectedItemIndex={selectedItemIndexState} setSelectedItemIndex={setSelectedItemIndex}></DoingItCarouselView>
+	);
 };
 
 DoingItCarousel.displayName = 'DoingItCarousel';

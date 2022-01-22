@@ -2,9 +2,9 @@ import React from 'react';
 
 import JoinWishlistView from './JoinWishlist.view';
 
-interface Props {}
+interface IProps {}
 
-const JoinWishlist: React.FC<Props> = (props: React.PropsWithChildren<Props>) => {
+const JoinWishlist: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	return <JoinWishlistView>{props.children}</JoinWishlistView>;
 };
 

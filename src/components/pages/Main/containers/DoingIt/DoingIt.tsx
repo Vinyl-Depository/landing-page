@@ -2,9 +2,9 @@ import React from 'react';
 
 import DoingItView from './DoingIt.view';
 
-interface Props {}
+interface IProps {}
 
-const DoingIt: React.FC<Props> = () => {
+const DoingIt: React.FC<IProps> = () => {
 	return <DoingItView></DoingItView>;
 };
 

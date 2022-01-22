@@ -2,9 +2,9 @@ import React from 'react';
 
 import FooterView from './Footer.view';
 
-interface Props {}
+interface IProps {}
 
-const Footer: React.FC<Props> = () => {
+const Footer: React.FC<IProps> = () => {
 	return <FooterView></FooterView>;
 };
 

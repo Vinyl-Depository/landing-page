@@ -1,0 +1,10 @@
+node_modules
+build
+dist
+public
+coverage
+package.json
+package-lock.json
+tsconfig.json
+.eslintrc.json
+.vscode

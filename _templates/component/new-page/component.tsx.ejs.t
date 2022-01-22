@@ -5,9 +5,9 @@ to: src/components/pages/<%= h.changeCase.pascalCase(name.toLowerCase()) %>/<%= 
 
 import <%= h.changeCase.pascalCase(name) %>View from './<%= h.changeCase.pascalCase(name) %>.view';
 
-interface Props {}
+interface IProps {}
 
-const <%= h.changeCase.pascalCase(name) %>: React.FC<Props> = (props: React.PropsWithChildren<Props>) => {
+const <%= h.changeCase.pascalCase(name) %>: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
   return <<%= h.changeCase.pascalCase(name) %>View>{props.children}</<%= h.changeCase.pascalCase(name) %>View>;
 };
 

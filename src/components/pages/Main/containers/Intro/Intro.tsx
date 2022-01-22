@@ -2,9 +2,9 @@ import React from 'react';
 
 import IntroView from './Intro.view';
 
-interface Props {}
+interface IProps {}
 
-const Intro: React.FC<Props> = () => {
+const Intro: React.FC<IProps> = () => {
 	return <IntroView></IntroView>;
 };
 

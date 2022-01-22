@@ -2,9 +2,9 @@ import React from 'react';
 
 import MainView from './Main.view';
 
-interface Props {}
+interface IProps {}
 
-const Main: React.FC<Props> = () => {
+const Main: React.FC<IProps> = () => {
 	return <MainView></MainView>;
 };
 

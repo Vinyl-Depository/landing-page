@@ -7,9 +7,9 @@ import emailLogo from '../../../../../assets/images/join-whistlist-emails.png';
 
 import classes from './JoinWishlist.module.scss';
 
-interface Props {}
+interface IProps {}
 
-const JoinWishlistView: React.FC<Props> = () => {
+const JoinWishlistView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 
 	return (

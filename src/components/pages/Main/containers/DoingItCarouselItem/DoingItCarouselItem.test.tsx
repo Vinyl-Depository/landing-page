@@ -1,15 +1,15 @@
 import { configure, shallow, ShallowWrapper } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import Footer from './Footer';
+import DoingItCarouselItem from './DoingItCarouselItem';
 
 configure({ adapter: new Adapter() });
 
-describe('<Footer>', () => {
+describe('<DoingItCarouselItem>', () => {
 	let wrapper: ShallowWrapper;
 
 	beforeEach(() => {
-		wrapper = shallow(<Footer></Footer>);
+		wrapper = shallow(<DoingItCarouselItem></DoingItCarouselItem>);
 	});
 
 	it('mounts without crashing', () => {
