@@ -7,7 +7,6 @@
 
 	.recommenderAppSectionInner {
 		max-width: map-get($sizes, main-web-width);
-
 		margin: 0 auto;
 		display: flex;
 
@@ -29,13 +28,10 @@
 			border-radius: 40px;
 			box-shadow: 10px 15px 30px rgba(41, 41, 42, 0.5);
 		}
+	}
 
-		&__groupPhone-ipad {
-			display: none;
-		}
-		&__groupPhone-mobile {
-			display: none;
-		}
+	&__groupPhone {
+		display: none;
 	}
 
 	.recommenderAppSectionDataContainer {
@@ -90,11 +86,15 @@
 
 @media (max-width: 850px) {
 	.recommenderAppSection {
+		width: 100%;
 		padding: 40px 40px 30px 40px;
+		display: flex;
+		// overflow-x: hidden;
 
 		.recommenderAppSectionInner {
 			max-width: map-get($sizes, ipad-width);
 			justify-content: space-between;
+			// overflow-x: hidden;
 
 			&__firstPhone {
 				display: none;
@@ -102,20 +102,20 @@
 			&__secondPhone {
 				display: none;
 			}
-			&__groupPhone-ipad {
-				// overflow: hidden;
-				display: block;
-				height: 540px;
-				position: relative;
-				bottom: 70px;
-				left: 13px;
-				// right: 30px;
-				margin: 0 10px;
-			}
-			&__groupPhone-mobile {
-				display: none;
-			}
 		}
+
+		&__groupPhone {
+			border: 2px solid red;
+			display: block;
+			height: 470px;
+			position: relative;
+			bottom: 70px;
+			left: 60px;
+			margin: 0 10px;
+			// border-radius: 40px;
+			// box-shadow: 10px 15px 30px rgba(41, 41, 42, 0.5);
+		}
+
 		.recommenderAppSectionDataContainer {
 			width: 360px;
 			&__title {
@@ -163,25 +163,28 @@
 		order: 3;
 		margin-top: 50px;
 		padding: 0;
+		flex-direction: column-reverse;
+		// overflow: hidden;
 
 		.recommenderAppSectionInner {
 			max-width: map-get($sizes, main-mobile-width);
 			flex-direction: column;
 			justify-content: center;
 			order: 0;
-
-			&__groupPhone-ipad {
-				display: none;
-			}
-
-			&__groupPhone-mobile {
-				display: block;
-				width: 100%;
-				object-fit: contain;
-				position: relative;
-				bottom: 40px;
-			}
 		}
+
+		&__groupPhone {
+			border: 1px solid red;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			display: block;
+			width: 486px;
+			object-fit: contain;
+			position: relative;
+			bottom: 40px;
+		}
+
 		.recommenderAppSectionDataContainer {
 			order: 1;
 			width: 100%;
