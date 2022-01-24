@@ -55,14 +55,15 @@
 				line-height: 31px;
 			}
 
-			&__img {
-				width: 400px !important;
-			}
+			// &__img {
+			// 	width: 400px !important;
+			// }
+			//TODO: approve the image to be 360px bc 400px leads to horizontal probloms
 		}
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 	.typicalMarketplacesSectionContainer {
 		order: 2;
 		padding: 0px;

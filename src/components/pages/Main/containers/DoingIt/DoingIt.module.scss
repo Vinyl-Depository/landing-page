@@ -51,7 +51,6 @@
 				margin: 7px 0 3px 0;
 				font-weight: 600;
 				font-size: 2.4rem;
-				// white-space: nowrap;
 			}
 
 			&__text {
@@ -82,5 +81,11 @@
 			font-size: 1.3rem;
 			line-height: 21px;
 		}
+	}
+}
+
+@media (max-width: 500px) {
+	.doingItSectionContainer {
+		display: none;
 	}
 }
