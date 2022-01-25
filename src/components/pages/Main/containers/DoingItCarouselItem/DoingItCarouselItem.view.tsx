@@ -5,7 +5,7 @@ import classes from './DoingItCarouselItem.module.scss';
 interface IProps {
 	readonly image: string;
 	readonly title: string;
-	readonly text: string;
+	readonly text: string | JSX.Element;
 
 	readonly children?: React.ReactNode; // * Temporary! - Due to errors with Children and React.memo
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 import { concatClasses } from '../../../../../utils/component';
 
@@ -59,18 +59,30 @@ const DoingItCarouselView: React.FC<IProps> = (props: React.PropsWithChildren<IP
 			renderArrowPrev={renderArrowPrev}
 			renderArrowNext={renderArrowNext}
 		>
-			<DoingItCarouselItem image={browseImg} title={t('doingIt.browse.title')} text={t('doingIt.browse.description')} />
-			<DoingItCarouselItem image={searchImg} title={t('doingIt.search.title')} text={t('doingIt.search.description')} />
-			<DoingItCarouselItem image={pileUpImg} title={t('doingIt.pileUp.title')} text={t('doingIt.pileUp.description')} />
+			<DoingItCarouselItem
+				image={browseImg}
+				title={t('doingIt.browse.title')}
+				text={<Trans i18nKey="doingIt.browse.description" />}
+			/>
+			<DoingItCarouselItem
+				image={searchImg}
+				title={t('doingIt.search.title')}
+				text={<Trans i18nKey="doingIt.search.description" />}
+			/>
+			<DoingItCarouselItem
+				image={pileUpImg}
+				title={t('doingIt.pileUp.title')}
+				text={<Trans i18nKey="doingIt.pileUp.description" />}
+			/>
 			<DoingItCarouselItem
 				image={personalizedImg}
 				title={t('doingIt.personalizedExperience.title')}
-				text={t('doingIt.personalizedExperience.description')}
+				text={<Trans i18nKey="doingIt.personalizedExperience.description" />}
 			/>
 			<DoingItCarouselItem
 				image={sellerImg}
 				title={t('doingIt.trustedSellers.title')}
-				text={t('doingIt.trustedSellers.description')}
+				text={<Trans i18nKey="doingIt.trustedSellers.description" />}
 			/>
 		</Carousel>
 	);
