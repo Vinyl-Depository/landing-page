@@ -4,7 +4,7 @@ import Header from '../../layout/Header/Header';
 import Intro from '../../pages/Main/containers/Intro/Intro';
 import TypicalMarketplaces from './containers/TypicalMarketplaces/TypicalMarketplaces';
 import DoingIt from '../../pages/Main/containers/DoingIt/DoingIt';
-// import RecommenderApp from '../../pages/Main/containers/RecommenderApp/RecommenderApp';
+import RecommenderApp from '../../pages/Main/containers/RecommenderApp/RecommenderApp';
 import JoinWishlist from '../../pages/Main/containers/JoinWishlist/JoinWishlist';
 import Sellers from '../../pages/Main/containers/Seller/Seller';
 import Footer from '../../layout/Footer/Footer';
@@ -21,7 +21,7 @@ const MainView: React.FC<IProps> = () => {
 			<DoingIt />
 			<Carousel />
 
-			{/* <RecommenderApp /> */}
+			<RecommenderApp />
 			<JoinWishlist />
 			<Sellers />
 			<Footer />
