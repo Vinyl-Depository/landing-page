@@ -14,6 +14,7 @@ interface IProps {}
 
 const RecommenderAppView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
+
 	return (
 		<section className={classes['recommenderAppSection']}>
 			<div className={classes['recommenderAppSectionInner']}>
