@@ -20,7 +20,6 @@ const MainView: React.FC<IProps> = () => {
 			<TypicalMarketplaces />
 			<DoingIt />
 			<Carousel />
-
 			<RecommenderApp />
 			<JoinWishlist />
 			<Sellers />
