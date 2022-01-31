@@ -6,8 +6,7 @@ interface IProps {
 	readonly image: string;
 	readonly title: string;
 	readonly text: string | JSX.Element;
-
-	readonly children?: React.ReactNode; // * Temporary! - Due to errors with Children and React.memo
+	readonly children?: React.ReactNode;
 }
 
 const DoingItCarouselItemView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
