@@ -8,18 +8,18 @@ import RecommenderApp from '../../pages/Main/containers/RecommenderApp/Recommend
 import JoinWishlist from '../../pages/Main/containers/JoinWishlist/JoinWishlist';
 import Sellers from '../../pages/Main/containers/Seller/Seller';
 import Footer from '../../layout/Footer/Footer';
-// import Carousel from '../../pages/Main/containers/DoingItCarousel/DoingItCarousel';
+import Carousel from '../../pages/Main/containers/DoingItCarousel/DoingItCarousel';
 
 interface IProps {}
 
 const MainView: React.FC<IProps> = () => {
 	return (
 		<React.Fragment>
-			{/* <Carousel /> */}
 			<Header />
 			<Intro />
 			<TypicalMarketplaces />
 			<DoingIt />
+			<Carousel />
 			<RecommenderApp />
 			<JoinWishlist />
 			<Sellers />

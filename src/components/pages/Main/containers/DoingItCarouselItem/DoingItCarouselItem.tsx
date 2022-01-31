@@ -5,7 +5,7 @@ import DoingItCarouselItemView from './DoingItCarouselItem.view';
 interface IProps {
 	readonly image: string;
 	readonly title: string;
-	readonly text: string;
+	readonly text: string | JSX.Element;
 }
 
 const DoingItCarouselItem: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
