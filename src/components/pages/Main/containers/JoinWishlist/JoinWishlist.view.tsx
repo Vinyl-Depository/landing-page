@@ -15,15 +15,14 @@ const JoinWishlistView: React.FC<IProps> = () => {
 	return (
 		<div className={classes['joinWishlistSectionContainer']}>
 			<section className={classes['joinWishlistSection']}>
-				<div className={classes['joinWishlistSection-logos']}>
-					<img className={classes['joinWishlistSection-logos__vinylLogo']} src={vinylLogo} alt="Join whistlist" />
-					<img className={classes['joinWishlistSection-logos__emailLogo']} src={emailLogo} alt="Join whistlist emails" />
+				<div className={classes['joinWishlistSectionLogos']}>
+					<img className={classes['joinWishlistSectionLogos__logo']} src={vinylLogo} alt="Join whistlist" />
+					<img className={classes['joinWishlistSectionLogos__logo']} src={emailLogo} alt="Join whistlist emails" />
 				</div>
 				<div className={classes['joinWishlistText']}>
 					<h2 className={classes['joinWishlistHeader']}>
 						<Trans i18nKey="joinWishlist.header" />
 						<span className={classes['joinWishlistHeader__counter']}></span>
-						{/*need to apply the '569' into a diffrent coloer  */}
 					</h2>
 					<form className={classes['joinWishlistForm']}>
 						<input
