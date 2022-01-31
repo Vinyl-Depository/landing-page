@@ -16,15 +16,10 @@
 		background-size: cover;
 		border-radius: 16px;
 
-		.joinWishlistSection-logos {
+		.joinWishlistSectionLogos {
 			display: flex;
 
-			&__vinylLogo {
-				height: 150px;
-				object-fit: contain;
-			}
-
-			&__emailLogo {
+			&__logo {
 				height: 150px;
 				object-fit: contain;
 			}
@@ -41,7 +36,6 @@
 			color: #fff;
 			font-weight: 800;
 			font-size: 4rem;
-			// white-space: nowrap;
 
 			&__counter {
 				color: #000;
@@ -52,6 +46,7 @@
 			margin-top: 40px;
 			height: 50px;
 			display: flex;
+			align-items: center;
 
 			&__input {
 				height: 100%;
@@ -93,15 +88,9 @@
 			flex-direction: column-reverse;
 			background-image: url('/assets/images/join-wishlist-background-mobile.png');
 
-			.joinWishlistSection-logos {
-				&__vinylLogo {
+			.joinWishlistSectionLogos {
+				&__logo {
 					height: 97px;
-					object-fit: contain;
-				}
-
-				&__emailLogo {
-					height: 78px;
-					object-fit: contain;
 				}
 			}
 		}
@@ -116,6 +105,9 @@
 			.joinWishlistForm {
 				margin: 20px auto 0 auto;
 				width: 100%;
+				background-color: #fff;
+				border-radius: 5px;
+				padding: 0 3px;
 
 				&__input {
 					width: 100%;
@@ -127,10 +119,9 @@
 
 				&__mobileSubmit {
 					display: block;
-					display: block;
-					width: 58px;
-					height: 100%;
-					border-radius: 4.8px;
+					width: 50px;
+					height: 90%;
+					border-radius: 5px;
 					background-color: #18191f;
 				}
 			}
