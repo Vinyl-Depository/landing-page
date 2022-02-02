@@ -21,6 +21,7 @@
 		margin-right: 30px;
 
 		&__title {
+			font-family: 'Inter';
 			font-weight: 800;
 			font-size: 3.6rem;
 			line-height: 64px;
@@ -29,6 +30,7 @@
 		}
 
 		&__text {
+			font-family: 'Inter';
 			font-size: 1.6rem;
 			line-height: 26px;
 			color: map-get($colors, text-color);
@@ -45,6 +47,7 @@
 		padding: 28px;
 
 		&__label {
+			font-family: 'Inter';
 			font-weight: 600;
 			font-size: 1.8rem;
 			color: #474a57;
@@ -52,6 +55,7 @@
 		}
 
 		&__input {
+			font-family: 'Inter';
 			margin-bottom: 20px;
 			padding: 14px 16px;
 			width: 100%;
@@ -72,6 +76,7 @@
 			border-radius: 5px;
 
 			&__text {
+				font-family: 'Inter';
 				font-size: 1.4rem;
 				color: #474a57;
 			}
@@ -83,6 +88,7 @@
 		}
 
 		&__submit {
+			font-family: 'Inter';
 			width: 120px;
 			align-self: flex-start;
 			margin: 20px 0 10px 0;

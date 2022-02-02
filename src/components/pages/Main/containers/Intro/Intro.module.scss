@@ -15,6 +15,7 @@
 			font-weight: 800;
 			font-size: 7.2rem;
 			text-align: center;
+			font-family: 'Inter';
 			color: map-get($colors, text-color);
 		}
 
@@ -46,14 +47,17 @@
 				margin-right: 3px;
 				font-weight: 700;
 				font-size: 1.8rem;
+				font-family: 'Inter';
 				color: #1b20a2;
 			}
 
 			&__counter {
+				font-family: 'Inter';
 				color: map-get($colors, text-color);
 			}
 
 			&__sub {
+				font-family: 'Inter';
 				font-weight: 600;
 				font-size: 1.4rem;
 				color: #b8b8b8;
@@ -66,10 +70,11 @@
 			margin-top: 10px;
 
 			&__input {
-				width: 460px;
+				width: 480px;
 				height: 100%;
 				padding: 14px 16px;
 				font-size: 1.4rem;
+				font-family: 'Inter';
 				color: #474a57;
 				background-color: #f4f5f7;
 				border-radius: 5px 0px 0px 5px;
@@ -85,6 +90,7 @@
 				padding: 14px 24px;
 				font-weight: 500;
 				font-size: 1.4rem;
+				font-family: 'Inter';
 				color: #fff;
 				background-color: #18191f;
 				border-radius: 0px 5px 5px 0px;
@@ -142,7 +148,7 @@
 				margin: 15px 0 20px 0;
 
 				&__input {
-					width: 400px;
+					width: 420px;
 					font-size: 1.8rem;
 				}
 

@@ -4,11 +4,11 @@ import { Trans, useTranslation } from 'react-i18next';
 
 import { concatClasses } from '../../../../../utils/component';
 
-import browseImg from '../../../../../assets/images/doing-it-browse.jpg';
-import searchImg from '../../../../../assets/images/doing-it-search.jpg';
-import pileUpImg from '../../../../../assets/images/doing-it-pileup.jpg';
-import personalizedImg from '../../../../../assets/images/doing-it-personalized.jpg';
-import sellerImg from '../../../../../assets/images/doing-it-seller.jpg';
+import browseImg from '../../../../../assets/images/doing-it-browse.png';
+import searchImg from '../../../../../assets/images/doing-it-search.png';
+import pileUpImg from '../../../../../assets/images/doing-it-pileup.png';
+import personalizedImg from '../../../../../assets/images/doing-it-personalized.png';
+import sellerImg from '../../../../../assets/images/doing-it-seller.png';
 
 import DoingItCarouselItem from '../DoingItCarouselItem/DoingItCarouselItem';
 import VSvg from '../../../../ui/VSvg/VSvg';

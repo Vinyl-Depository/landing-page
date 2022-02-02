@@ -41,17 +41,23 @@
 		&__title {
 			font-weight: 800;
 			font-size: 4.8rem;
+			font-family: 'Inter';
+			color: map-get($colors, text-color);
 		}
 
 		&__text {
 			margin: 12px 0;
 			font-size: 1.8rem;
+			font-family: 'Inter';
+			color: map-get($colors, text-color);
 			line-height: 32px;
 		}
 
 		&__getAppText {
 			font-weight: 500;
 			font-size: 1.8rem;
+			font-family: 'Inter';
+			color: map-get($colors, text-color);
 		}
 	}
 
@@ -201,10 +207,11 @@
 			&__logo {
 				order: 3;
 				left: 0;
+				margin-bottom: 15px;
 			}
 
 			.getTheAppContainerButton {
-				height: 55px;
+				height: 48px;
 			}
 		}
 	}

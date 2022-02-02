@@ -27,6 +27,7 @@
 			&__text {
 				font-weight: 700;
 				font-size: 1.8rem;
+				font-family: 'Inter';
 				color: map-get($colors, text-color);
 				white-space: nowrap;
 			}
@@ -127,7 +128,7 @@
 			.rightHeader {
 				.rightHeaderButton {
 					&__img {
-						width: 72px;
+						width: 85px;
 					}
 				}
 			}
