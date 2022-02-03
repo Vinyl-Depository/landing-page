@@ -11,6 +11,7 @@
 		flex-direction: column;
 
 		&__header {
+			font-family: 'Inter';
 			font-weight: 800;
 			font-size: 4.5rem;
 			text-align: center;
@@ -46,6 +47,7 @@
 			}
 
 			&__title {
+				font-family: 'Inter';
 				text-align: center;
 				color: map-get($colors, text-color);
 				margin: 7px 0 3px 0;
@@ -54,6 +56,8 @@
 			}
 
 			&__text {
+				font-family: 'Inter';
+				color: map-get($colors, text-color);
 				text-align: center;
 				font-size: 1.6rem;
 			}

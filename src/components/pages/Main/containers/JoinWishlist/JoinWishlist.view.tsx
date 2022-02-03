@@ -21,8 +21,9 @@ const JoinWishlistView: React.FC<IProps> = () => {
 				</div>
 				<div className={classes['joinWishlistText']}>
 					<h2 className={classes['joinWishlistHeader']}>
-						<Trans i18nKey="joinWishlist.header" />
-						<span className={classes['joinWishlistHeader__counter']}></span>
+						<Trans i18nKey="joinWishlist.header__main" />
+						<span className={classes['joinWishlistHeader__counter']}> 6969 </span>
+						<Trans i18nKey="joinWishlist.header__secondPart" />
 					</h2>
 					<form className={classes['joinWishlistForm']}>
 						<input

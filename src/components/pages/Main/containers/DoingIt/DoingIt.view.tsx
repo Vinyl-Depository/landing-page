@@ -1,11 +1,11 @@
 import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 
-import browseImg from '../../../../../assets/images/doing-it-browse.jpg';
-import searchImg from '../../../../../assets/images/doing-it-search.jpg';
-import pileUpImg from '../../../../../assets/images/doing-it-pileup.jpg';
-import personalizedImg from '../../../../../assets/images/doing-it-personalized.jpg';
-import sellerImg from '../../../../../assets/images/doing-it-seller.jpg';
+import browseImg from '../../../../../assets/images/doing-it-browse.png';
+import searchImg from '../../../../../assets/images/doing-it-search.png';
+import pileUpImg from '../../../../../assets/images/doing-it-pileup.png';
+import personalizedImg from '../../../../../assets/images/doing-it-personalized.png';
+import sellerImg from '../../../../../assets/images/doing-it-seller.png';
 
 import classes from './DoingIt.module.scss';
 
