@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import VSvg from '../../../../ui/VSvg/VSvg';
 
 import introImagIpadResponsive from '../../../../../assets/images/intro-logo-ipad.jpg';
-import introImgMobileResponsive from '../../../../../assets/images/intro-logo-mobile.jpg';
+import introImgMobileResponsive from '../../../../../assets/images/intro-logo-mobile.png';
 import introImgWebResponsive from '../../../../../assets/images/intro-logo-web.jpg';
 
 import classes from './Intro.module.scss';

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import marketplaceImg from '../../../../../assets/images/marketplace.jpg';
-import marketplaceMobileImg from '../../../../../assets/images/marketplace-mobile.jpg';
+import marketplaceImg from '../../../../../assets/images/marketplace.png';
+import marketplaceMobileImg from '../../../../../assets/images/marketplace-mobile.png';
 
 import classes from './TypicalMarketplaces.module.scss';
 

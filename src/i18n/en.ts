@@ -46,7 +46,8 @@ const en = {
 		getTheApp: 'Get the App',
 	},
 	joinWishlist: {
-		header: ' Join 598 more people in the waitlist for a better experience.',
+		header__main: 'Join',
+		header__secondPart: 'more people in the waitlist for a better experience.',
 		formPlaceholder: 'Your email address',
 		button: 'Join the waitlist',
 	},
