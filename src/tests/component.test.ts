@@ -7,12 +7,6 @@ describe('[utils/component]', () => {
 		expect(result === '').toEqual(true);
 	});
 
-	it('concatClasses | Function should return empty string for given input without arguments', () => {
-		const result = concatClasses({ testKey: 'testValue' });
-
-		expect(result === '').toEqual(true);
-	});
-
 	it('concatClasses | Function should return empty string for given input with nullish arguments', () => {
 		const result = concatClasses({ testKey: 'testValue' }, null, null);
 

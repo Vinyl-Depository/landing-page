@@ -1,5 +1,5 @@
 ---
-to: src/components/pages/<%= h.changeCase.pascalCase(pageName.toLowerCase()) %>/containers/<%= h.changeCase.pascalCase(containerName.toLowerCase()) %>/<%= h.changeCase.pascalCase(containerName.toLowerCase()) %>.test.tsx
+to: src/components/containers/<%= h.changeCase.pascalCase(pageName.toLowerCase()) %>/<%= h.changeCase.pascalCase(containerName.toLowerCase()) %>/<%= h.changeCase.pascalCase(containerName.toLowerCase()) %>.test.tsx
 ---
 <% name = containerName.toLowerCase() %>import React from 'react';
 import { configure, shallow, ShallowWrapper } from 'enzyme';

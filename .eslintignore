@@ -1,6 +1,9 @@
 changelog.config.js
 jest.config.js
+jest.setup.js
 .eslintrc.js
 .prettierrc.js
+next.config.js
 dist
 build
+_templates

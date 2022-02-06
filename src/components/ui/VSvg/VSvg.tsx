@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react';
 
-import icons from '../../../assets/icons';
+import icons from '../../../icons';
 
 import VSvgView from './VSvg.view';
 

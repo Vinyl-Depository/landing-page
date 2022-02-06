@@ -1,5 +1,5 @@
 ---
-to: src/components/pages/<%= h.changeCase.pascalCase(name.toLowerCase()) %>/<%= h.changeCase.pascalCase(name.toLowerCase()) %>.tsx
+to: src/components/containers/<%= h.changeCase.pascalCase(name.toLowerCase()) %>/<%= h.changeCase.pascalCase(name.toLowerCase()) %>.tsx
 ---
 <% name = name.toLowerCase() %>import React from 'react';
 

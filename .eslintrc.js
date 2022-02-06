@@ -3,8 +3,14 @@ module.exports = {
 		browser: true,
 		es2021: true,
 	},
-	extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/jsx-runtime'],
-	parser: '@typescript-eslint/parser',
+	extends: [
+		'eslint:recommended',
+		'plugin:react/recommended',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:react/jsx-runtime',
+		'prettier',
+		'next/core-web-vitals',
+	],
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
@@ -45,10 +51,7 @@ module.exports = {
 		'@typescript-eslint/no-require-imports': ['error'],
 		'@typescript-eslint/no-non-null-assertion': 'off',
 		'unused-imports/no-unused-imports': 'error',
-	},
-	settings: {
-		react: {
-			version: 'latest',
-		},
+		'@next/next/no-img-element': 'error',
+		'jsx-a11y/alt-text': 'error',
 	},
 };
