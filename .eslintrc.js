@@ -53,5 +53,6 @@ module.exports = {
 		'unused-imports/no-unused-imports': 'error',
 		'@next/next/no-img-element': 'error',
 		'jsx-a11y/alt-text': 'error',
+		'react/jsx-fragments': 'error',
 	},
 };

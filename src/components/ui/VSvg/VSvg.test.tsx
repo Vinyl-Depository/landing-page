@@ -1,18 +1,11 @@
-import { configure, shallow, ShallowWrapper } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { render } from '@testing-library/react';
 
 import VSvg from './VSvg';
 
-configure({ adapter: new Adapter() });
-
 describe('<VSvg>', () => {
-	let wrapper: ShallowWrapper;
+	it('Should render the component unchanged', () => {
+		const { container } = render(<VSvg name="arrowDown" />);
 
-	beforeEach(() => {
-		wrapper = shallow(<VSvg></VSvg>);
-	});
-
-	it('mounts without crashing', () => {
-		wrapper.unmount();
+		expect(container).toMatchSnapshot();
 	});
 });

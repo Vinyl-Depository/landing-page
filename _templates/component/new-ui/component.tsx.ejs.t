@@ -8,7 +8,7 @@ import V<%= h.changeCase.pascalCase(name) %>View from './V<%= h.changeCase.pasca
 interface IProps {}
 
 const V<%= h.changeCase.pascalCase(name) %>: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
-  return <V<%= h.changeCase.pascalCase(name) %>View>{props.children}</V<%= h.changeCase.pascalCase(name) %>View>;
+  return <V<%= h.changeCase.pascalCase(name) %>View />;
 };
 
 V<%= h.changeCase.pascalCase(name) %>.displayName = 'V<%= h.changeCase.pascalCase(name) %>';

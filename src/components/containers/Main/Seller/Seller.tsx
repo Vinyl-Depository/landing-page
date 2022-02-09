@@ -5,7 +5,7 @@ import SellerView from './Seller.view';
 interface IProps {}
 
 const Seller: React.FC<IProps> = () => {
-	return <SellerView></SellerView>;
+	return <SellerView />;
 };
 
 Seller.displayName = 'Seller';

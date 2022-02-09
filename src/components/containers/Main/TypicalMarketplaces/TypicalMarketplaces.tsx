@@ -5,7 +5,7 @@ import TypicalMarketplacesView from './TypicalMarketplaces.view';
 interface IProps {}
 
 const TypicalMarketplaces: React.FC<IProps> = () => {
-	return <TypicalMarketplacesView></TypicalMarketplacesView>;
+	return <TypicalMarketplacesView />;
 };
 
 TypicalMarketplaces.displayName = 'TypicalMarketplaces';

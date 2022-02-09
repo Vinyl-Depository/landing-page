@@ -2,10 +2,12 @@ import React from 'react';
 
 import MainView from './Main.view';
 
-interface IProps {}
+interface IProps {
+	readonly joinersCount: number;
+}
 
-const Main: React.FC<IProps> = () => {
-	return <MainView></MainView>;
+const Main: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
+	return <MainView joinersCount={props.joinersCount} />;
 };
 
 Main.displayName = 'Main';

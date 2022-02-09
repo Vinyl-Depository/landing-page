@@ -1,12 +1,12 @@
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 
-import googlePlayLogo from '../../../../../assets/images/google-play.png';
-import appStoreLogo from '../../../../../assets/images/app-store.png';
-import brandLogo from '../../../../../assets/images/brand-logo.png';
-import firstPhone from '../../../../../assets/images/first-phone.png';
-import secondPhone from '../../../../../assets/images/second-phone.png';
-import groupPhoneIpad from '../../../../../assets/images/group-phones.png';
+import googlePlayLogo from '@/images/google-play.png';
+import appStoreLogo from '@/images/app-store.png';
+import brandLogo from '@/images/brand-logo.png';
+import firstPhone from '@/images/first-phone.png';
+import secondPhone from '@/images/second-phone.png';
+import groupPhoneIpad from '@/images/group-phones.png';
 
 import classes from './RecommenderApp.module.scss';
 

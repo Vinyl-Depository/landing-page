@@ -5,7 +5,7 @@ import DoingItView from './DoingIt.view';
 interface IProps {}
 
 const DoingIt: React.FC<IProps> = () => {
-	return <DoingItView></DoingItView>;
+	return <DoingItView />;
 };
 
 DoingIt.displayName = 'DoingIt';

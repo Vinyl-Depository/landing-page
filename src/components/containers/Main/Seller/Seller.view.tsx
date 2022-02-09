@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 
-import VSvg from '../../../../ui/VSvg/VSvg';
+import VSvg from '@/ui/VSvg';
 
 import classes from './Seller.module.scss';
 

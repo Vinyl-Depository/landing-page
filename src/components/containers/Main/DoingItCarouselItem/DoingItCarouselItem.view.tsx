@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './DoingItCarouselItem.module.scss';
 
 interface IProps {
-	readonly image: string;
+	readonly image: StaticImageData;
 	readonly title: string;
 	readonly text: string | JSX.Element;
 	readonly children?: React.ReactNode;

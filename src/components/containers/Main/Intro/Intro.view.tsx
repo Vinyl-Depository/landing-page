@@ -1,17 +1,19 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import VSvg from '../../../../ui/VSvg/VSvg';
+import introImagIpadResponsive from '@images/intro-logo-ipad.jpg';
+import introImgMobileResponsive from '@/images/intro-logo-mobile.png';
+import introImgWebResponsive from '@/images/intro-logo-web.jpg';
 
-import introImagIpadResponsive from '../../../../../assets/images/intro-logo-ipad.jpg';
-import introImgMobileResponsive from '../../../../../assets/images/intro-logo-mobile.png';
-import introImgWebResponsive from '../../../../../assets/images/intro-logo-web.jpg';
+import VSvg from '@/ui/VSvg';
 
 import classes from './Intro.module.scss';
 
-interface IProps {}
+interface IProps {
+	readonly joinersCount: number;
+}
 
-const IntroView: React.FC<IProps> = () => {
+const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const { t } = useTranslation();
 
 	return (
@@ -25,7 +27,7 @@ const IntroView: React.FC<IProps> = () => {
 					<p className={classes['introWishlistTextContainer']}>
 						<span className={classes['introWishlistTextContainer__main']}>
 							{t('intro.waitListFirstPartDescription')}
-							<span className={classes['introWishlistTextContainer__counter']}> 122 </span>
+							<span className={classes['introWishlistTextContainer__counter']}> {props.joinersCount} </span>
 							{t('intro.waitListSecondPartDescription')}
 						</span>
 						<span className={classes['introWishlistTextContainer__sub']}>({t('intro.waitListDescriptionSub')})</span>

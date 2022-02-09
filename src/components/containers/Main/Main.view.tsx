@@ -8,19 +8,21 @@ import RecommenderApp from './RecommenderApp';
 import Seller from './Seller';
 import TypicalMarketplaces from './TypicalMarketplaces';
 
-interface IProps {}
+interface IProps {
+	readonly joinersCount: number;
+}
 
-const MainView: React.FC<IProps> = () => {
+const MainView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	return (
-		<React.Fragment>
-			<Intro />
+		<>
+			<Intro joinersCount={props.joinersCount} />
 			<TypicalMarketplaces />
 			<DoingIt />
 			<DoingItCarousel />
 			<RecommenderApp />
 			<JoinWishlist />
 			<Seller />
-		</React.Fragment>
+		</>
 	);
 };
 

@@ -3,7 +3,7 @@ import { Trans } from 'react-i18next';
 
 import { concatClasses } from '@/utils/component';
 
-import brandLogo from '../../../assets/images/brand-logo-white.png';
+import brandLogo from '@/images/brand-logo-white.png';
 
 import classes from './Footer.module.scss';
 

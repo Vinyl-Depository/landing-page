@@ -9,9 +9,7 @@ const DoingItCarousel: React.FC<IProps> = () => {
 
 	const setSelectedItemIndex = (index: number) => setSelectedItemIndexState(() => index);
 
-	return (
-		<DoingItCarouselView selectedItemIndex={selectedItemIndexState} setSelectedItemIndex={setSelectedItemIndex}></DoingItCarouselView>
-	);
+	return <DoingItCarouselView selectedItemIndex={selectedItemIndexState} setSelectedItemIndex={setSelectedItemIndex} />;
 };
 
 DoingItCarousel.displayName = 'DoingItCarousel';

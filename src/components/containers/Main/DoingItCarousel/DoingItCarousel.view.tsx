@@ -4,13 +4,13 @@ import { Trans, useTranslation } from 'react-i18next';
 
 import { concatClasses } from '@/utils/component';
 
-import browseImg from '../../../../../assets/images/doing-it-browse.png';
-import searchImg from '../../../../../assets/images/doing-it-search.png';
-import pileUpImg from '../../../../../assets/images/doing-it-pileup.png';
-import personalizedImg from '../../../../../assets/images/doing-it-personalized.png';
-import sellerImg from '../../../../../assets/images/doing-it-seller.png';
+import browseImg from '@/images/doing-it-browse.png';
+import searchImg from '@/images/doing-it-search.png';
+import pileUpImg from '@/images/doing-it-pileup.png';
+import personalizedImg from '@/images/doing-it-personalized.png';
+import sellerImg from '@/images/doing-it-seller.png';
 
-import DoingItCarouselItem from '../DoingItCarouselItem/DoingItCarouselItem';
+import DoingItCarouselItem from '../DoingItCarouselItem';
 import VSvg from '@/ui/VSvg';
 
 import classes from './DoingItCarousel.module.scss';

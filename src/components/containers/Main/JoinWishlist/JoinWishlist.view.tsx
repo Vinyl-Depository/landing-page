@@ -1,9 +1,10 @@
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import VSvg from '../../../../ui/VSvg/VSvg';
 
-import vinylLogo from '../../../../../assets/images/join-whistlist-vinyl-logo.png';
-import emailLogo from '../../../../../assets/images/join-whistlist-emails.png';
+import vinylLogo from '@/images/join-whistlist-vinyl-logo.png';
+import emailLogo from '@/images/join-whistlist-emails.png';
+
+import VSvg from '@/ui/VSvg';
 
 import classes from './JoinWishlist.module.scss';
 

@@ -5,7 +5,7 @@ import HeaderView from './Header.view';
 interface IProps {}
 
 const HeaderOne: React.FC<IProps> = () => {
-	return <HeaderView></HeaderView>;
+	return <HeaderView />;
 };
 
 HeaderOne.displayName = 'HeaderOne';

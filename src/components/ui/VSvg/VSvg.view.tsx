@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react';
 
-import icons from '../../../icons';
+import icons from 'src/icons';
 
 import classes from './VSvg.module.scss';
 

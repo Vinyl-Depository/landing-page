@@ -4,8 +4,8 @@ import JoinWishlistView from './JoinWishlist.view';
 
 interface IProps {}
 
-const JoinWishlist: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
-	return <JoinWishlistView>{props.children}</JoinWishlistView>;
+const JoinWishlist: React.FC<IProps> = () => {
+	return <JoinWishlistView />;
 };
 
 JoinWishlist.displayName = 'JoinWishlist';

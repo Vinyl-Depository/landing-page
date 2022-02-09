@@ -2,10 +2,12 @@ import React from 'react';
 
 import IntroView from './Intro.view';
 
-interface IProps {}
+interface IProps {
+	readonly joinersCount: number;
+}
 
-const Intro: React.FC<IProps> = () => {
-	return <IntroView></IntroView>;
+const Intro: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
+	return <IntroView joinersCount={props.joinersCount} />;
 };
 
 Intro.displayName = 'Intro';
