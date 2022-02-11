@@ -10,8 +10,9 @@ import pileUpImg from '@/images/doing-it-pileup.png';
 import personalizedImg from '@/images/doing-it-personalized.png';
 import sellerImg from '@/images/doing-it-seller.png';
 
-import DoingItCarouselItem from '../DoingItCarouselItem';
 import VSvg from '@/ui/VSvg';
+
+import DoingItCarouselItem from '../DoingItCarouselItem';
 
 import classes from './DoingItCarousel.module.scss';
 
@@ -25,12 +26,10 @@ const DoingItCarouselView: React.FC<IProps> = (props: React.PropsWithChildren<IP
 
 	const renderIndicator = (_: (e: React.MouseEvent | React.KeyboardEvent) => void, isSelected: boolean, index: number) => {
 		if (isSelected) {
-			return <button className={concatClasses(classes, 'indicator', 'indicator--selected')} type="button" role="button"></button>;
+			return <button className={concatClasses(classes, 'indicator', 'indicator--selected')} type="button" role="button" />;
 		}
 
-		return (
-			<button className={classes['indicator']} onClick={() => props.setSelectedItemIndex(index)} type="button" role="button"></button>
-		);
+		return <button className={classes['indicator']} type="button" role="button" onClick={() => props.setSelectedItemIndex(index)} />;
 	};
 
 	const renderArrowPrev = (clickHandler: () => void, hasPrev: boolean) => {

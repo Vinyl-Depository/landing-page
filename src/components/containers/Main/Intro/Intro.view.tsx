@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import introImagIpadResponsive from '@images/intro-logo-ipad.jpg';
+import introImagIpadResponsive from '@/images/intro-logo-ipad.jpg';
 import introImgMobileResponsive from '@/images/intro-logo-mobile.png';
 import introImgWebResponsive from '@/images/intro-logo-web.jpg';
 
@@ -27,10 +27,14 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					<p className={classes['introWishlistTextContainer']}>
 						<span className={classes['introWishlistTextContainer__main']}>
 							{t('intro.waitListFirstPartDescription')}
-							<span className={classes['introWishlistTextContainer__counter']}> {props.joinersCount} </span>
+							<span className={classes['introWishlistTextContainer__counter']}>
+								&nbsp;
+								{props.joinersCount}
+								&nbsp;
+							</span>
 							{t('intro.waitListSecondPartDescription')}
 						</span>
-						<span className={classes['introWishlistTextContainer__sub']}>({t('intro.waitListDescriptionSub')})</span>
+						<span className={classes['introWishlistTextContainer__sub']}>{t('intro.waitListDescriptionSub')}</span>
 					</p>
 					<form className={classes['introWishlistFormContainer']}>
 						<input

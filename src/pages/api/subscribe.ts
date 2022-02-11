@@ -13,6 +13,7 @@ export default async function handler(req: ISubscribeRequest, res: NextApiRespon
 				success: false,
 				message: 'Provided invalid email',
 			});
+
 			return;
 		}
 
@@ -30,12 +31,14 @@ export default async function handler(req: ISubscribeRequest, res: NextApiRespon
 				success: true,
 				message: 'Successfully fulfilled subscription action',
 			});
+
 			return;
 		} catch (e) {
 			res.status(500).send({
 				success: false,
 				message: e as string,
 			});
+
 			return;
 		}
 	}
@@ -44,5 +47,6 @@ export default async function handler(req: ISubscribeRequest, res: NextApiRespon
 		success: false,
 		message: 'Invalid API call',
 	});
+
 	return;
 }

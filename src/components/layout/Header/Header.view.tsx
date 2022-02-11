@@ -1,9 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import brandLogo from '../../../assets/images/brand-logo.png';
-import playStoreLogo from '../../../assets/images/google-play.png';
-import appStoreLogo from '../../../assets/images/app-store.png';
+import brandLogo from '@/images/brand-logo.png';
+import playStoreLogo from '@/images/google-play.png';
+import appStoreLogo from '@/images/app-store.png';
+
+import VSvg from '@/ui/VSvg';
 
 import classes from './Header.module.scss';
 
@@ -16,19 +18,7 @@ const HeaderView: React.FC<IProps> = () => {
 		<div className={classes['headerContainer']}>
 			<header className={classes['header']}>
 				<div className={classes['mobileHeadrMenu']}>
-					<svg
-						className={classes['mobileHeadrMenu__icon']}
-						viewBox="0 0 37 33"
-						width="37"
-						height="33"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M.875.833h35.25V4.75H.875V.833Zm0 13.709h35.25v3.916H.875v-3.916Zm0 13.708h35.25v3.917H.875V28.25Z"
-							fill="#232233"
-						/>
-					</svg>
+					<VSvg className={classes['mobileHeaderMenu__icon']} name="hamburgerMenu" />
 				</div>
 				<div className={classes['leftHeader']}>
 					<a className={classes['headerLogo']} href="../../pages/Main/Main.tsx">

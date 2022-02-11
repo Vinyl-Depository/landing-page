@@ -35,7 +35,7 @@ const JoinWishlistView: React.FC<IProps> = () => {
 						<button className={classes['joinWishlistForm__submit']} type="submit">
 							{t('joinWishlist.button')}
 						</button>
-						<button className={classes['joinWishlistForm__mobileSubmit']}>
+						<button className={classes['joinWishlistForm__mobileSubmit']} type="submit">
 							<VSvg name="submitButton" />
 						</button>
 					</form>

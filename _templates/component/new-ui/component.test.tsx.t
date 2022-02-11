@@ -1,7 +1,8 @@
 ---
 to: src/components/ui/V<%= h.changeCase.pascalCase(name.toLowerCase()) %>/V<%= h.changeCase.pascalCase(name.toLowerCase()) %>.test.tsx
 ---
-<% name = name.toLowerCase() %>import { render } from '@testing-library/react';
+<% name = name.toLowerCase() %>import React from 'react';
+import { render } from '@testing-library/react';
 
 import V<%= h.changeCase.pascalCase(name) %> from './V<%= h.changeCase.pascalCase(name) %>';
 

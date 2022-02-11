@@ -13,6 +13,7 @@ interface IProps {}
 
 const DoingItView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
+
 	return (
 		<div className={classes['doingItSectionContainer']}>
 			<section className={classes['doingItSection']}>
@@ -43,7 +44,7 @@ const DoingItView: React.FC<IProps> = () => {
 						<span className={classes['doingItItem__text']}>{t('doingIt.personalizedExperience.description')}</span>
 					</div>
 					<div className={classes['doingItItem']}>
-						<img className={classes['doingItItem__img']} src={sellerImg} />
+						<img className={classes['doingItItem__img']} src={sellerImg} alt="doing it - seller" />
 						<h2 className={classes['doingItItem__title']}>{t('doingIt.trustedSellers.title')}</h2>
 						<span className={classes['doingItItem__text']}>{t('doingIt.trustedSellers.description')}</span>
 					</div>

@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<title>Vinyl Depository</title>
 			</Head>
 			<Header />
-			<Component {...pageProps} />;
+			<Component {...pageProps} />
 			<Footer />
 		</>
 	);
