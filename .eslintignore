@@ -4,8 +4,8 @@ jest.setup.js
 .eslintrc.js
 .prettierrc.js
 next.config.js
+stylelint.config.js
 dist
 build
 _templates
-_app.tsx
-_document.tsx
+coverage

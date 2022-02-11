@@ -1,9 +1,14 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/display-name */
+/* eslint-disable react/function-component-definition */
+/* eslint-disable react/destructuring-assignment */
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 import '../i18n/config';
 import '../styles/custom.scss';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import Header from '@/layout/Header';
 import Footer from '@/layout/Footer';
