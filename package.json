@@ -8,9 +8,11 @@
 		"build": "next build",
 		"start": "next start -p 80",
 		"lint": "next lint",
+		"lint:fix": "next lint --fix",
 		"format": "prettier --write \"**/*.{ts,tsx,scss,js,json}\"",
 		"type-check": "tsc --noEmit",
-		"stylelint": "stylelint src/**/*.scss --fix",
+		"stylelint": "stylelint src/**/*.scss",
+		"stylelint:fix": "stylelint src/**/*.scss --fix",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:cov": "jest --coverage",
@@ -21,9 +23,8 @@
 		"template:ui": "hygen component new-ui"
 	},
 	"lint-staged": {
-		"*.{ts,tsx}": ["tsc --noEmit", "jest --coverage --findRelatedTests"],
-		"*.{ts,tsx,js}": "eslint --fix",
-		"*.scss": "stylelint --fix",
+		"src/**/*.{ts,tsx}": ["tsc --noEmit", "eslint --fix", "jest --coverage --findRelatedTests"],
+		"src/**/*.scss": "stylelint --fix",
 		"*.{ts,tsx,scss,js,json}": "prettier --write"
 	},
 	"config": {
