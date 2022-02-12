@@ -1,15 +1,17 @@
+@use 'sass:map';
+
 @import '../../../styles/variables.scss';
 
 .footer {
-	padding: 5px map-get($sizes, minimal-padding);
-	background-color: #0b0d17;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 5px map.get($sizes, minimal-padding);
+	background-color: #0b0d17;
 
 	&__logo {
-		margin-left: 100px;
 		height: 56px;
+		margin-left: 100px;
 		object-fit: contain;
 	}
 
@@ -18,7 +20,7 @@
 		align-items: center;
 
 		&__text {
-			font-family: 'Inter';
+			font-family: Inter, sans-serif;
 			font-size: 1.2rem;
 			color: #d9dbe1;
 
@@ -31,20 +33,21 @@
 
 @media (max-width: 850px) {
 	.footer {
-		padding: 20px 0;
 		justify-content: none;
+		padding: 20px 0;
 
 		&__logo {
 			margin: 0 20px;
 		}
 	}
+
 	.footerText {
-		margin: 0 20px 0 0;
 		flex-direction: column;
+		margin: 0 20px 0 0;
 
 		&__text {
 			&--withMargin {
-				margin: 0px;
+				margin: 0;
 			}
 		}
 	}

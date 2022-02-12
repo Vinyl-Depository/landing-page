@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 @import '../../../../styles/variables.scss';
 
 .carousel {
@@ -6,18 +8,18 @@
 
 @media (max-width: 500px) {
 	.carousel {
-		margin-top: 30px;
 		display: flex;
 		order: 4;
-		padding: 0 map-get($sizes, minimal-padding);
+		padding: 0 map.get($sizes, minimal-padding);
+		margin-top: 30px;
 	}
 
 	.indicator {
-		height: 16px;
 		width: 16px;
-		border-radius: 50%;
-		border: 2px solid #a1a7d4;
+		height: 16px;
 		margin-inline-start: 20px;
+		border: 2px solid #a1a7d4;
+		border-radius: 50%;
 
 		&--selected {
 			background-color: #e8ebff;
@@ -25,14 +27,14 @@
 	}
 
 	.arrow {
-		margin: 0 10px;
-		cursor: pointer;
-		fill: #595d8b;
-		height: 53px;
-		width: auto;
 		position: absolute;
 		top: 70px;
 		z-index: 1;
+		width: auto;
+		height: 53px;
+		margin: 0 10px;
+		cursor: pointer;
+		fill: #595d8b;
 
 		&--prev {
 			transform: rotate(180deg);

@@ -1,15 +1,17 @@
+@use 'sass:map';
+
 @import '../../../styles/variables.scss';
 
 .headerContainer {
-	padding: 0 map-get($sizes, minimal-padding);
+	padding: 0 map.get($sizes, minimal-padding);
 	border-bottom: 1px solid #dddbdb;
 
 	.header {
-		margin: 0 auto;
-		max-width: map-get($sizes, main-web-width);
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		justify-content: space-between;
+		max-width: map.get($sizes, main-web-width);
+		margin: 0 auto;
 
 		.mobileHeadrMenu {
 			display: none;
@@ -25,10 +27,10 @@
 			align-items: center;
 
 			&__text {
-				font-weight: 700;
+				font-family: Inter, sans-serif;
 				font-size: 1.8rem;
-				font-family: 'Inter';
-				color: map-get($colors, text-color);
+				font-weight: 700;
+				color: map.get($colors, text-color);
 				white-space: nowrap;
 			}
 
@@ -53,10 +55,10 @@
 
 		.headerContact {
 			margin-left: 30px;
-			text-decoration: none;
-			font-weight: 500;
 			font-size: 1.4rem;
-			color: map-get($colors, text-color);
+			font-weight: 500;
+			color: map.get($colors, text-color);
+			text-decoration: none;
 			white-space: nowrap;
 		}
 	}
@@ -64,19 +66,19 @@
 
 @media (max-width: 850px) {
 	.headerContainer {
-		border-bottom-color: transparent;
 		padding-top: 10px;
+		border-bottom-color: transparent;
 
 		.header {
-			max-width: map-get($sizes, ipad-width);
+			max-width: map.get($sizes, ipad-width);
 
 			.mobileHeadrMenu {
 				display: block;
 				width: 145px;
 
 				&__icon {
-					height: 30px;
 					width: auto;
+					height: 30px;
 				}
 			}
 
@@ -89,7 +91,7 @@
 
 				.rightHeaderButton {
 					&--android {
-						margin: 0 0 5px 0;
+						margin: 0 0 5px;
 					}
 
 					&__img {
@@ -114,14 +116,14 @@
 @media (max-width: 500px) {
 	.headerContainer {
 		.header {
-			max-width: map-get($sizes, main-mobile-width);
+			max-width: map.get($sizes, main-mobile-width);
 
 			.mobileHeadrMenu {
 				width: 72px;
 
 				&__icon {
-					height: 16px;
 					width: auto;
+					height: 16px;
 				}
 			}
 

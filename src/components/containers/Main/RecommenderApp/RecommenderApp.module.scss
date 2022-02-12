@@ -1,30 +1,32 @@
+@use 'sass:map';
+
 @import '../../../../styles/variables.scss';
 
 .recommenderAppSection {
+	padding: 40px map.get($sizes, minimal-padding);
 	margin-top: 100px;
-	padding: 40px map-get($sizes, minimal-padding);
 	background-color: #afb3da;
 
 	.recommenderAppSectionInner {
-		max-width: map-get($sizes, main-web-width);
-		margin: 0 auto;
 		display: flex;
+		max-width: map.get($sizes, main-web-width);
+		margin: 0 auto;
 
 		&__firstPhone {
-			height: 450px;
-			object-fit: contain;
 			position: relative;
 			bottom: 80px;
+			height: 450px;
 			margin: 0 20px;
 			border-radius: 40px;
+			object-fit: contain;
 		}
 
 		&__secondPhone {
-			height: 450px;
-			object-fit: contain;
 			position: relative;
 			top: 80px;
+			height: 450px;
 			border-radius: 40px;
+			object-fit: contain;
 		}
 	}
 
@@ -37,25 +39,25 @@
 		flex-direction: column;
 
 		&__title {
-			font-weight: 800;
+			font-family: Inter, sans-serif;
 			font-size: 4.8rem;
-			font-family: 'Inter';
-			color: map-get($colors, text-color);
+			font-weight: 800;
+			color: map.get($colors, text-color);
 		}
 
 		&__text {
 			margin: 12px 0;
+			font-family: Inter, sans-serif;
 			font-size: 1.8rem;
-			font-family: 'Inter';
-			color: map-get($colors, text-color);
 			line-height: 32px;
+			color: map.get($colors, text-color);
 		}
 
 		&__getAppText {
-			font-weight: 500;
+			font-family: Inter, sans-serif;
 			font-size: 1.8rem;
-			font-family: 'Inter';
-			color: map-get($colors, text-color);
+			font-weight: 500;
+			color: map.get($colors, text-color);
 		}
 	}
 
@@ -90,13 +92,13 @@
 
 @media (max-width: 850px) {
 	.recommenderAppSection {
-		width: 100%;
-		padding: 40px 40px 30px 40px;
 		display: flex;
+		width: 100%;
+		padding: 40px 40px 30px;
 
 		.recommenderAppSectionInner {
-			max-width: map-get($sizes, ipad-width);
 			justify-content: space-between;
+			max-width: map.get($sizes, ipad-width);
 
 			&__firstPhone {
 				display: none;
@@ -108,11 +110,11 @@
 		}
 
 		&__groupPhone {
-			display: block;
-			height: 470px;
 			position: relative;
 			bottom: 70px;
 			left: 60px;
+			display: block;
+			height: 470px;
 			margin: 0 10px;
 		}
 
@@ -152,36 +154,36 @@
 		}
 
 		.getTheAppContainer__logo {
-			margin-top: 30px;
-			border-radius: 8px;
 			position: relative;
 			left: 50%;
+			margin-top: 30px;
+			border-radius: 8px;
 		}
 	}
 }
 
 @media (max-width: 500px) {
 	.recommenderAppSection {
-		order: 3;
-		margin-top: 50px;
-		padding: 0;
 		flex-direction: column-reverse;
 		align-items: center;
+		order: 3;
+		padding: 0;
+		margin-top: 50px;
 
 		.recommenderAppSectionInner {
-			max-width: map-get($sizes, main-mobile-width);
 			flex-direction: column;
 			justify-content: center;
 			order: 0;
+			max-width: map.get($sizes, main-mobile-width);
 		}
 
 		&__groupPhone {
-			left: 0;
 			bottom: 40px;
-			margin: 0;
-			padding: 0;
+			left: 0;
 			display: block;
 			width: 486px;
+			padding: 0;
+			margin: 0;
 			object-fit: contain;
 		}
 
@@ -203,14 +205,15 @@
 			order: 2;
 
 			&__logo {
-				order: 3;
 				left: 0;
+				order: 3;
 				margin-bottom: 15px;
 			}
 
 			.getTheAppContainerButton {
 				justify-content: space-between;
 				width: 100%;
+
 				&__img {
 					width: 100%;
 					height: 55px;
