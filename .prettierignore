@@ -4,3 +4,4 @@ dist
 public
 coverage
 .next
+package.json

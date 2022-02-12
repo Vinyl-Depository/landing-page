@@ -20,6 +20,12 @@
 		"template:layout": "hygen component new-layout",
 		"template:ui": "hygen component new-ui"
 	},
+	"lint-staged": {
+		"*.{ts,tsx}": ["tsc --noEmit", "jest --coverage --findRelatedTests", "git add"],
+		"*.{ts,tsx,js}": ["eslint --fix", "git add"],
+		"*.scss": ["stylelint --fix", "git add"],
+		"*.{ts,tsx,scss,js,json}": ["prettier --write", "git add"]
+	},
 	"config": {
 		"commitizen": {
 			"path": "git-cz"
@@ -63,6 +69,7 @@
 		"husky": "^7.0.4",
 		"hygen": "^6.1.0",
 		"jest": "^27.4.7",
+		"lint-staged": "^12.3.3",
 		"prettier": "^2.5.1",
 		"sass": "^1.49.7",
 		"stylelint": "^14.5.0",
