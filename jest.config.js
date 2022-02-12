@@ -7,10 +7,10 @@ const customJestConfig = {
 	coveragePathIgnorePatterns: ['<rootDir>/src/pages/', '<rootDir>/src/i18n/', '<rootDir>/src/icons.ts'],
 	coverageThreshold: {
 		global: {
-			branches: 30,
-			functions: 30,
-			lines: 30,
-			statements: 30,
+			branches: 90,
+			functions: 90,
+			lines: 90,
+			statements: 90,
 		},
 	},
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
