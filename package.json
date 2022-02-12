@@ -23,7 +23,7 @@
 		"template:ui": "hygen component new-ui"
 	},
 	"lint-staged": {
-		"src/**/*.{ts,tsx}": ["eslint --fix", "jest -c jest.config.js --bail --coverage --findRelatedTests"],
+		"src/**/*.{ts,tsx}": ["eslint --fix", "jest --bail --coverage --findRelatedTests || exit 0"],
 		"src/**/*.scss": "stylelint --fix",
 		"*.{ts,tsx,scss,js,json}": "prettier --write"
 	},
