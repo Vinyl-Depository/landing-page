@@ -80,13 +80,15 @@
 			}
 		}
 
-		.doingItItem__title {
-			font-size: 2rem;
-		}
+		.doingItItem {
+			&__title {
+				font-size: 2rem;
+			}
 
-		.doingItItem__text {
-			font-size: 1.3rem;
-			line-height: 21px;
+			&__text {
+				font-size: 1.3rem;
+				line-height: 21px;
+			}
 		}
 	}
 }

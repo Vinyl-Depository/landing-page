@@ -138,6 +138,13 @@
 		.getTheAppContainer {
 			flex-direction: column;
 
+			&__logo {
+				position: relative;
+				left: 50%;
+				margin-top: 30px;
+				border-radius: 8px;
+			}
+
 			.getTheAppLinksContainer {
 				display: flex;
 				justify-content: space-between;
@@ -151,13 +158,6 @@
 					margin: 0 0 0 10px;
 				}
 			}
-		}
-
-		.getTheAppContainer__logo {
-			position: relative;
-			left: 50%;
-			margin-top: 30px;
-			border-radius: 8px;
 		}
 	}
 }
