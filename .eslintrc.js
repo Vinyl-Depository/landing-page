@@ -23,7 +23,7 @@ module.exports = {
 	plugins: ['react', '@typescript-eslint', 'unused-imports', 'import', 'react-hooks', 'import'],
 	rules: {
 		'indent': ['error', 'tab'],
-		'quotes': ['error', 'single'],
+		'quotes': ['error', 'single', { avoidEscape: true }],
 		'semi': ['error', 'always'],
 		'no-empty': [
 			'error',

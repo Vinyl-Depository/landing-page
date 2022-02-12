@@ -21,6 +21,7 @@ const customJestConfig = {
 		'^@/utils/(.*)$': '<rootDir>/src/utils/$1',
 		'^@/images/(.*)$': '<rootDir>/public/images/$1',
 		'^@/models/(.*)$': '<rootDir>/src/models/$1',
+		'^@/data/(.*)$': '<rootDir>/src/data/$1',
 	},
 	moduleDirectories: ['node_modules', '<rootDir>/'],
 	testEnvironment: 'jest-environment-jsdom',

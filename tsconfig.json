@@ -34,7 +34,8 @@
 			"@/ui/*": ["src/components/ui/*"],
 			"@/utils/*": ["src/utils/*"],
 			"@/images/*": ["public/images/*"],
-			"@/models/*": ["src/models/*"]
+			"@/models/*": ["src/models/*"],
+			"@/data/*": ["src/data/*"]
 		},
 		"typeRoots": ["./node_modules/@types", "./@types"]
 	},
