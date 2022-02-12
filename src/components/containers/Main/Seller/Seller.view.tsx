@@ -22,13 +22,29 @@ const SellerView: React.FC<IProps> = () => {
 					</p>
 				</div>
 				<form className={classes['sellersSectionForm']}>
-					<label className={classes['sellersSectionForm__label']}>{t('seller.form.emailInput')}</label>
-					<input className={classes['sellersSectionForm__input']} type="email" placeholder="Your email address" />
-					<label className={classes['sellersSectionForm__label']}>{t('seller.form.nameInput')}</label>
-					<input className={classes['sellersSectionForm__input']} type="text" placeholder="Name / Store name" />
-					<label className={classes['sellersSectionForm__label']}>{t('seller.form.countryTitle')}</label>
+					<label className={classes['sellersSectionForm__label']}>
+						{t('seller.form.emailInput')}
+					</label>
+					<input
+						className={classes['sellersSectionForm__input']}
+						type="email"
+						placeholder="Your email address"
+					/>
+					<label className={classes['sellersSectionForm__label']}>
+						{t('seller.form.nameInput')}
+					</label>
+					<input
+						className={classes['sellersSectionForm__input']}
+						type="text"
+						placeholder="Name / Store name"
+					/>
+					<label className={classes['sellersSectionForm__label']}>
+						{t('seller.form.countryTitle')}
+					</label>
 					<div className={classes['sellersSectionFormSelect']}>
-						<span className={classes['sellersSectionFormSelect__text']}>{t('seller.form.countryInput')}</span>
+						<span className={classes['sellersSectionFormSelect__text']}>
+							{t('seller.form.countryInput')}
+						</span>
 						<VSvg name="arrowDown" className={classes['sellersSectionFormSelect__icon']} />
 					</div>
 					<button className={classes['sellersSectionForm__submit']} type="submit">

@@ -12,7 +12,9 @@ interface IProps {
 }
 
 const VSvg: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
-	return <VSvgView style={props.style} className={props.className} name={props.name} onClick={props.onClick} />;
+	return (
+		<VSvgView style={props.style} className={props.className} name={props.name} onClick={props.onClick} />
+	);
 };
 
 VSvg.displayName = 'VSvg';

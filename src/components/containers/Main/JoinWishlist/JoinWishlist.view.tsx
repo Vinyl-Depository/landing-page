@@ -17,8 +17,16 @@ const JoinWishlistView: React.FC<IProps> = () => {
 		<div className={classes['joinWishlistSectionContainer']}>
 			<section className={classes['joinWishlistSection']}>
 				<div className={classes['joinWishlistSectionLogos']}>
-					<img className={classes['joinWishlistSectionLogos__logo']} src={vinylLogo} alt="Join whistlist" />
-					<img className={classes['joinWishlistSectionLogos__logo']} src={emailLogo} alt="Join whistlist emails" />
+					<img
+						className={classes['joinWishlistSectionLogos__logo']}
+						src={vinylLogo}
+						alt="Join whistlist"
+					/>
+					<img
+						className={classes['joinWishlistSectionLogos__logo']}
+						src={emailLogo}
+						alt="Join whistlist emails"
+					/>
 				</div>
 				<div className={classes['joinWishlistText']}>
 					<h2 className={classes['joinWishlistHeader']}>

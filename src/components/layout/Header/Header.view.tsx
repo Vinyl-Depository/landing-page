@@ -32,10 +32,18 @@ const HeaderView: React.FC<IProps> = () => {
 						className={`${classes['rightHeaderButton']} ${classes['rightHeaderButton--android']}`}
 						href="../../pages/Main/Main.tsx"
 					>
-						<img className={classes['rightHeaderButton__img']} src={playStoreLogo} alt="android button" />
+						<img
+							className={classes['rightHeaderButton__img']}
+							src={playStoreLogo}
+							alt="android button"
+						/>
 					</a>
 					<a className={classes['rightHeaderButton']} href="../../pages/Main/Main.tsx">
-						<img className={classes['rightHeaderButton__img']} src={appStoreLogo} alt="apple button" />
+						<img
+							className={classes['rightHeaderButton__img']}
+							src={appStoreLogo}
+							alt="apple button"
+						/>
 					</a>
 				</div>
 			</header>

@@ -28,7 +28,8 @@ const en = {
 		},
 		pileUp: {
 			title: 'Pile up, listen and choose',
-			description: 'Stack up the records of your choice - listen, enjoy, share, and get them straight to your mailbox.',
+			description:
+				'Stack up the records of your choice - listen, enjoy, share, and get them straight to your mailbox.',
 		},
 		personalizedExperience: {
 			title: 'Personalized experience',

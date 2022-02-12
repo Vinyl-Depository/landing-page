@@ -24,12 +24,29 @@ interface IProps {
 const DoingItCarouselView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const { t } = useTranslation();
 
-	const renderIndicator = (_: (e: React.MouseEvent | React.KeyboardEvent) => void, isSelected: boolean, index: number) => {
+	const renderIndicator = (
+		_: (e: React.MouseEvent | React.KeyboardEvent) => void,
+		isSelected: boolean,
+		index: number,
+	) => {
 		if (isSelected) {
-			return <button className={concatClasses(classes, 'indicator', 'indicator--selected')} type="button" role="button" />;
+			return (
+				<button
+					className={concatClasses(classes, 'indicator', 'indicator--selected')}
+					type="button"
+					role="button"
+				/>
+			);
 		}
 
-		return <button className={classes['indicator']} type="button" role="button" onClick={() => props.setSelectedItemIndex(index)} />;
+		return (
+			<button
+				className={classes['indicator']}
+				type="button"
+				role="button"
+				onClick={() => props.setSelectedItemIndex(index)}
+			/>
+		);
 	};
 
 	const renderArrowPrev = (clickHandler: () => void, hasPrev: boolean) => {
@@ -37,7 +54,13 @@ const DoingItCarouselView: React.FC<IProps> = (props: React.PropsWithChildren<IP
 			return null;
 		}
 
-		return <VSvg className={concatClasses(classes, 'arrow', 'arrow--prev')} name="carouselArrow" onClick={clickHandler} />;
+		return (
+			<VSvg
+				className={concatClasses(classes, 'arrow', 'arrow--prev')}
+				name="carouselArrow"
+				onClick={clickHandler}
+			/>
+		);
 	};
 
 	const renderArrowNext = (clickHandler: () => void, hasNext: boolean) => {
@@ -45,7 +68,13 @@ const DoingItCarouselView: React.FC<IProps> = (props: React.PropsWithChildren<IP
 			return null;
 		}
 
-		return <VSvg className={concatClasses(classes, 'arrow', 'arrow--next')} name="carouselArrow" onClick={clickHandler} />;
+		return (
+			<VSvg
+				className={concatClasses(classes, 'arrow', 'arrow--next')}
+				name="carouselArrow"
+				onClick={clickHandler}
+			/>
+		);
 	};
 
 	return (

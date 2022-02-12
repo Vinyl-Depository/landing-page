@@ -20,8 +20,18 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 		<div className={classes['introSectionContainer']}>
 			<section className={classes['introSection']}>
 				<h1 className={classes['introSection__header']}>{t('intro.mainHeader')}</h1>
-				<img className={classes['introSection__ipadImg']} src={introImagIpadResponsive} alt="Intro image" loading="lazy" />
-				<img className={classes['introSection__mobileImg']} src={introImgMobileResponsive} alt="Intro image" loading="lazy" />
+				<img
+					className={classes['introSection__ipadImg']}
+					src={introImagIpadResponsive}
+					alt="Intro image"
+					loading="lazy"
+				/>
+				<img
+					className={classes['introSection__mobileImg']}
+					src={introImgMobileResponsive}
+					alt="Intro image"
+					loading="lazy"
+				/>
 
 				<div className={classes['introWishlistContainer']}>
 					<p className={classes['introWishlistTextContainer']}>
@@ -34,7 +44,9 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 							</span>
 							{t('intro.waitListSecondPartDescription')}
 						</span>
-						<span className={classes['introWishlistTextContainer__sub']}>{t('intro.waitListDescriptionSub')}</span>
+						<span className={classes['introWishlistTextContainer__sub']}>
+							{t('intro.waitListDescriptionSub')}
+						</span>
 					</p>
 					<form className={classes['introWishlistFormContainer']}>
 						<input
@@ -51,7 +63,12 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					</form>
 				</div>
 
-				<img className={classes['introSection__webImg']} src={introImgWebResponsive} alt="Intro image" loading="lazy" />
+				<img
+					className={classes['introSection__webImg']}
+					src={introImgWebResponsive}
+					alt="Intro image"
+					loading="lazy"
+				/>
 			</section>
 		</div>
 	);

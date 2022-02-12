@@ -29,24 +29,46 @@ const DoingItView: React.FC<IProps> = () => {
 					<div className={classes['doingItItem']}>
 						<img className={classes['doingItItem__img']} src={searchImg} alt="doing it search" />
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.search.title')}</h4>
-						<span className={classes['doingItItem__text']}>{t('doingIt.search.description')}</span>
+						<span className={classes['doingItItem__text']}>
+							{t('doingIt.search.description')}
+						</span>
 					</div>
 					<div className={classes['doingItItem']}>
-						<img className={classes['doingItItem__img']} src={pileUpImg} alt="doing it pilu up and choose" />
+						<img
+							className={classes['doingItItem__img']}
+							src={pileUpImg}
+							alt="doing it pilu up and choose"
+						/>
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.pileUp.title')}</h4>
-						<span className={classes['doingItItem__text']}>{t('doingIt.pileUp.description')}</span>
+						<span className={classes['doingItItem__text']}>
+							{t('doingIt.pileUp.description')}
+						</span>
 					</div>
 				</div>
 				<div className={classes['doingItSecondRow']}>
 					<div className={`${classes['doingItItem']} ${classes['doingItItem--withMargin']}`}>
-						<img className={classes['doingItItem__img']} src={personalizedImg} alt="doing it personalized" />
-						<h4 className={classes['doingItItem__title']}>{t('doingIt.personalizedExperience.title')}</h4>
-						<span className={classes['doingItItem__text']}>{t('doingIt.personalizedExperience.description')}</span>
+						<img
+							className={classes['doingItItem__img']}
+							src={personalizedImg}
+							alt="doing it personalized"
+						/>
+						<h4 className={classes['doingItItem__title']}>
+							{t('doingIt.personalizedExperience.title')}
+						</h4>
+						<span className={classes['doingItItem__text']}>
+							{t('doingIt.personalizedExperience.description')}
+						</span>
 					</div>
 					<div className={classes['doingItItem']}>
-						<img className={classes['doingItItem__img']} src={sellerImg} alt="doing it - seller" />
+						<img
+							className={classes['doingItItem__img']}
+							src={sellerImg}
+							alt="doing it - seller"
+						/>
 						<h2 className={classes['doingItItem__title']}>{t('doingIt.trustedSellers.title')}</h2>
-						<span className={classes['doingItItem__text']}>{t('doingIt.trustedSellers.description')}</span>
+						<span className={classes['doingItItem__text']}>
+							{t('doingIt.trustedSellers.description')}
+						</span>
 					</div>
 				</div>
 			</section>

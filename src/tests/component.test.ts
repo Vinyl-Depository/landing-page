@@ -26,7 +26,11 @@ describe('[utils/component]', () => {
 	});
 
 	it('concatClasses | Function should return correct result when provide multiple arguments', () => {
-		const result = concatClasses({ testKey: 'testValue', testKeyMore: 'testValueMore' }, 'testKey', 'testKeyMore');
+		const result = concatClasses(
+			{ testKey: 'testValue', testKeyMore: 'testValueMore' },
+			'testKey',
+			'testKeyMore',
+		);
 
 		expect(result === 'testValue testValueMore').toEqual(true);
 	});

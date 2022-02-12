@@ -8,6 +8,7 @@
 		"build": "next build",
 		"start": "next start -p 80",
 		"lint": "next lint",
+		"format": "prettier --write \"src/**/*.{ts,tsx}\"",
 		"type-check": "tsc --noEmit",
 		"stylelint": "stylelint src/**/*.scss --fix",
 		"test": "jest",
