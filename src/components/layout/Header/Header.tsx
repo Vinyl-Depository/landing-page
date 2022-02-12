@@ -4,11 +4,11 @@ import HeaderView from './Header.view';
 
 interface IProps {}
 
-const HeaderOne: React.FC<IProps> = () => {
+const Header: React.FC<IProps> = () => {
 	return <HeaderView />;
 };
 
-HeaderOne.displayName = 'HeaderOne';
-HeaderOne.defaultProps = {};
+Header.displayName = 'HeaderOne';
+Header.defaultProps = {};
 
-export default React.memo(HeaderOne);
+export default React.memo(Header);
