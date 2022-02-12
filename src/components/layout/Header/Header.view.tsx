@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
 import brandLogo from '@/images/brand-logo.png';
@@ -6,6 +8,8 @@ import playStoreLogo from '@/images/google-play.png';
 import appStoreLogo from '@/images/app-store.png';
 
 import VSvg from '@/ui/VSvg';
+
+import { concatClasses } from '@/utils/component';
 
 import classes from './Header.module.scss';
 
@@ -21,30 +25,49 @@ const HeaderView: React.FC<IProps> = () => {
 					<VSvg className={classes['mobileHeaderMenu__icon']} name="hamburgerMenu" />
 				</div>
 				<div className={classes['leftHeader']}>
-					<a className={classes['headerLogo']} href="../../pages/Main/Main.tsx">
-						<img className={classes['headerLogo__img']} src={brandLogo} alt="Vinyl Depository" />
-					</a>
+					<Link href="/" passHref>
+						<a className={classes['leftHeader__logo']}>
+							<Image
+								src={brandLogo}
+								alt="Vinyl Depository"
+								placeholder="blur"
+								layout="fill"
+								objectFit="contain"
+							/>
+						</a>
+					</Link>
 					<a className={classes['headerContact']}>{t('header.contactUs')}</a>
 				</div>
 				<div className={classes['rightHeader']}>
 					<p className={classes['rightHeader__text']}>{t('header.rightHeaderText')}</p>
-					<a
-						className={`${classes['rightHeaderButton']} ${classes['rightHeaderButton--android']}`}
-						href="../../pages/Main/Main.tsx"
-					>
-						<img
-							className={classes['rightHeaderButton__img']}
-							src={playStoreLogo}
-							alt="android button"
-						/>
-					</a>
-					<a className={classes['rightHeaderButton']} href="../../pages/Main/Main.tsx">
-						<img
-							className={classes['rightHeaderButton__img']}
-							src={appStoreLogo}
-							alt="apple button"
-						/>
-					</a>
+					<Link href="yazif.com" passHref>
+						<a
+							className={concatClasses(
+								classes,
+								'rightHeader__button',
+								'rightHeader__button--android',
+							)}
+						>
+							<Image
+								src={playStoreLogo}
+								alt="android button"
+								placeholder="blur"
+								layout="fill"
+								objectFit="contain"
+							/>
+						</a>
+					</Link>
+					<Link href="yazif.com" passHref>
+						<a className={classes['rightHeader__button']}>
+							<Image
+								src={appStoreLogo}
+								alt="apple button"
+								placeholder="blur"
+								layout="fill"
+								objectFit="contain"
+							/>
+						</a>
+					</Link>
 				</div>
 			</header>
 		</div>

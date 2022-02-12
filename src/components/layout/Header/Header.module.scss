@@ -20,6 +20,12 @@
 		.leftHeader {
 			display: flex;
 			align-items: center;
+
+			&__logo {
+				position: relative;
+				width: 150px;
+				height: 64px;
+			}
 		}
 
 		.rightHeader {
@@ -34,22 +40,14 @@
 				white-space: nowrap;
 			}
 
-			.rightHeaderButton {
+			&__button {
+				position: relative;
+				width: 135px;
+				height: 45px;
+
 				&--android {
 					margin: 0 10px;
 				}
-
-				&__img {
-					object-fit: contain;
-					width: 135px;
-				}
-			}
-		}
-
-		.headerLogo {
-			&__img {
-				height: 64px;
-				object-fit: contain;
 			}
 		}
 
@@ -82,6 +80,13 @@
 				}
 			}
 
+			.leftHeader {
+				&__logo {
+					width: 180px;
+					height: 77px;
+				}
+			}
+
 			.rightHeader {
 				flex-direction: column;
 
@@ -89,25 +94,18 @@
 					display: none;
 				}
 
-				.rightHeaderButton {
+				&__button {
+					width: 145px;
+					height: 45px;
+
 					&--android {
 						margin: 0 0 5px;
-					}
-
-					&__img {
-						width: 145px;
 					}
 				}
 			}
 
 			.headerContact {
 				display: none;
-			}
-
-			.headerLogo {
-				&__img {
-					height: 77px;
-				}
 			}
 		}
 	}
@@ -127,19 +125,18 @@
 				}
 			}
 
-			.rightHeader {
-				.rightHeaderButton {
-					&__img {
-						width: 85px;
-					}
+			.leftHeader {
+				&__logo {
+					width: 122px;
+					height: 55px;
 				}
 			}
-		}
 
-		.headerLogo {
-			&__img {
-				width: 122px;
-				object-fit: contain;
+			.rightHeader {
+				&__button {
+					width: 85px;
+					height: 28px;
+				}
 			}
 		}
 	}
