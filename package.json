@@ -21,10 +21,10 @@
 		"template:ui": "hygen component new-ui"
 	},
 	"lint-staged": {
-		"*.{ts,tsx}": ["tsc --noEmit", "jest --coverage --findRelatedTests", "git add"],
-		"*.{ts,tsx,js}": ["eslint --fix", "git add"],
-		"*.scss": ["stylelint --fix", "git add"],
-		"*.{ts,tsx,scss,js,json}": ["prettier --write", "git add"]
+		"*.{ts,tsx}": ["tsc --noEmit", "jest --coverage --findRelatedTests"],
+		"*.{ts,tsx,js}": "eslint --fix",
+		"*.scss": "stylelint --fix",
+		"*.{ts,tsx,scss,js,json}": "prettier --write"
 	},
 	"config": {
 		"commitizen": {
