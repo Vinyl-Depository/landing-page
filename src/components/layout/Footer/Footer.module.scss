@@ -10,9 +10,10 @@
 	background-color: #0b0d17;
 
 	&__logo {
+		position: relative;
+		width: 140px;
 		height: 56px;
 		margin-left: 100px;
-		object-fit: contain;
 	}
 
 	.footerText {
