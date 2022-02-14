@@ -25,9 +25,10 @@ const TypicalMarketplacesView: React.FC<IProps> = () => {
 					<div className={classes['typicalMarketplacesTextContainer__img']}>
 						<Image
 							src={marketplaceImg}
-							alt="marketpalce"
+							alt="marketplace"
 							placeholder="blur"
 							objectFit="contain"
+							layout="responsive"
 						/>
 					</div>
 					<div className={classes['typicalMarketplacesTextContainer__mobileImg']}>

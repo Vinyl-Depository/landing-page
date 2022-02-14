@@ -27,6 +27,7 @@ const DoingItView: React.FC<IProps> = () => {
 								alt="doing it browse"
 								placeholder="blur"
 								objectFit="contain"
+								layout="fill"
 							/>
 						</div>
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.browse.title')}</h4>

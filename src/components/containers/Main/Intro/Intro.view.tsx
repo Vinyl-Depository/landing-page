@@ -27,7 +27,6 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 						alt="Intro image"
 						loading="lazy"
 						placeholder="blur"
-						// layout="fill" TODO: fill disable the "display:none for some reason"
 						objectFit="contain"
 					/>
 				</div>
