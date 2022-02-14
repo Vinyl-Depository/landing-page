@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { useTranslation, Trans } from 'react-i18next';
 
 import browseImg from '@/images/doing-it-browse.png';
@@ -20,25 +21,42 @@ const DoingItView: React.FC<IProps> = () => {
 				<h1 className={classes['doingItSection__header']}>{t('doingIt.header')}</h1>
 				<div className={classes['doingItFirstRow']}>
 					<div className={classes['doingItItem']}>
-						<img className={classes['doingItItem__img']} src={browseImg} alt="doing it browse" />
+						<div className={classes['doingItItem__img']}>
+							<Image
+								src={browseImg}
+								alt="doing it browse"
+								placeholder="blur"
+								objectFit="contain"
+							/>
+						</div>
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.browse.title')}</h4>
 						<span className={classes['doingItItem__text']}>
 							<Trans i18nKey="doingIt.browse.description" />
 						</span>
 					</div>
 					<div className={classes['doingItItem']}>
-						<img className={classes['doingItItem__img']} src={searchImg} alt="doing it search" />
+						<div className={classes['doingItItem__img']}>
+							<Image
+								src={searchImg}
+								alt="doing it search"
+								placeholder="blur"
+								objectFit="contain"
+							/>
+						</div>
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.search.title')}</h4>
 						<span className={classes['doingItItem__text']}>
 							{t('doingIt.search.description')}
 						</span>
 					</div>
 					<div className={classes['doingItItem']}>
-						<img
-							className={classes['doingItItem__img']}
-							src={pileUpImg}
-							alt="doing it pilu up and choose"
-						/>
+						<div className={classes['doingItItem__img']}>
+							<Image
+								src={pileUpImg}
+								alt="doing it pilu up and choose"
+								placeholder="blur"
+								objectFit="contain"
+							/>
+						</div>
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.pileUp.title')}</h4>
 						<span className={classes['doingItItem__text']}>
 							{t('doingIt.pileUp.description')}
@@ -47,11 +65,14 @@ const DoingItView: React.FC<IProps> = () => {
 				</div>
 				<div className={classes['doingItSecondRow']}>
 					<div className={`${classes['doingItItem']} ${classes['doingItItem--withMargin']}`}>
-						<img
-							className={classes['doingItItem__img']}
-							src={personalizedImg}
-							alt="doing it personalized"
-						/>
+						<div className={classes['doingItItem__img']}>
+							<Image
+								src={personalizedImg}
+								alt="doing it personalized"
+								placeholder="blur"
+								objectFit="contain"
+							/>
+						</div>
 						<h4 className={classes['doingItItem__title']}>
 							{t('doingIt.personalizedExperience.title')}
 						</h4>
@@ -60,11 +81,14 @@ const DoingItView: React.FC<IProps> = () => {
 						</span>
 					</div>
 					<div className={classes['doingItItem']}>
-						<img
-							className={classes['doingItItem__img']}
-							src={sellerImg}
-							alt="doing it - seller"
-						/>
+						<div className={classes['doingItItem__img']}>
+							<Image
+								src={sellerImg}
+								alt="doing it - seller"
+								placeholder="blur"
+								objectFit="contain"
+							/>
+						</div>
 						<h2 className={classes['doingItItem__title']}>{t('doingIt.trustedSellers.title')}</h2>
 						<span className={classes['doingItItem__text']}>
 							{t('doingIt.trustedSellers.description')}

@@ -35,7 +35,6 @@
 
 			&__img {
 				width: 360px;
-				object-fit: contain;
 			}
 
 			&__mobileImg {
@@ -100,7 +99,6 @@
 				&__mobileImg {
 					display: initial;
 					width: 100%;
-					object-fit: contain;
 				}
 			}
 		}

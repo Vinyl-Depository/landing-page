@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import classes from './DoingItCarouselItem.module.scss';
 
@@ -12,7 +13,9 @@ interface IProps {
 const DoingItCarouselItemView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	return (
 		<div className={classes['container']}>
-			<img className={classes['container__img']} src={props.image} alt={props.title} />
+			<div className={classes['container__img']}>
+				<Image src={props.image} alt={props.title} placeholder="blur" objectFit="contain" />
+			</div>
 			<h4 className={classes['container__title']}>{props.title}</h4>
 			<span className={classes['container__text']}>{props.text}</span>
 		</div>

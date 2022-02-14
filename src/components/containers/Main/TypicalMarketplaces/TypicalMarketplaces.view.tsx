@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
 import marketplaceImg from '@/images/marketplace.png';
@@ -21,16 +22,22 @@ const TypicalMarketplacesView: React.FC<IProps> = () => {
 					<p className={classes['typicalMarketplacesTextContainer__text']}>
 						{t('typicalMarketplaces.description')}
 					</p>
-					<img
-						className={classes['typicalMarketplacesTextContainer__img']}
-						src={marketplaceImg}
-						alt="marketpalce"
-					/>
-					<img
-						className={classes['typicalMarketplacesTextContainer__mobileImg']}
-						src={marketplaceMobileImg}
-						alt="marketpalce"
-					/>
+					<div className={classes['typicalMarketplacesTextContainer__img']}>
+						<Image
+							src={marketplaceImg}
+							alt="marketpalce"
+							placeholder="blur"
+							objectFit="contain"
+						/>
+					</div>
+					<div className={classes['typicalMarketplacesTextContainer__mobileImg']}>
+						<Image
+							src={marketplaceMobileImg}
+							alt="marketpalce"
+							placeholder="blur"
+							objectFit="contain"
+						/>
+					</div>
 				</div>
 			</section>
 		</div>

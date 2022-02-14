@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
 import introImagIpadResponsive from '@/images/intro-logo-ipad.jpg';
@@ -20,18 +21,27 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 		<div className={classes['introSectionContainer']}>
 			<section className={classes['introSection']}>
 				<h1 className={classes['introSection__header']}>{t('intro.mainHeader')}</h1>
-				<img
-					className={classes['introSection__ipadImg']}
-					src={introImagIpadResponsive}
-					alt="Intro image"
-					loading="lazy"
-				/>
-				<img
-					className={classes['introSection__mobileImg']}
-					src={introImgMobileResponsive}
-					alt="Intro image"
-					loading="lazy"
-				/>
+				<div className={classes['introSection__ipadImg']}>
+					<Image
+						src={introImagIpadResponsive}
+						alt="Intro image"
+						loading="lazy"
+						placeholder="blur"
+						// layout="fill" TODO: fill disable the "display:none for some reason"
+						objectFit="contain"
+					/>
+				</div>
+
+				<div className={classes['introSection__mobileImg']}>
+					<Image
+						src={introImgMobileResponsive}
+						alt="Intro image"
+						loading="lazy"
+						placeholder="blur"
+						// layout="fill"
+						objectFit="contain"
+					/>
+				</div>
 
 				<div className={classes['introWishlistContainer']}>
 					<p className={classes['introWishlistTextContainer']}>
@@ -62,13 +72,16 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 						</button>
 					</form>
 				</div>
-
-				<img
-					className={classes['introSection__webImg']}
-					src={introImgWebResponsive}
-					alt="Intro image"
-					loading="lazy"
-				/>
+				<div className={classes['introSection__webImg']}>
+					<Image
+						src={introImgWebResponsive}
+						alt="Intro image"
+						loading="lazy"
+						placeholder="blur"
+						// layout="fill"
+						objectFit="contain"
+					/>
+				</div>
 			</section>
 		</div>
 	);

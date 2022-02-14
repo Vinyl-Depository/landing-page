@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Trans, useTranslation } from 'react-i18next';
 
 import vinylLogo from '@/images/join-whistlist-vinyl-logo.png';
@@ -17,16 +18,17 @@ const JoinWishlistView: React.FC<IProps> = () => {
 		<div className={classes['joinWishlistSectionContainer']}>
 			<section className={classes['joinWishlistSection']}>
 				<div className={classes['joinWishlistSectionLogos']}>
-					<img
-						className={classes['joinWishlistSectionLogos__logo']}
-						src={vinylLogo}
-						alt="Join whistlist"
-					/>
-					<img
-						className={classes['joinWishlistSectionLogos__logo']}
-						src={emailLogo}
-						alt="Join whistlist emails"
-					/>
+					<div className={classes['joinWishlistSectionLogos__logo']}>
+						<Image src={vinylLogo} alt="Join whistlist" placeholder="blur" objectFit="contain" />
+					</div>
+					<div className={classes['joinWishlistSectionLogos__logo']}>
+						<Image
+							src={emailLogo}
+							alt="Join whistlist emails"
+							placeholder="blur"
+							objectFit="contain"
+						/>
+					</div>
 				</div>
 				<div className={classes['joinWishlistText']}>
 					<h2 className={classes['joinWishlistHeader']}>
