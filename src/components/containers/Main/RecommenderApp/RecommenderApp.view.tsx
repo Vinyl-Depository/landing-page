@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { Trans, useTranslation } from 'react-i18next';
 
 import googlePlayLogo from '@/images/google-play.png';
@@ -30,47 +32,54 @@ const RecommenderAppView: React.FC<IProps> = () => {
 					</span>
 					<div className={classes['getTheAppContainer']}>
 						<div className={classes['getTheAppLinksContainer']}>
-							<a className={classes['getTheAppContainerButton']} href="index.html">
-								<img
-									className={classes['getTheAppContainerButton__img']}
-									src={googlePlayLogo}
-									alt="get on google play"
-								/>
-							</a>
-							<a
-								className={`${classes['getTheAppContainerButton']} ${classes['getTheAppContainerButton--apple']}`}
-								href="index.html"
-							>
-								<img
-									className={classes['getTheAppContainerButton__img']}
-									src={appStoreLogo}
-									alt="get on apple store"
-								/>
-							</a>
+							<Link href="/" passHref>
+								<a className={classes['getTheAppContainerButton']}>
+									<div className={classes['getTheAppContainerButton__img']}>
+										<Image
+											src={googlePlayLogo}
+											alt="get on google play"
+											placeholder="blur"
+											objectFit="contain"
+										/>
+									</div>
+								</a>
+							</Link>
+
+							<Link href="/" passHref>
+								<a
+									className={`${classes['getTheAppContainerButton']} ${classes['getTheAppContainerButton--apple']}`}
+								>
+									<div className={classes['getTheAppContainerButton__img']}>
+										<Image
+											src={appStoreLogo}
+											alt="get on apple store"
+											placeholder="blur"
+											objectFit="contain"
+										/>
+									</div>
+								</a>
+							</Link>
 						</div>
-						<img
-							className={classes['getTheAppContainer__logo']}
-							src={brandLogo}
-							alt="Vinyl Depository"
-						/>
+						<div className={classes['getTheAppContainer__logo']}>
+							<Image
+								src={brandLogo}
+								alt="Vinyl Depository"
+								placeholder="blur"
+								objectFit="contain"
+							/>
+						</div>
 					</div>
 				</div>
-				<img
-					className={classes['recommenderAppSectionInner__firstPhone']}
-					src={firstPhone}
-					alt="first phone"
-				/>
-				<img
-					className={classes['recommenderAppSectionInner__secondPhone']}
-					src={secondPhone}
-					alt="second phone"
-				/>
+				<div className={classes['recommenderAppSectionInner__firstPhone']}>
+					<Image src={firstPhone} alt="first phone" placeholder="blur" objectFit="contain" />
+				</div>
+				<div className={classes['recommenderAppSectionInner__secondPhone']}>
+					<Image src={secondPhone} alt="second phone" placeholder="blur" objectFit="contain" />
+				</div>
 			</div>
-			<img
-				className={classes['recommenderAppSection__groupPhone']}
-				src={groupPhoneIpad}
-				alt="group of phones"
-			/>
+			<div className={classes['recommenderAppSection__groupPhone']}>
+				<Image src={groupPhoneIpad} alt="group of phones" placeholder="blur" objectFit="contain" />
+			</div>
 		</section>
 	);
 };

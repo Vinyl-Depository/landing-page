@@ -42,10 +42,11 @@
 			}
 
 			&__img {
+				position: relative;
 				width: 100%;
 				height: 235px;
-				object-fit: contain;
 				object-position: bottom;
+				border: 1px solid red;
 			}
 
 			&__title {

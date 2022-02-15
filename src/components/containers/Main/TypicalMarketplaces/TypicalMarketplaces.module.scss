@@ -34,8 +34,8 @@
 			}
 
 			&__img {
-				width: 360px;
-				object-fit: contain;
+				width: 340px;
+				min-width: 340px;
 			}
 
 			&__mobileImg {
@@ -60,11 +60,6 @@
 				font-size: 1.9rem;
 				line-height: 31px;
 			}
-
-			// &__img {
-			// 	width: 400px !important;
-			// }
-			// TODO: approve the image to be 360px bc 400px leads to horizontal probloms
 		}
 	}
 }
@@ -100,7 +95,6 @@
 				&__mobileImg {
 					display: initial;
 					width: 100%;
-					object-fit: contain;
 				}
 			}
 		}

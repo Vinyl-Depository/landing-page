@@ -14,8 +14,7 @@ jobs:
           node-version: 12
       - run: yarn install --immutable --immutable-cache --check-cache
       - run: yarn run type-check
-      - run: yarn run lint:fix
-      - run: yarn run stylelint:fix
-      - run: yarn run format
+      - run: yarn run lint
+      - run: yarn run stylelint
       - run: yarn run test:cov
       - run: yarn run build
