@@ -7,10 +7,10 @@ const customJestConfig = {
 	coveragePathIgnorePatterns: ['<rootDir>/src/pages/', '<rootDir>/src/i18n/', '<rootDir>/src/icons.ts'],
 	coverageThreshold: {
 		global: {
-			branches: 9,
-			functions: 9,
-			lines: 9,
-			statements: 9,
+			branches: 5,
+			functions: 5,
+			lines: 5,
+			statements: 5,
 		},
 	},
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -22,6 +22,7 @@ const customJestConfig = {
 		'^@/images/(.*)$': '<rootDir>/public/images/$1',
 		'^@/models/(.*)$': '<rootDir>/src/models/$1',
 		'^@/data/(.*)$': '<rootDir>/src/data/$1',
+		'^@/hooks/(.*)$': '<rootDir>/src/hooks/$1',
 	},
 	moduleDirectories: ['node_modules', '<rootDir>/'],
 	testEnvironment: 'jest-environment-jsdom',

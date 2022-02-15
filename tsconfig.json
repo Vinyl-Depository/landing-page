@@ -35,7 +35,8 @@
 			"@/utils/*": ["src/utils/*"],
 			"@/images/*": ["public/images/*"],
 			"@/models/*": ["src/models/*"],
-			"@/data/*": ["src/data/*"]
+			"@/data/*": ["src/data/*"],
+			"@/hooks/*": ["src/hooks/*"]
 		},
 		"typeRoots": ["./node_modules/@types", "./@types"]
 	},
