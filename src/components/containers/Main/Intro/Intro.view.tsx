@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
-import introImagIpadResponsive from '@/images/intro-logo-ipad.jpg';
+import introImagIpadResponsive from '@/images/intro-logo-ipad.png';
 import introImgMobileResponsive from '@/images/intro-logo-mobile.png';
-import introImgWebResponsive from '@/images/intro-logo-web.jpg';
+import introImgWebResponsive from '@/images/intro-logo-web.png';
 
 import VSvg from '@/ui/VSvg';
 
@@ -12,6 +12,10 @@ import classes from './Intro.module.scss';
 
 interface IProps {
 	readonly joinersCount: number;
+	readonly emailInputChangeHandler: (_: string) => void;
+	readonly emailInputState: string | null;
+	readonly formSubmitHandler: (event: KeyboardEvent) => void;
+	readonly emailInputIsInValid: boolean;
 }
 
 const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
@@ -37,7 +41,6 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 						alt="Intro image"
 						loading="lazy"
 						placeholder="blur"
-						// layout="fill"
 						objectFit="contain"
 					/>
 				</div>
@@ -57,15 +60,25 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 							{t('intro.waitListDescriptionSub')}
 						</span>
 					</p>
-					<form className={classes['introWishlistFormContainer']}>
+					<form
+						className={classes['introWishlistFormContainer']}
+						onSubmit={({ currentTarget: { value } }) => props.formSubmitHandler(value)}
+					>
 						<input
 							className={classes['introWishlistFormContainer__input']}
 							type="email"
 							placeholder={t('intro.wishListFormPlaceHolder')}
+							onChange={({ currentTarget: { value } }) => props.emailInputChangeHandler(value)}
 						/>
 						<button className={classes['introWishlistFormContainer__submit']} type="submit">
 							{t('intro.wishListFormButton')}
 						</button>
+						{/* {!props.emailInputIsInValid && (
+							<p className={classes['emailInputIsValid']}>valid email/</p>
+						)} */}
+						{props.emailInputIsInValid && (
+							<p className={classes['emailInputIsValid']}>somthing went worng!</p>
+						)}
 						<button className={classes['introWishlistFormContainer__submitIpad']} type="submit">
 							<VSvg name="submitButton" />
 						</button>
@@ -77,7 +90,6 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 						alt="Intro image"
 						loading="lazy"
 						placeholder="blur"
-						// layout="fill"
 						objectFit="contain"
 					/>
 				</div>
