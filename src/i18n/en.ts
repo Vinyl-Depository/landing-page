@@ -10,6 +10,9 @@ const en = {
 		waitListDescriptionSub: 'hell, we might even send you a beta invite',
 		wishListFormPlaceHolder: 'Your email address',
 		wishListFormButton: 'Join the waitlist',
+		successValidationMessage: 'Welcome! Thanks for joining :)',
+		errorValidationMessageFirstRow: "Whoops, this doesn't seem to be a valid email!",
+		errorValidationMessageSecondRow: '(Should be something like Jimi@Hendrix.com)',
 	},
 	typicalMarketplaces: {
 		header: 'Forget about those typical marketplaces',

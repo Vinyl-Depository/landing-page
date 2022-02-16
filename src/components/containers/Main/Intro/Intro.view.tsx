@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import introImgMobileResponsive from '@/images/intro-logo-mobile.png';
 import introImgWebResponsive from '@/images/intro-logo-web.png';
 import { EmailValidation } from '@/models/email';
+
 import VSvg from '@/ui/VSvg';
 
 import classes from './Intro.module.scss';
@@ -20,16 +21,25 @@ interface IProps {
 const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const { t } = useTranslation();
 
-	let validationMessage: string | null = null;
+	let validationMessage: JSX.Element | string | null = null;
 	let validationMessageClassName: string | null = null;
 
 	if (props.emailValidation === EmailValidation.Success) {
-		validationMessage = 'Welcome! Thanks for joining :)';
-		validationMessageClassName = classes['emailValidationSuccessMessage'] ?? '';
+		validationMessage = t('intro.successValidationMessage');
+		validationMessageClassName = classes['validationMessageSuccess'] ?? '';
 	} else if (props.emailValidation === EmailValidation.BadInput) {
-		validationMessage =
-			'Whoops, this doesnt seem to be a valid email! (Should be something like Jimi@Hendrix.com)';
-		validationMessageClassName = classes['emailValidationBadInputMessage'] ?? '';
+		validationMessage = (
+			<>
+				<span className={classes['validationMessageError__firstRow']}>
+					<b>{t('intro.errorValidationMessageFirstRow')}</b>
+				</span>
+				<br />
+				<span className={classes['validationMessageError__secondRow']}>
+					{t('intro.errorValidationMessageSecondRow')}
+				</span>
+			</>
+		);
+		validationMessageClassName = classes['validationMessageError'] ?? '';
 	}
 
 	return (
@@ -73,13 +83,13 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					</p>
 					<form
 						className={classes['introWishlistFormContainer']}
+						noValidate
 						onSubmit={props.formSubmitHandler}
 					>
 						<input
 							className={classes['introWishlistFormContainer__input']}
 							type="email"
 							placeholder={t('intro.wishListFormPlaceHolder')}
-							formNoValidate
 							value={props.emailInput ?? ''}
 							onChange={({ currentTarget: { value } }) => props.emailInputChangeHandler(value)}
 						/>

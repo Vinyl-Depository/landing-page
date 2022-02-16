@@ -66,7 +66,9 @@
 		}
 
 		.introWishlistFormContainer {
+			position: relative;
 			display: flex;
+			align-items: center;
 			height: 52px;
 			margin-top: 10px;
 
@@ -97,27 +99,54 @@
 				border-radius: 0 5px 5px 0;
 			}
 
-			.emailValidationSuccessMessage {
+			.validationMessageSuccess {
+				position: absolute;
+				left: calc(100% + 15px);
+				font-family: Inter, sans-serif;
 				font-size: 1.8rem;
-				font-family: Inter;
 				font-weight: 700;
 				color: #3e8133;
-				display: flex;
-				position: relative;
-				left: 15px;
-				top: 12px;
+				white-space: nowrap;
 			}
 
-			.emailValidationBadInputMessage {
+			.validationMessageError {
+				position: absolute;
+				left: calc(100% + 15px);
+				font-family: Inter, sans-serif;
 				font-size: 1.5rem;
-				font-family: Inter;
 				font-weight: 500;
 				color: #813333;
+
+				&__firstRow {
+					white-space: nowrap;
+				}
+
+				&__secondRow {
+					font-weight: normal;
+					white-space: nowrap;
+				}
 			}
 
 			&__submitIpad {
 				display: none;
 			}
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.introWishlistFormContainer {
+		justify-content: center;
+		margin-bottom: 40px;
+
+		.validationMessageSuccess {
+			top: calc(100% + 15px);
+			left: initial !important;
+		}
+
+		.validationMessageError {
+			top: calc(100% + 15px);
+			left: initial !important;
 		}
 	}
 }
