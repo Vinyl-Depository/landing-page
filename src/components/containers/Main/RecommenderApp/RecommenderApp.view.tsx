@@ -55,6 +55,7 @@ const RecommenderAppView: React.FC<IProps> = () => {
 											alt="get on apple store"
 											placeholder="blur"
 											objectFit="contain"
+											// layout="fill"
 										/>
 									</div>
 								</a>
@@ -67,6 +68,7 @@ const RecommenderAppView: React.FC<IProps> = () => {
 								placeholder="blur"
 								objectFit="contain"
 								layout="fill"
+								// height={1400}
 								// max-height={100}
 							/>
 						</div>
@@ -78,6 +80,7 @@ const RecommenderAppView: React.FC<IProps> = () => {
 						alt="first phone"
 						placeholder="blur"
 						objectFit="contain"
+						height={2500}
 						// layout="fill"
 					/>
 				</div>
@@ -87,6 +90,7 @@ const RecommenderAppView: React.FC<IProps> = () => {
 						alt="second phone"
 						placeholder="blur"
 						objectFit="contain"
+						height={2500}
 						// layout="fill"
 					/>
 				</div>
