@@ -42,6 +42,7 @@ const DoingItView: React.FC<IProps> = () => {
 								alt="doing it search"
 								placeholder="blur"
 								objectFit="contain"
+								layout="fill"
 							/>
 						</div>
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.search.title')}</h4>
@@ -56,6 +57,7 @@ const DoingItView: React.FC<IProps> = () => {
 								alt="doing it pilu up and choose"
 								placeholder="blur"
 								objectFit="contain"
+								layout="fill"
 							/>
 						</div>
 						<h4 className={classes['doingItItem__title']}>{t('doingIt.pileUp.title')}</h4>
@@ -72,6 +74,7 @@ const DoingItView: React.FC<IProps> = () => {
 								alt="doing it personalized"
 								placeholder="blur"
 								objectFit="contain"
+								layout="fill"
 							/>
 						</div>
 						<h4 className={classes['doingItItem__title']}>
@@ -88,6 +91,7 @@ const DoingItView: React.FC<IProps> = () => {
 								alt="doing it - seller"
 								placeholder="blur"
 								objectFit="contain"
+								layout="fill"
 							/>
 						</div>
 						<h2 className={classes['doingItItem__title']}>{t('doingIt.trustedSellers.title')}</h2>

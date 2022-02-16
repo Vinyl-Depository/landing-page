@@ -66,15 +66,29 @@ const RecommenderAppView: React.FC<IProps> = () => {
 								alt="Vinyl Depository"
 								placeholder="blur"
 								objectFit="contain"
+								layout="fill"
+								// max-height={100}
 							/>
 						</div>
 					</div>
 				</div>
 				<div className={classes['recommenderAppSectionInner__firstPhone']}>
-					<Image src={firstPhone} alt="first phone" placeholder="blur" objectFit="contain" />
+					<Image
+						src={firstPhone}
+						alt="first phone"
+						placeholder="blur"
+						objectFit="contain"
+						// layout="fill"
+					/>
 				</div>
 				<div className={classes['recommenderAppSectionInner__secondPhone']}>
-					<Image src={secondPhone} alt="second phone" placeholder="blur" objectFit="contain" />
+					<Image
+						src={secondPhone}
+						alt="second phone"
+						placeholder="blur"
+						objectFit="contain"
+						// layout="fill"
+					/>
 				</div>
 			</div>
 			<div className={classes['recommenderAppSection__groupPhone']}>

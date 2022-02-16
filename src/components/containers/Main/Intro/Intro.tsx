@@ -1,8 +1,8 @@
-// import { match } from 'assert';
 import React, { useState } from 'react';
 // import axios from 'axios';
 
 import { validateEmail } from '@/utils/validators';
+import { EmailValidation } from '@/models/email';
 
 import IntroView from './Intro.view';
 
@@ -12,37 +12,23 @@ interface IProps {
 
 const Intro: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const [emailInputState, setEmailInputState] = useState<string | null>(null);
+	const [emailValidationState, setEmailValidationState] = useState<EmailValidation | null>(null);
 
-	const emailInputChangeHandler = (input: string) => {
-		setEmailInputState(() => input);
-	};
+	const emailInputChangeHandler = (input: string) => setEmailInputState(() => input);
 
-	const [emailInputIsValidState, setEmailInputIsValidState] = useState<boolean>(false);
-
-	const [emailInputTouchedState, setEmailInputTouchedState] = useState<boolean>(false);
-
-	const emailInputIsInValid = !emailInputIsValidState && emailInputTouchedState;
-
-	const formSubmitHandler = (event: KeyboardEvent) => {
+	const formSubmitHandler = (event: React.FormEvent) => {
 		event.preventDefault();
-
-		setEmailInputTouchedState(true);
 
 		if (emailInputState === null) {
 			return;
 		}
 
 		if (validateEmail(emailInputState)) {
-			// try {
-			// 	const response = await axios.post('')
-
-			// } catch (error) {
-
-			// }
-			setEmailInputIsValidState(() => true);
-			setEmailInputState(() => null);
+			//shold add && not existing
+			setEmailValidationState(() => EmailValidation.Success);
+			setEmailInputState(() => '');
 		} else {
-			setEmailInputIsValidState(() => false);
+			setEmailValidationState(() => EmailValidation.BadInput);
 		}
 	};
 
@@ -51,8 +37,8 @@ const Intro: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 			joinersCount={props.joinersCount}
 			emailInputChangeHandler={emailInputChangeHandler}
 			formSubmitHandler={formSubmitHandler}
-			emailInputState={emailInputState}
-			emailInputIsInValid={emailInputIsInValid}
+			emailInput={emailInputState}
+			emailValidation={emailValidationState}
 		/>
 	);
 };

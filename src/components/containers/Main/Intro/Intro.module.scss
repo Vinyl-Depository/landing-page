@@ -97,6 +97,24 @@
 				border-radius: 0 5px 5px 0;
 			}
 
+			.emailValidationSuccessMessage {
+				font-size: 1.8rem;
+				font-family: Inter;
+				font-weight: 700;
+				color: #3e8133;
+				display: flex;
+				position: relative;
+				left: 15px;
+				top: 12px;
+			}
+
+			.emailValidationBadInputMessage {
+				font-size: 1.5rem;
+				font-family: Inter;
+				font-weight: 500;
+				color: #813333;
+			}
+
 			&__submitIpad {
 				display: none;
 			}
