@@ -40,9 +40,9 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					<Image
 						src={introImgWebResponsive}
 						alt="Intro image"
-						loading="lazy"
 						placeholder="blur"
 						objectFit="contain"
+						priority
 					/>
 				</div>
 
@@ -50,9 +50,9 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					<Image
 						src={introImgMobileResponsive}
 						alt="Intro image"
-						loading="lazy"
 						placeholder="blur"
 						objectFit="contain"
+						priority
 					/>
 				</div>
 
@@ -79,6 +79,8 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 							className={classes['introWishlistFormContainer__input']}
 							type="email"
 							placeholder={t('intro.wishListFormPlaceHolder')}
+							formNoValidate
+							value={props.emailInput ?? ''}
 							onChange={({ currentTarget: { value } }) => props.emailInputChangeHandler(value)}
 						/>
 						<button className={classes['introWishlistFormContainer__submit']} type="submit">
@@ -96,9 +98,9 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					<Image
 						src={introImgWebResponsive}
 						alt="Intro image"
-						loading="lazy"
 						placeholder="blur"
 						objectFit="contain"
+						priority
 					/>
 				</div>
 			</section>

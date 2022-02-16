@@ -9,9 +9,11 @@ import VSvg from '@/ui/VSvg';
 
 import classes from './JoinWishlist.module.scss';
 
-interface IProps {}
+interface IProps {
+	readonly joinersCount: number;
+}
 
-const JoinWishlistView: React.FC<IProps> = () => {
+const JoinWishlistView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const { t } = useTranslation();
 
 	return (
@@ -19,7 +21,13 @@ const JoinWishlistView: React.FC<IProps> = () => {
 			<section className={classes['joinWishlistSection']}>
 				<div className={classes['joinWishlistSectionLogos']}>
 					<div className={classes['joinWishlistSectionLogos__logo']}>
-						<Image src={vinylLogo} alt="Join whistlist" placeholder="blur" objectFit="contain" />
+						<Image
+							src={vinylLogo}
+							alt="Join whistlist"
+							placeholder="blur"
+							objectFit="contain"
+							layout="fill"
+						/>
 					</div>
 					<div className={classes['joinWishlistSectionLogos__logo']}>
 						<Image
@@ -27,14 +35,19 @@ const JoinWishlistView: React.FC<IProps> = () => {
 							alt="Join whistlist emails"
 							placeholder="blur"
 							objectFit="contain"
+							layout="fill"
 						/>
 					</div>
 				</div>
 				<div className={classes['joinWishlistText']}>
 					<h2 className={classes['joinWishlistHeader']}>
-						<Trans i18nKey="joinWishlist.header__main" />
-						<span className={classes['joinWishlistHeader__counter']}> 6969 </span>
-						<Trans i18nKey="joinWishlist.header__secondPart" />
+						<Trans i18nKey="joinWishlist.headerMain" />
+						<span className={classes['joinWishlistHeader__counter']}>
+							&nbsp;
+							{props.joinersCount}
+							&nbsp;
+						</span>
+						<Trans i18nKey="joinWishlist.headerSecondPart" />
 					</h2>
 					<form className={classes['joinWishlistForm']}>
 						<input

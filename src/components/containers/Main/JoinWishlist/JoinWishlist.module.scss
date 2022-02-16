@@ -22,8 +22,8 @@
 			display: flex;
 
 			&__logo {
-				height: 150px;
-				object-fit: contain;
+				position: relative;
+				width: 110px;
 			}
 		}
 	}

@@ -47,8 +47,8 @@ const en = {
 		getTheApp: 'Get the App',
 	},
 	joinWishlist: {
-		header__main: 'Join',
-		header__secondPart: 'more people in the waitlist for a better experience.',
+		headerMain: 'Join',
+		headerSecondPart: 'more people in the waitlist for a better experience.',
 		formPlaceholder: 'Your email address',
 		button: 'Join the waitlist',
 	},

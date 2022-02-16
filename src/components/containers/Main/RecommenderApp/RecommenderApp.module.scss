@@ -14,15 +14,20 @@
 
 		&__firstPhone {
 			position: relative;
-			bottom: 80px;
+			bottom: 95px;
+			width: 260px;
+			min-width: 260px;
+			height: 530px;
 			margin: 0 20px;
 			border-radius: 40px;
-			// margin-left: 100px;
 		}
 
 		&__secondPhone {
 			position: relative;
-			top: 80px;
+			top: 95px;
+			width: 260px;
+			min-width: 260px;
+			height: 530px;
 			border-radius: 40px;
 		}
 	}
@@ -33,6 +38,7 @@
 
 	.recommenderAppSectionDataContainer {
 		display: flex;
+		flex: 1;
 		flex-direction: column;
 
 		&__title {
@@ -43,7 +49,7 @@
 		}
 
 		&__text {
-			margin: 12px 0;
+			margin: 12px 0 35px;
 			font-family: Inter, sans-serif;
 			font-size: 1.8rem;
 			line-height: 32px;
@@ -71,24 +77,20 @@
 			height: 40px;
 
 			&--apple {
-				// position: relative;
-
 				margin: 0 40px 0 8px;
 			}
 
 			&__img {
-				// position: relative;
-
-				height: 50px;
-				width: 100%;
+				position: relative;
+				width: 130px;
+				height: 100%;
 			}
 		}
 
 		&__logo {
 			position: relative;
-			width: 100%;
+			width: 160px;
 			height: 60px;
-			// top: 10px;
 		}
 	}
 }
@@ -117,8 +119,10 @@
 			bottom: 70px;
 			left: 60px;
 			display: block;
-			height: 470px;
-			margin: 0 10px;
+			width: 490px;
+			min-width: 490px;
+			height: 478px;
+			margin-left: 3px;
 		}
 
 		.recommenderAppSectionDataContainer {
@@ -158,7 +162,12 @@
 				height: 50px;
 
 				&--apple {
+					height: 55px;
 					margin: 0 0 0 10px;
+				}
+
+				&__img {
+					width: 175px;
 				}
 			}
 		}
@@ -219,7 +228,7 @@
 
 				&__img {
 					width: 100%;
-					height: 55px;
+					height: 65px;
 				}
 			}
 		}

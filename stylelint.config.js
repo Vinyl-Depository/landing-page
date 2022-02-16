@@ -11,6 +11,7 @@ module.exports = {
 			{ resolveNestedSelectors: true, message: 'Expected class selector to be camel case' },
 		],
 		'value-no-vendor-prefix': null,
+		'selector-id-pattern': null,
 
 		'scss/at-import-partial-extension': null,
 	},

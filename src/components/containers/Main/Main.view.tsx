@@ -20,7 +20,7 @@ const MainView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 			<DoingIt />
 			<DoingItCarousel />
 			<RecommenderApp />
-			<JoinWishlist />
+			<JoinWishlist joinersCount={props.joinersCount} />
 			<Seller />
 		</>
 	);

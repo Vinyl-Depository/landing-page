@@ -23,13 +23,15 @@ const Intro: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 			return;
 		}
 
+		// If the email is valid then set a success state and reset the email input
 		if (validateEmail(emailInputState)) {
-			//shold add && not existing
 			setEmailValidationState(() => EmailValidation.Success);
-			setEmailInputState(() => '');
-		} else {
-			setEmailValidationState(() => EmailValidation.BadInput);
+			setEmailInputState(() => null);
+
+			return;
 		}
+
+		setEmailValidationState(() => EmailValidation.BadInput);
 	};
 
 	return (

@@ -19,7 +19,7 @@ const DoingItCarouselItemView: React.FC<IProps> = (props: React.PropsWithChildre
 					alt={props.title}
 					placeholder="blur"
 					objectFit="contain"
-					// layout="fill"
+					layout="fill"
 				/>
 			</div>
 			<h4 className={classes['container__title']}>{props.title}</h4>
