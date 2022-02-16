@@ -40,6 +40,7 @@ const RecommenderAppView: React.FC<IProps> = () => {
 											alt="get on google play"
 											placeholder="blur"
 											objectFit="contain"
+											layout="fill"
 										/>
 									</div>
 								</a>
@@ -55,6 +56,7 @@ const RecommenderAppView: React.FC<IProps> = () => {
 											alt="get on apple store"
 											placeholder="blur"
 											objectFit="contain"
+											layout="fill"
 										/>
 									</div>
 								</a>
@@ -66,19 +68,38 @@ const RecommenderAppView: React.FC<IProps> = () => {
 								alt="Vinyl Depository"
 								placeholder="blur"
 								objectFit="contain"
+								layout="fill"
 							/>
 						</div>
 					</div>
 				</div>
 				<div className={classes['recommenderAppSectionInner__firstPhone']}>
-					<Image src={firstPhone} alt="first phone" placeholder="blur" objectFit="contain" />
+					<Image
+						src={firstPhone}
+						alt="first phone"
+						placeholder="blur"
+						objectFit="cover"
+						layout="fill"
+					/>
 				</div>
 				<div className={classes['recommenderAppSectionInner__secondPhone']}>
-					<Image src={secondPhone} alt="second phone" placeholder="blur" objectFit="contain" />
+					<Image
+						src={secondPhone}
+						alt="second phone"
+						placeholder="blur"
+						objectFit="cover"
+						layout="fill"
+					/>
 				</div>
 			</div>
 			<div className={classes['recommenderAppSection__groupPhone']}>
-				<Image src={groupPhoneIpad} alt="group of phones" placeholder="blur" objectFit="contain" />
+				<Image
+					src={groupPhoneIpad}
+					alt="group of phones"
+					placeholder="blur"
+					objectFit="cover"
+					layout="fill"
+				/>
 			</div>
 		</section>
 	);

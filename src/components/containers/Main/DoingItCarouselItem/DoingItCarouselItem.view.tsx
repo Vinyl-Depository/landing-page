@@ -14,7 +14,13 @@ const DoingItCarouselItemView: React.FC<IProps> = (props: React.PropsWithChildre
 	return (
 		<div className={classes['container']}>
 			<div className={classes['container__img']}>
-				<Image src={props.image} alt={props.title} placeholder="blur" objectFit="contain" />
+				<Image
+					src={props.image}
+					alt={props.title}
+					placeholder="blur"
+					objectFit="contain"
+					layout="fill"
+				/>
 			</div>
 			<h4 className={classes['container__title']}>{props.title}</h4>
 			<span className={classes['container__text']}>{props.text}</span>

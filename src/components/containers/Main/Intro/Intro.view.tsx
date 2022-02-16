@@ -2,10 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
-import introImagIpadResponsive from '@/images/intro-logo-ipad.png';
 import introImgMobileResponsive from '@/images/intro-logo-mobile.png';
 import introImgWebResponsive from '@/images/intro-logo-web.png';
-
+import { EmailValidation } from '@/models/email';
 import VSvg from '@/ui/VSvg';
 
 import classes from './Intro.module.scss';
@@ -13,13 +12,25 @@ import classes from './Intro.module.scss';
 interface IProps {
 	readonly joinersCount: number;
 	readonly emailInputChangeHandler: (_: string) => void;
-	readonly emailInputState: string | null;
-	readonly formSubmitHandler: (event: KeyboardEvent) => void;
-	readonly emailInputIsInValid: boolean;
+	readonly emailInput: string | null;
+	readonly formSubmitHandler: (event: React.FormEvent) => void;
+	readonly emailValidation: EmailValidation | null;
 }
 
 const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const { t } = useTranslation();
+
+	let validationMessage: string | null = null;
+	let validationMessageClassName: string | null = null;
+
+	if (props.emailValidation === EmailValidation.Success) {
+		validationMessage = 'Welcome! Thanks for joining :)';
+		validationMessageClassName = classes['emailValidationSuccessMessage'] ?? '';
+	} else if (props.emailValidation === EmailValidation.BadInput) {
+		validationMessage =
+			'Whoops, this doesnt seem to be a valid email! (Should be something like Jimi@Hendrix.com)';
+		validationMessageClassName = classes['emailValidationBadInputMessage'] ?? '';
+	}
 
 	return (
 		<div className={classes['introSectionContainer']}>
@@ -27,11 +38,11 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 				<h1 className={classes['introSection__header']}>{t('intro.mainHeader')}</h1>
 				<div className={classes['introSection__ipadImg']}>
 					<Image
-						src={introImagIpadResponsive}
+						src={introImgWebResponsive}
 						alt="Intro image"
-						loading="lazy"
 						placeholder="blur"
 						objectFit="contain"
+						priority
 					/>
 				</div>
 
@@ -39,9 +50,9 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					<Image
 						src={introImgMobileResponsive}
 						alt="Intro image"
-						loading="lazy"
 						placeholder="blur"
 						objectFit="contain"
+						priority
 					/>
 				</div>
 
@@ -62,22 +73,21 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					</p>
 					<form
 						className={classes['introWishlistFormContainer']}
-						onSubmit={({ currentTarget: { value } }) => props.formSubmitHandler(value)}
+						onSubmit={props.formSubmitHandler}
 					>
 						<input
 							className={classes['introWishlistFormContainer__input']}
 							type="email"
 							placeholder={t('intro.wishListFormPlaceHolder')}
+							formNoValidate
+							value={props.emailInput ?? ''}
 							onChange={({ currentTarget: { value } }) => props.emailInputChangeHandler(value)}
 						/>
 						<button className={classes['introWishlistFormContainer__submit']} type="submit">
 							{t('intro.wishListFormButton')}
 						</button>
-						{/* {!props.emailInputIsInValid && (
-							<p className={classes['emailInputIsValid']}>valid email/</p>
-						)} */}
-						{props.emailInputIsInValid && (
-							<p className={classes['emailInputIsValid']}>somthing went worng!</p>
+						{props.emailValidation && (
+							<span className={validationMessageClassName ?? ''}>{validationMessage}</span>
 						)}
 						<button className={classes['introWishlistFormContainer__submitIpad']} type="submit">
 							<VSvg name="submitButton" />
@@ -88,9 +98,9 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					<Image
 						src={introImgWebResponsive}
 						alt="Intro image"
-						loading="lazy"
 						placeholder="blur"
 						objectFit="contain"
+						priority
 					/>
 				</div>
 			</section>

@@ -29,6 +29,7 @@
 		.doingItSecondRow {
 			display: flex;
 			justify-content: center;
+			margin-top: 20px;
 		}
 
 		.doingItItem {
@@ -46,7 +47,6 @@
 				width: 100%;
 				height: 235px;
 				object-position: bottom;
-				border: 1px solid red;
 			}
 
 			&__title {

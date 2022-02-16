@@ -2,10 +2,12 @@ import React from 'react';
 
 import JoinWishlistView from './JoinWishlist.view';
 
-interface IProps {}
+interface IProps {
+	readonly joinersCount: number;
+}
 
-const JoinWishlist: React.FC<IProps> = () => {
-	return <JoinWishlistView />;
+const JoinWishlist: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
+	return <JoinWishlistView joinersCount={props.joinersCount} />;
 };
 
 JoinWishlist.displayName = 'JoinWishlist';

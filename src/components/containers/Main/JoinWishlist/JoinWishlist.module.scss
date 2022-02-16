@@ -7,13 +7,12 @@
 	margin: 70px 0;
 
 	.joinWishlistSection {
-		border: 1px solid red;
 		display: flex;
 		align-items: center;
 		max-width: 1100px;
 		padding: 50px 25px;
 		margin: 0 auto;
-		background-image: url('/public/images/join-wishlist-background.png');
+		background-image: url('/images/join-wishlist-background.png');
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -23,8 +22,8 @@
 			display: flex;
 
 			&__logo {
-				height: 150px;
-				object-fit: contain;
+				position: relative;
+				width: 110px;
 			}
 		}
 	}
@@ -92,7 +91,7 @@
 			flex-direction: column-reverse;
 			padding: 15px 70px;
 			margin: 0 auto;
-			background-image: url('/src/public/images/join-wishlist-background-mobile.png');
+			background-image: url('/images/join-wishlist-background-mobile.png');
 
 			.joinWishlistSectionLogos {
 				&__logo {
@@ -142,7 +141,7 @@
 		width: 100%;
 		padding: 0 20px;
 		margin-top: 25px;
-		background-image: url('/src/public/images/join-wishlist-background.png');
+		background-image: url('/images/join-wishlist-background.png');
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
