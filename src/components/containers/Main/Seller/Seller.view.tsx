@@ -11,7 +11,7 @@ const SellerView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 
 	return (
-		<section className={classes['sellersSection']}>
+		<section id="seller" className={classes['sellersSection']}>
 			<div className={classes['sellersSectionInner']}>
 				<div className={classes['sellersSectionText']}>
 					<h1 className={classes['sellersSectionText__title']}>
