@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { Link as ScrollLink } from 'react-scroll';
 
 import brandLogo from '@/images/brand-logo.png';
 import playStoreLogo from '@/images/google-play.png';
@@ -36,9 +37,9 @@ const HeaderView: React.FC<IProps> = () => {
 							/>
 						</a>
 					</Link>
-					<Link href="#seller">
+					<ScrollLink to="seller" smooth>
 						<a className={classes['headerContact']}>{t('header.contactUs')}</a>
-					</Link>
+					</ScrollLink>
 				</div>
 				<div className={classes['rightHeader']}>
 					<p className={classes['rightHeader__text']}>{t('header.rightHeaderText')}</p>
@@ -59,7 +60,7 @@ const HeaderView: React.FC<IProps> = () => {
 							/>
 						</a>
 					</Link>
-					<Link href="yazif.com" passHref>
+					<Link href="/" passHref>
 						<a className={classes['rightHeader__button']}>
 							<Image
 								src={appStoreLogo}
