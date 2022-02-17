@@ -3,7 +3,10 @@ import Mailchimp from 'mailchimp-api-v3';
 
 import { ISubscribeRequest } from '@/models/api/request/subcribe';
 import { ISubscribeResponse } from '@/models/api/response/subscribe';
+import { IMailchimpError } from '@/models/mailchimp';
 import { validateEmail } from '@/utils/validators';
+
+const MAILCHIMP_MEMBER_EXISTS_MESSAGE = 'Member Exists';
 
 export default async function handler(req: ISubscribeRequest, res: NextApiResponse<ISubscribeResponse>) {
 	if (req.method === 'POST') {
@@ -34,6 +37,18 @@ export default async function handler(req: ISubscribeRequest, res: NextApiRespon
 
 			return;
 		} catch (e) {
+			// The API request above might fail due to duplicate subscription try - in this case return successful response
+			const isDuplicateError = (e as IMailchimpError).title === MAILCHIMP_MEMBER_EXISTS_MESSAGE;
+
+			if (isDuplicateError) {
+				res.status(200).send({
+					success: true,
+					message: 'Successfully fulfilled subscription action',
+				});
+
+				return;
+			}
+
 			res.status(500).send({
 				success: false,
 				message: e as string,
