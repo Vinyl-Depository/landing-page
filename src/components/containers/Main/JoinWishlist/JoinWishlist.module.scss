@@ -49,6 +49,7 @@
 
 		.joinWishlistForm {
 			display: flex;
+			position: relative;
 			align-items: center;
 			height: 50px;
 			margin-top: 40px;
@@ -74,6 +75,36 @@
 				background-color: #18191f;
 				border-top-right-radius: 5px;
 				border-bottom-right-radius: 5px;
+			}
+
+			.validationMessageSuccess {
+				position: absolute;
+				margin: 0 auto;
+				top: calc(100% + 15px);
+				font-family: Inter, sans-serif;
+				font-size: 1.8rem;
+				font-weight: 700;
+				color: #fff;
+				white-space: nowrap;
+			}
+
+			.validationMessageError {
+				position: absolute;
+				margin: 0 auto;
+				font-family: Inter, sans-serif;
+				font-size: 1.5rem;
+				font-weight: 500;
+				color: #fff;
+				top: calc(100% + 5px);
+
+				&__firstRow {
+					white-space: nowrap;
+				}
+
+				&__secondRow {
+					font-weight: normal;
+					white-space: nowrap;
+				}
 			}
 
 			&__mobileSubmit {
@@ -166,6 +197,20 @@
 
 				&__input {
 					width: 100%;
+				}
+				.validationMessageSuccess {
+					position: absolute;
+					margin: 0 auto;
+					top: calc(100% + 15px);
+					font-family: Inter, sans-serif;
+					font-size: 1.8rem;
+					font-weight: 700;
+					color: #fff;
+					white-space: nowrap;
+				}
+
+				.validationMessageError {
+					font-size: 1rem;
 				}
 			}
 		}
