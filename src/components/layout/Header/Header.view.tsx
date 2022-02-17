@@ -36,7 +36,7 @@ const HeaderView: React.FC<IProps> = () => {
 							/>
 						</a>
 					</Link>
-					<Link href=".in">
+					<Link href="#seller">
 						<a className={classes['headerContact']}>{t('header.contactUs')}</a>
 					</Link>
 				</div>
