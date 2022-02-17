@@ -52,6 +52,7 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 						alt="Intro image"
 						placeholder="blur"
 						objectFit="contain"
+						layout="fill"
 						priority
 					/>
 				</div>
