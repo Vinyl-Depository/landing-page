@@ -36,6 +36,7 @@ const JoinWishlist: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) 
 
 		setEmailValidationState(() => EmailValidation.BadInput);
 	};
+
 	return (
 		<JoinWishlistView
 			joinersCount={props.joinersCount}
