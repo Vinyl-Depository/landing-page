@@ -64,6 +64,7 @@ const en = {
 			nameInput: 'Your name / Store name',
 			countryTitle: 'Country',
 			countryInput: 'Select country',
+			errorValidationNameMessage: "That dosn't seems to be right 🧐",
 		},
 	},
 	footer: {

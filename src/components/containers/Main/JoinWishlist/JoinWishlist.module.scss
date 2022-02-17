@@ -48,8 +48,8 @@
 		}
 
 		.joinWishlistForm {
-			display: flex;
 			position: relative;
+			display: flex;
 			align-items: center;
 			height: 50px;
 			margin-top: 40px;
@@ -79,8 +79,8 @@
 
 			.validationMessageSuccess {
 				position: absolute;
-				margin: 0 auto;
 				top: calc(100% + 15px);
+				margin: 0 auto;
 				font-family: Inter, sans-serif;
 				font-size: 1.8rem;
 				font-weight: 700;
@@ -90,12 +90,12 @@
 
 			.validationMessageError {
 				position: absolute;
+				top: calc(100% + 5px);
 				margin: 0 auto;
 				font-family: Inter, sans-serif;
 				font-size: 1.5rem;
 				font-weight: 500;
 				color: #fff;
-				top: calc(100% + 5px);
 
 				&__firstRow {
 					white-space: nowrap;
@@ -198,10 +198,11 @@
 				&__input {
 					width: 100%;
 				}
+
 				.validationMessageSuccess {
 					position: absolute;
-					margin: 0 auto;
 					top: calc(100% + 15px);
+					margin: 0 auto;
 					font-family: Inter, sans-serif;
 					font-size: 1.8rem;
 					font-weight: 700;

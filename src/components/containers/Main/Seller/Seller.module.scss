@@ -67,6 +67,16 @@
 			border-radius: 5px;
 		}
 
+		.validationMessageError {
+			position: absolute;
+			left: calc(100% + 15px);
+			font-family: Inter, sans-serif;
+			font-size: 1.5rem;
+			font-weight: 500;
+			color: #813333;
+			white-space: nowrap;
+		}
+
 		.sellersSectionFormSelect {
 			display: flex;
 			align-items: center;
