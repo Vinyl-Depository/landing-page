@@ -67,26 +67,8 @@
 			border-radius: 5px;
 		}
 
-		.sellersSectionFormSelect {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+		&__selectCountry {
 			width: 50%;
-			padding: 14px 10px 14px 16px;
-			margin-left: 0;
-			background-color: #f4f5f7;
-			border-radius: 5px;
-
-			&__text {
-				font-family: Inter, sans-serif;
-				font-size: 1.4rem;
-				color: #474a57;
-			}
-
-			&__icon {
-				width: auto;
-				height: 8px;
-			}
 		}
 
 		&__submit {

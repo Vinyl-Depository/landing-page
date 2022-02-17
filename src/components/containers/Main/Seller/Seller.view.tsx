@@ -1,7 +1,8 @@
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 
-import VSvg from '@/ui/VSvg';
+import VSelect from '@/ui/VSelect';
+import { countriesList } from '@/data/countries';
 
 import classes from './Seller.module.scss';
 
@@ -41,12 +42,12 @@ const SellerView: React.FC<IProps> = () => {
 					<label className={classes['sellersSectionForm__label']}>
 						{t('seller.form.countryTitle')}
 					</label>
-					<div className={classes['sellersSectionFormSelect']}>
-						<span className={classes['sellersSectionFormSelect__text']}>
-							{t('seller.form.countryInput')}
-						</span>
-						<VSvg name="arrowDown" className={classes['sellersSectionFormSelect__icon']} />
-					</div>
+					<VSelect
+						placeholder={t('seller.form.countryInput')}
+						options={countriesList}
+						className={classes['sellersSectionForm__selectCountry']}
+						iconName="arrowDown"
+					/>
 					<button className={classes['sellersSectionForm__submit']} type="submit">
 						Send
 					</button>
