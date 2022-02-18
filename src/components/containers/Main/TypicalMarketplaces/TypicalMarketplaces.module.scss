@@ -44,6 +44,10 @@
 }
 
 @media (max-width: 850px) {
+	.typicalMarketplacesSectionContainer {
+		margin-top: 40px;
+	}
+
 	.typicalMarketplacesSection {
 		&__header {
 			margin-bottom: 15px;
