@@ -1,8 +1,8 @@
-import { concatClasses } from '../component';
+import { concatClasses, concatDiverseClasses } from '../component';
 
 describe('[utils/component]', () => {
 	it('concatClasses | Function should return empty string for given input of empty object', () => {
-		const result = concatClasses({}, 'test');
+		const result = concatClasses({}, 'test', 'test2');
 
 		expect(result === '').toEqual(true);
 	});
@@ -19,19 +19,48 @@ describe('[utils/component]', () => {
 		expect(result === '').toEqual(true);
 	});
 
-	it('concatClasses | Function should return "testValue" when provide single argument', () => {
-		const result = concatClasses({ testKey: 'testValue' }, 'testKey');
-
-		expect(result === 'testValue').toEqual(true);
-	});
-
-	it('concatClasses | Function should return correct result when provide multiple arguments', () => {
+	it('concatClasses | Function should return correct concatanation when using 2 classes', () => {
 		const result = concatClasses(
-			{ testKey: 'testValue', testKeyMore: 'testValueMore' },
-			'testKey',
-			'testKeyMore',
+			{ testKey1: 'testValue1', testKey2: 'testValue2' },
+			'testKey1',
+			'testKey2',
 		);
 
-		expect(result === 'testValue testValueMore').toEqual(true);
+		expect(result === 'testValue1 testValue2').toEqual(true);
+	});
+
+	it('concatClasses | Function should return correct result when provide multiple arguments (more than 2)', () => {
+		const result = concatClasses(
+			{ testKey: 'testValue', testKeyMore: 'testValueMore', another: 'anotherValue' },
+			'testKey',
+			'testKeyMore',
+			'another',
+		);
+
+		expect(result === 'testValue testValueMore anotherValue').toEqual(true);
+	});
+
+	it('concatDiverseClasses | Function should return empty string for given input of empty classes', () => {
+		const result = concatDiverseClasses('', '');
+
+		expect(result === '').toEqual(true);
+	});
+
+	it('concatDiverseClasses | Function should return empty string for given input of undefined classes', () => {
+		const result = concatDiverseClasses(undefined, undefined);
+
+		expect(result === '').toEqual(true);
+	});
+
+	it('concatDiverseClasses | Function should return correct concatanation when using 2 classes', () => {
+		const result = concatDiverseClasses('testKey1', 'testKey2');
+
+		expect(result === 'testKey1 testKey2').toEqual(true);
+	});
+
+	it('concatDiverseClasses | Function should return correct result when provide multiple arguments (more than 2)', () => {
+		const result = concatDiverseClasses('testKey', 'testKeyMore', 'another');
+
+		expect(result === 'testKey testKeyMore another').toEqual(true);
 	});
 });

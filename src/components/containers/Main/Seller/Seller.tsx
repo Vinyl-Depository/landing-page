@@ -9,12 +9,16 @@ interface IProps {}
 const Seller: React.FC<IProps> = () => {
 	const [emailInputState, setEmailInputState] = useState<string | null>(null);
 	const [nameInputState, setNameInputState] = useState<string | null>(null);
+	const [countrySelectedIndexState, setCountrySelectedIndexState] = useState<number | null>(null);
 	const [isEmailOnErrorState, setIsEmailOnErrorState] = useState<boolean>(false);
 	const [isNameOnErrorState, setIsNameOnErrorState] = useState<boolean>(false);
+	const [isCountryOnErrorState, setIsCountryOnErrorState] = useState<boolean>(false);
 
 	const onEmailInputChange = (input: string) => setEmailInputState(() => input);
 
 	const onNameInputChange = (input: string) => setNameInputState(() => input);
+
+	const onCountrySelectSelected = (index: number) => setCountrySelectedIndexState(() => index);
 
 	const onFormSubmit = (event: React.FormEvent) => {
 		event.preventDefault();
@@ -33,6 +37,12 @@ const Seller: React.FC<IProps> = () => {
 			formHasFailed = true;
 		}
 
+		if (countrySelectedIndexState === null) {
+			setIsCountryOnErrorState(() => true);
+
+			formHasFailed = true;
+		}
+
 		if (!formHasFailed) {
 			setEmailInputState(() => null);
 			setNameInputState(() => null);
@@ -43,10 +53,13 @@ const Seller: React.FC<IProps> = () => {
 		<SellerView
 			emailInput={emailInputState}
 			nameInput={nameInputState}
+			countrySelectedIndex={countrySelectedIndexState}
 			isEmailOnError={isEmailOnErrorState}
 			isNameOnError={isNameOnErrorState}
+			isCountryOnError={isCountryOnErrorState}
 			onEmailInputChange={onEmailInputChange}
 			onNameInputChange={onNameInputChange}
+			onCountrySelectIndexSelected={onCountrySelectSelected}
 			onFormSubmit={onFormSubmit}
 		/>
 	);
