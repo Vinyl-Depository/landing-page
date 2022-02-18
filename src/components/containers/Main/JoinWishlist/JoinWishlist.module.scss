@@ -23,7 +23,8 @@
 
 			&__logo {
 				position: relative;
-				width: 110px;
+				width: 130px;
+				height: 130px;
 			}
 		}
 	}
@@ -35,18 +36,17 @@
 		margin-left: 50px;
 
 		.joinWishlistHeader {
-			font-family: Inter, sans-serif;
 			font-size: 4rem;
 			font-weight: 800;
 			color: #fff;
 
 			&__counter {
-				font-family: Inter, sans-serif;
 				color: map.get($colors, text-color);
 			}
 		}
 
 		.joinWishlistForm {
+			position: relative;
 			display: flex;
 			align-items: center;
 			height: 50px;
@@ -56,7 +56,6 @@
 				width: 55%;
 				height: 100%;
 				padding: 8px 15px;
-				font-family: Inter, sans-serif;
 				font-size: 1.4rem;
 				color: #474a57;
 				border-top-left-radius: 5px;
@@ -66,13 +65,40 @@
 			&__submit {
 				height: 100%;
 				padding: 8px 20px;
-				font-family: Inter, sans-serif;
 				font-size: 1.4rem;
 				font-weight: 500;
 				color: #fff;
 				background-color: #18191f;
 				border-top-right-radius: 5px;
 				border-bottom-right-radius: 5px;
+			}
+
+			.validationMessageSuccess {
+				position: absolute;
+				top: calc(100% + 15px);
+				margin: 0 auto;
+				font-size: 1.8rem;
+				font-weight: 700;
+				color: #fff;
+				white-space: nowrap;
+			}
+
+			.validationMessageError {
+				position: absolute;
+				top: calc(100% + 5px);
+				margin: 0 auto;
+				font-size: 1.5rem;
+				font-weight: 500;
+				color: #fff;
+
+				&__firstRow {
+					white-space: nowrap;
+				}
+
+				&__secondRow {
+					font-weight: normal;
+					white-space: nowrap;
+				}
 			}
 
 			&__mobileSubmit {
@@ -95,6 +121,7 @@
 
 			.joinWishlistSectionLogos {
 				&__logo {
+					width: 97px;
 					height: 97px;
 				}
 			}
@@ -164,6 +191,20 @@
 
 				&__input {
 					width: 100%;
+				}
+
+				.validationMessageSuccess {
+					position: absolute;
+					top: calc(100% + 15px);
+					margin: 0 auto;
+					font-size: 1.8rem;
+					font-weight: 700;
+					color: #fff;
+					white-space: nowrap;
+				}
+
+				.validationMessageError {
+					font-size: 1rem;
 				}
 			}
 		}

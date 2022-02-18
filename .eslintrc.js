@@ -9,8 +9,8 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:react/jsx-runtime',
 		'plugin:import/typescript',
-		'prettier',
 		'next/core-web-vitals',
+		'prettier',
 	],
 	parserOptions: {
 		ecmaFeatures: {
@@ -20,7 +20,7 @@ module.exports = {
 		project: 'tsconfig.json',
 		sourceType: 'module',
 	},
-	plugins: ['react', '@typescript-eslint', 'unused-imports', 'import', 'react-hooks', 'import'],
+	plugins: ['react', '@typescript-eslint', 'unused-imports', 'import', 'react-hooks', 'import', 'node'],
 	rules: {
 		'indent': ['error', 'tab'],
 		'quotes': ['error', 'single', { avoidEscape: true }],
@@ -214,6 +214,8 @@ module.exports = {
 				groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
 			},
 		],
+
+		'node/no-sync': 'error',
 	},
 	settings: {
 		react: {

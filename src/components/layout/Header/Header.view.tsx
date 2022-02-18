@@ -4,12 +4,12 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
 import brandLogo from '@/images/brand-logo.png';
-import playStoreLogo from '@/images/google-play.png';
-import appStoreLogo from '@/images/app-store.png';
+// import playStoreLogo from '@/images/google-play.png';
+// import appStoreLogo from '@/images/app-store.png';
 
-import VSvg from '@/ui/VSvg';
+// import VSvg from '@/ui/VSvg';
 
-import { concatClasses } from '@/utils/component';
+// import { concatClasses } from '@/utils/component';
 
 import classes from './Header.module.scss';
 
@@ -21,9 +21,9 @@ const HeaderView: React.FC<IProps> = () => {
 	return (
 		<div className={classes['headerContainer']}>
 			<header className={classes['header']}>
-				<div className={classes['mobileHeadrMenu']}>
+				{/* <div className={classes['mobileHeadrMenu']}>
 					<VSvg className={classes['mobileHeaderMenu__icon']} name="hamburgerMenu" />
-				</div>
+				</div> */}
 				<div className={classes['leftHeader']}>
 					<Link href="/" passHref>
 						<a className={classes['leftHeader__logo']}>
@@ -36,11 +36,13 @@ const HeaderView: React.FC<IProps> = () => {
 							/>
 						</a>
 					</Link>
-					<a className={classes['headerContact']}>{t('header.contactUs')}</a>
+					<Link href="#seller" passHref>
+						<a className={classes['headerContact']}>{t('header.contactUs')}</a>
+					</Link>
 				</div>
-				<div className={classes['rightHeader']}>
+				{/* <div className={classes['rightHeader']}>
 					<p className={classes['rightHeader__text']}>{t('header.rightHeaderText')}</p>
-					<Link href="yazif.com" passHref>
+					<Link href="/" passHref>
 						<a
 							className={concatClasses(
 								classes,
@@ -57,7 +59,7 @@ const HeaderView: React.FC<IProps> = () => {
 							/>
 						</a>
 					</Link>
-					<Link href="yazif.com" passHref>
+					<Link href="/" passHref>
 						<a className={classes['rightHeader__button']}>
 							<Image
 								src={appStoreLogo}
@@ -68,7 +70,7 @@ const HeaderView: React.FC<IProps> = () => {
 							/>
 						</a>
 					</Link>
-				</div>
+				</div> */}
 			</header>
 		</div>
 	);

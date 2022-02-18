@@ -4,7 +4,7 @@ import DoingIt from './DoingIt';
 import DoingItCarousel from './DoingItCarousel';
 import Intro from './Intro';
 import JoinWishlist from './JoinWishlist';
-import RecommenderApp from './RecommenderApp';
+// import RecommenderApp from './RecommenderApp';
 import Seller from './Seller';
 import TypicalMarketplaces from './TypicalMarketplaces';
 
@@ -19,7 +19,7 @@ const MainView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 			<TypicalMarketplaces />
 			<DoingIt />
 			<DoingItCarousel />
-			<RecommenderApp />
+			{/* <RecommenderApp /> */}
 			<JoinWishlist joinersCount={props.joinersCount} />
 			<Seller />
 		</>

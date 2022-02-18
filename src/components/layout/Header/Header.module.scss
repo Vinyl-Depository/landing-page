@@ -9,7 +9,7 @@
 	.header {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		max-width: map.get($sizes, main-web-width);
 		margin: 0 auto;
 
@@ -28,28 +28,27 @@
 			}
 		}
 
-		.rightHeader {
-			display: flex;
-			align-items: center;
+		// .rightHeader {
+		// 	display: flex;
+		// 	align-items: center;
 
-			&__text {
-				font-family: Inter, sans-serif;
-				font-size: 1.8rem;
-				font-weight: 700;
-				color: map.get($colors, text-color);
-				white-space: nowrap;
-			}
+		// 	&__text {
+		// 		font-size: 1.8rem;
+		// 		font-weight: 700;
+		// 		color: map.get($colors, text-color);
+		// 		white-space: nowrap;
+		// 	}
 
-			&__button {
-				position: relative;
-				width: 135px;
-				height: 45px;
+		// 	&__button {
+		// 		position: relative;
+		// 		width: 135px;
+		// 		height: 45px;
 
-				&--android {
-					margin: 0 10px;
-				}
-			}
-		}
+		// 		&--android {
+		// 			margin: 0 10px;
+		// 		}
+		// 	}
+		// }
 
 		.headerContact {
 			margin-left: 30px;
@@ -87,22 +86,22 @@
 				}
 			}
 
-			.rightHeader {
-				flex-direction: column;
+			// .rightHeader {
+			// 	flex-direction: column;
 
-				&__text {
-					display: none;
-				}
+			// 	&__text {
+			// 		display: none;
+			// 	}
 
-				&__button {
-					width: 145px;
-					height: 45px;
+			// 	&__button {
+			// 		width: 145px;
+			// 		height: 45px;
 
-					&--android {
-						margin: 0 0 5px;
-					}
-				}
-			}
+			// 		&--android {
+			// 			margin: 0 0 5px;
+			// 		}
+			// 	}
+			// }
 
 			.headerContact {
 				display: none;
@@ -132,12 +131,12 @@
 				}
 			}
 
-			.rightHeader {
-				&__button {
-					width: 85px;
-					height: 28px;
-				}
-			}
+			// .rightHeader {
+			// 	&__button {
+			// 		width: 85px;
+			// 		height: 28px;
+			// 	}
+			// }
 		}
 	}
 }

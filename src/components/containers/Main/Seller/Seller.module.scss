@@ -4,7 +4,7 @@
 
 .sellersSection {
 	padding: 50px map.get($sizes, minimal-padding);
-	background-image: url('/assets/images/sellers-background.png');
+	background-image: url('/images/sellers-background.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -24,7 +24,6 @@
 
 		&__title {
 			margin-bottom: 17px;
-			font-family: Inter, sans-serif;
 			font-size: 3.6rem;
 			font-weight: 800;
 			line-height: 64px;
@@ -32,7 +31,6 @@
 		}
 
 		&__text {
-			font-family: Inter, sans-serif;
 			font-size: 1.6rem;
 			line-height: 26px;
 			color: map.get($colors, text-color);
@@ -50,7 +48,6 @@
 
 		&__label {
 			margin-bottom: 10px;
-			font-family: Inter, sans-serif;
 			font-size: 1.8rem;
 			font-weight: 600;
 			color: #474a57;
@@ -59,34 +56,22 @@
 		&__input {
 			width: 100%;
 			padding: 14px 16px;
-			margin-bottom: 20px;
-			font-family: Inter, sans-serif;
+			margin-bottom: 10px;
 			font-size: 1.4rem;
 			color: #474a57;
 			background-color: #f4f5f7;
 			border-radius: 5px;
 		}
 
-		.sellersSectionFormSelect {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+		&__selectCountry {
 			width: 50%;
-			padding: 14px 10px 14px 16px;
-			margin-left: 0;
-			background-color: #f4f5f7;
-			border-radius: 5px;
+		}
 
-			&__text {
-				font-family: Inter, sans-serif;
-				font-size: 1.4rem;
-				color: #474a57;
-			}
-
-			&__icon {
-				width: auto;
-				height: 8px;
-			}
+		&__errorValidationMessage {
+			margin-bottom: 10px;
+			font-size: 1.4rem;
+			font-weight: 400;
+			color: #813333;
 		}
 
 		&__submit {
@@ -94,7 +79,6 @@
 			width: 120px;
 			padding: 12px;
 			margin: 20px 0 10px;
-			font-family: Inter, sans-serif;
 			font-weight: 700;
 			color: #fff;
 			background-color: #18191f;

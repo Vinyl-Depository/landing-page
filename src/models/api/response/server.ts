@@ -1,4 +1,4 @@
 export interface IServerResponse {
-	success: boolean;
-	message: string;
+	readonly success: boolean;
+	readonly message: string;
 }

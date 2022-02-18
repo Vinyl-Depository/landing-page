@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-// import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 import { validateEmail } from '@/utils/validators';
-import { EmailValidation } from '@/models/email';
+import useBackend from '@/hooks/backend';
+import { ISubscribeResponse } from '@/models/api/response/subscribe';
 
 import IntroView from './Intro.view';
 
@@ -12,35 +12,49 @@ interface IProps {
 
 const Intro: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const [emailInputState, setEmailInputState] = useState<string | null>(null);
-	const [emailValidationState, setEmailValidationState] = useState<EmailValidation | null>(null);
+	const [isEmailInputOnErrorState, setIsEmailInputOnErrorState] = useState<boolean | null>(null);
 
-	const emailInputChangeHandler = (input: string) => setEmailInputState(() => input);
+	const {
+		response: subscriptionResponse,
+		error: subscriptionError,
+		request: subscriptionRequest,
+	} = useBackend<ISubscribeResponse>('/api/subscribe', 'POST', {
+		email: emailInputState,
+	});
 
-	const formSubmitHandler = (event: React.FormEvent) => {
+	useEffect(() => {
+		if (subscriptionResponse) {
+			setIsEmailInputOnErrorState(() => false);
+			setEmailInputState(() => null);
+		} else if (subscriptionError) {
+			setIsEmailInputOnErrorState(() => true);
+		}
+	}, [subscriptionResponse, subscriptionError]);
+
+	const onEmailInputChange = (input: string) => setEmailInputState(() => input);
+
+	const onFormSubmit = (event: React.FormEvent) => {
 		event.preventDefault();
 
 		if (emailInputState === null) {
 			return;
 		}
 
-		// If the email is valid then set a success state and reset the email input
-		if (validateEmail(emailInputState)) {
-			setEmailValidationState(() => EmailValidation.Success);
-			setEmailInputState(() => null);
-
-			return;
+		if (emailInputState === '' || !validateEmail(emailInputState)) {
+			return setIsEmailInputOnErrorState(() => true);
 		}
 
-		setEmailValidationState(() => EmailValidation.BadInput);
+		// If the email is valid - try to subscribe
+		subscriptionRequest();
 	};
 
 	return (
 		<IntroView
 			joinersCount={props.joinersCount}
-			emailInputChangeHandler={emailInputChangeHandler}
-			formSubmitHandler={formSubmitHandler}
 			emailInput={emailInputState}
-			emailValidation={emailValidationState}
+			isEmailInputOnError={isEmailInputOnErrorState}
+			onEmailInputChange={onEmailInputChange}
+			onFormSubmit={onFormSubmit}
 		/>
 	);
 };

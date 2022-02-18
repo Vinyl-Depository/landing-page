@@ -4,32 +4,38 @@ import { useTranslation } from 'react-i18next';
 
 import introImgMobileResponsive from '@/images/intro-logo-mobile.png';
 import introImgWebResponsive from '@/images/intro-logo-web.png';
-import { EmailValidation } from '@/models/email';
+
 import VSvg from '@/ui/VSvg';
 
 import classes from './Intro.module.scss';
 
 interface IProps {
 	readonly joinersCount: number;
-	readonly emailInputChangeHandler: (_: string) => void;
 	readonly emailInput: string | null;
-	readonly formSubmitHandler: (event: React.FormEvent) => void;
-	readonly emailValidation: EmailValidation | null;
+	readonly isEmailInputOnError: boolean | null;
+	readonly onEmailInputChange: (_: string) => void;
+	readonly onFormSubmit: (event: React.FormEvent) => void;
 }
 
 const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const { t } = useTranslation();
 
-	let validationMessage: string | null = null;
-	let validationMessageClassName: string | null = null;
+	let validationMessage: JSX.Element | string = t('intro.successValidationMessage');
+	let validationMessageClassName = classes['validationMessageSuccess'];
 
-	if (props.emailValidation === EmailValidation.Success) {
-		validationMessage = 'Welcome! Thanks for joining :)';
-		validationMessageClassName = classes['emailValidationSuccessMessage'] ?? '';
-	} else if (props.emailValidation === EmailValidation.BadInput) {
-		validationMessage =
-			'Whoops, this doesnt seem to be a valid email! (Should be something like Jimi@Hendrix.com)';
-		validationMessageClassName = classes['emailValidationBadInputMessage'] ?? '';
+	if (props.isEmailInputOnError) {
+		validationMessage = (
+			<>
+				<span className={classes['validationMessageError__firstRow']}>
+					<b>{t('intro.errorValidationMessageFirstRow')}</b>
+				</span>
+				<br />
+				<span className={classes['validationMessageError__secondRow']}>
+					{t('intro.errorValidationMessageSecondRow')}
+				</span>
+			</>
+		);
+		validationMessageClassName = classes['validationMessageError'];
 	}
 
 	return (
@@ -73,22 +79,27 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					</p>
 					<form
 						className={classes['introWishlistFormContainer']}
-						onSubmit={props.formSubmitHandler}
+						noValidate
+						onSubmit={props.onFormSubmit}
 					>
 						<input
 							className={classes['introWishlistFormContainer__input']}
 							type="email"
 							placeholder={t('intro.wishListFormPlaceHolder')}
-							formNoValidate
 							value={props.emailInput ?? ''}
-							onChange={({ currentTarget: { value } }) => props.emailInputChangeHandler(value)}
+							onChange={({ currentTarget: { value } }) => props.onEmailInputChange(value)}
 						/>
 						<button className={classes['introWishlistFormContainer__submit']} type="submit">
 							{t('intro.wishListFormButton')}
 						</button>
-						{props.emailValidation && (
-							<span className={validationMessageClassName ?? ''}>{validationMessage}</span>
-						)}
+
+						<span
+							className={validationMessageClassName}
+							style={{ visibility: props.isEmailInputOnError === null ? 'hidden' : 'visible' }}
+						>
+							{validationMessage}
+						</span>
+
 						<button className={classes['introWishlistFormContainer__submitIpad']} type="submit">
 							<VSvg name="submitButton" />
 						</button>
