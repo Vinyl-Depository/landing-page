@@ -1,17 +1,26 @@
 import React from 'react';
 
+import { concatDiverseClasses } from '@/utils/component';
+
 import icons from 'src/icons';
 
 import VSvg from '../VSvg';
 
 import classes from './VSelect.module.scss';
 
+type UtilitiesClasses = 'container' | 'placeholder' | 'optionsContainer' | 'optionText' | 'icon';
+
 interface IProps {
+	readonly innerRef: React.RefObject<HTMLDivElement>;
 	readonly placeholder: string;
 	readonly options: ReadonlyArray<string>;
 	readonly selectedOption: string | null;
 	readonly isOpen: boolean;
 	readonly className?: string;
+	readonly placeholderClassName?: string;
+	readonly optionsContainerClassName?: string;
+	readonly optionTextClassName?: string;
+	readonly iconClassName?: string;
 	readonly iconName?: keyof typeof icons | null;
 	readonly onSelectOption: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>, option: string) => void;
 	readonly onCloseOptions: () => void;
@@ -19,19 +28,25 @@ interface IProps {
 }
 
 const VSelectView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
-	const containerClasses = classes['container'] + (props.className ? ` ${props.className}` : '');
+	const classesMap: Record<UtilitiesClasses, string> = {
+		container: concatDiverseClasses(classes['container'], props.className),
+		placeholder: concatDiverseClasses(classes['container__text'], props.placeholderClassName),
+		optionsContainer: concatDiverseClasses(classes['optionsContainer'], props.optionsContainerClassName),
+		optionText: concatDiverseClasses(classes['optionsContainer__option'], props.optionTextClassName),
+		icon: concatDiverseClasses(classes['container__icon'], props.iconClassName),
+	};
 
 	return (
-		<div className={containerClasses} onClick={props.onOpenOptions}>
-			<span className={classes['container__text']}>{props.selectedOption ?? props.placeholder}</span>
-			{props.iconName && <VSvg name={props.iconName} className={classes['container__icon']} />}
+		<div ref={props.innerRef} className={classesMap.container} onClick={props.onOpenOptions}>
+			<span className={classesMap.placeholder}>{props.selectedOption ?? props.placeholder}</span>
+			{props.iconName && <VSvg name={props.iconName} className={classesMap.icon} />}
 
 			{props.isOpen && (
-				<div className={classes['optionsContainer']}>
+				<div className={classesMap.optionsContainer}>
 					{props.options.map((option, index) => (
 						<span
 							key={index}
-							className={classes['optionsContainer__option']}
+							className={classesMap.optionText}
 							onClick={(event) => props.onSelectOption(event, option)}
 						>
 							{option}
