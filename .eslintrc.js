@@ -9,8 +9,8 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:react/jsx-runtime',
 		'plugin:import/typescript',
-		'prettier',
 		'next/core-web-vitals',
+		'prettier',
 	],
 	parserOptions: {
 		ecmaFeatures: {
