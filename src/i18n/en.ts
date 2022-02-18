@@ -69,6 +69,7 @@ const en = {
 			errorValidationEmailMessage: 'Please use a work email address..',
 			errorValidationNameMessage: 'Please enter a name so we’ll know how to contact you back!',
 			errorValidationCountryMessage: 'Please select a country from the list above.',
+			successMessage: 'Thank you!<br />We will get in touch as development progresses',
 			submitButton: 'Send',
 		},
 	},

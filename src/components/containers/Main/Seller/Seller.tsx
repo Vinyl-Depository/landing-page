@@ -16,6 +16,7 @@ const Seller: React.FC<IProps> = () => {
 	const [isEmailOnErrorState, setIsEmailOnErrorState] = useState<boolean>(false);
 	const [isNameOnErrorState, setIsNameOnErrorState] = useState<boolean>(false);
 	const [isCountryOnErrorState, setIsCountryOnErrorState] = useState<boolean>(false);
+	const [isFormOnSuccessState, setIsFormOnSuccessState] = useState<boolean>(false);
 
 	const {
 		response: subscriptionResponse,
@@ -28,6 +29,10 @@ const Seller: React.FC<IProps> = () => {
 	});
 
 	useEffect(() => {
+		if (subscriptionResponse) {
+			setIsFormOnSuccessState(() => true);
+		}
+
 		setEmailInputState(() => null);
 		setNameInputState(() => null);
 		setCountryState(() => null);
@@ -79,6 +84,7 @@ const Seller: React.FC<IProps> = () => {
 			isEmailOnError={isEmailOnErrorState}
 			isNameOnError={isNameOnErrorState}
 			isCountryOnError={isCountryOnErrorState}
+			isFormOnSuccess={isFormOnSuccessState}
 			onEmailInputChange={onEmailInputChange}
 			onNameInputChange={onNameInputChange}
 			onCountrySelect={onCountrySelect}

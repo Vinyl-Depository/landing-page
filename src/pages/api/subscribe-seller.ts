@@ -48,7 +48,10 @@ export default async function handler(
 			await mailchimp.post(`/lists/${process.env.MAILCHIMP_LIST_ID}/members`, {
 				email_address: req.body.email,
 				status: 'subscribed',
-				tags: [process.env.MAILCHIMP_APPROVAL_LANDING_SUB_TAG],
+				tags: [
+					process.env.MAILCHIMP_APPROVAL_LANDING_SUB_TAG,
+					process.env.MAILCHIMP_SELLER_LANDING_SUB,
+				],
 				merge_fields: {
 					FNAME: req.body.firstName,
 					COUNTRY: req.body.country,
