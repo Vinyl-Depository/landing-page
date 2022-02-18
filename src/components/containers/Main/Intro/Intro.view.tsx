@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 
 import introImgMobileResponsive from '@/images/intro-logo-mobile.png';
 import introImgWebResponsive from '@/images/intro-logo-web.png';
-import { EmailValidation } from '@/models/form';
 
 import VSvg from '@/ui/VSvg';
 
@@ -12,22 +11,19 @@ import classes from './Intro.module.scss';
 
 interface IProps {
 	readonly joinersCount: number;
-	readonly emailInputChangeHandler: (_: string) => void;
 	readonly emailInput: string | null;
-	readonly formSubmitHandler: (event: React.FormEvent) => void;
-	readonly emailValidation: EmailValidation | null;
+	readonly isEmailInputOnError: boolean | null;
+	readonly onEmailInputChange: (_: string) => void;
+	readonly onFormSubmit: (event: React.FormEvent) => void;
 }
 
 const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const { t } = useTranslation();
 
-	let validationMessage: JSX.Element | string | null = null;
-	let validationMessageClassName: string | null = null;
+	let validationMessage: JSX.Element | string = t('intro.successValidationMessage');
+	let validationMessageClassName = classes['validationMessageSuccess'];
 
-	if (props.emailValidation === EmailValidation.Success) {
-		validationMessage = t('intro.successValidationMessage');
-		validationMessageClassName = classes['validationMessageSuccess'] ?? '';
-	} else if (props.emailValidation === EmailValidation.BadInput) {
+	if (props.isEmailInputOnError) {
 		validationMessage = (
 			<>
 				<span className={classes['validationMessageError__firstRow']}>
@@ -39,7 +35,7 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 				</span>
 			</>
 		);
-		validationMessageClassName = classes['validationMessageError'] ?? '';
+		validationMessageClassName = classes['validationMessageError'];
 	}
 
 	return (
@@ -84,21 +80,26 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					<form
 						className={classes['introWishlistFormContainer']}
 						noValidate
-						onSubmit={props.formSubmitHandler}
+						onSubmit={props.onFormSubmit}
 					>
 						<input
 							className={classes['introWishlistFormContainer__input']}
 							type="email"
 							placeholder={t('intro.wishListFormPlaceHolder')}
 							value={props.emailInput ?? ''}
-							onChange={({ currentTarget: { value } }) => props.emailInputChangeHandler(value)}
+							onChange={({ currentTarget: { value } }) => props.onEmailInputChange(value)}
 						/>
 						<button className={classes['introWishlistFormContainer__submit']} type="submit">
 							{t('intro.wishListFormButton')}
 						</button>
-						{props.emailValidation && (
-							<span className={validationMessageClassName ?? ''}>{validationMessage}</span>
-						)}
+
+						<span
+							className={validationMessageClassName}
+							style={{ visibility: props.isEmailInputOnError === null ? 'hidden' : 'visible' }}
+						>
+							{validationMessage}
+						</span>
+
 						<button className={classes['introWishlistFormContainer__submitIpad']} type="submit">
 							<VSvg name="submitButton" />
 						</button>

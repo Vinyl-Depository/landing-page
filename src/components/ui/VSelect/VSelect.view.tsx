@@ -11,10 +11,10 @@ import classes from './VSelect.module.scss';
 type UtilitiesClasses = 'container' | 'placeholder' | 'optionsContainer' | 'optionText' | 'icon';
 
 interface IProps {
+	readonly selectedIndex: number | null;
 	readonly innerRef: React.RefObject<HTMLDivElement>;
 	readonly placeholder: string;
 	readonly options: ReadonlyArray<string>;
-	readonly selectedOption: string | null;
 	readonly isOpen: boolean;
 	readonly className?: string;
 	readonly placeholderClassName?: string;
@@ -38,7 +38,9 @@ const VSelectView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =
 
 	return (
 		<div ref={props.innerRef} className={classesMap.container} onClick={props.onOpenOptions}>
-			<span className={classesMap.placeholder}>{props.selectedOption ?? props.placeholder}</span>
+			<span className={classesMap.placeholder}>
+				{props.selectedIndex ? props.options[props.selectedIndex] : props.placeholder}
+			</span>
 			{props.iconName && <VSvg name={props.iconName} className={classesMap.icon} />}
 
 			{props.isOpen && (

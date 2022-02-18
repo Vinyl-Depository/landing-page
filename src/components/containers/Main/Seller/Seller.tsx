@@ -23,6 +23,10 @@ const Seller: React.FC<IProps> = () => {
 	const onFormSubmit = (event: React.FormEvent) => {
 		event.preventDefault();
 
+		setIsEmailOnErrorState(() => false);
+		setIsNameOnErrorState(() => false);
+		setIsCountryOnErrorState(() => false);
+
 		let formHasFailed = false;
 
 		if (!emailInputState || !validateEmail(emailInputState)) {
@@ -46,6 +50,7 @@ const Seller: React.FC<IProps> = () => {
 		if (!formHasFailed) {
 			setEmailInputState(() => null);
 			setNameInputState(() => null);
+			setCountrySelectedIndexState(() => null);
 		}
 	};
 

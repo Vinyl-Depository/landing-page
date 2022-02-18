@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { Trans, useTranslation } from 'react-i18next';
-import { EmailValidation } from '@/models/form';
 
 import vinylLogo from '@/images/join-whistlist-vinyl-logo.png';
 import emailLogo from '@/images/join-whistlist-emails.png';
@@ -12,22 +11,19 @@ import classes from './JoinWishlist.module.scss';
 
 interface IProps {
 	readonly joinersCount: number;
-	readonly emailInputChangeHandler: (_: string) => void;
 	readonly emailInput: string | null;
-	readonly formSubmitHandler: (event: React.FormEvent) => void;
-	readonly emailValidation: EmailValidation | null;
+	readonly isEmailInputOnError: boolean | null;
+	readonly onEmailInputChange: (_: string) => void;
+	readonly onFormSubmit: (event: React.FormEvent) => void;
 }
 
 const JoinWishlistView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const { t } = useTranslation();
 
-	let validationMessage: JSX.Element | string | null = null;
-	let validationMessageClassName: string | null = null;
+	let validationMessage: JSX.Element | string = t('intro.successValidationMessage');
+	let validationMessageClassName = classes['validationMessageSuccess'];
 
-	if (props.emailValidation === EmailValidation.Success) {
-		validationMessage = t('intro.successValidationMessage');
-		validationMessageClassName = classes['validationMessageSuccess'] ?? '';
-	} else if (props.emailValidation === EmailValidation.BadInput) {
+	if (props.isEmailInputOnError) {
 		validationMessage = (
 			<>
 				<span className={classes['validationMessageError__firstRow']}>
@@ -39,7 +35,7 @@ const JoinWishlistView: React.FC<IProps> = (props: React.PropsWithChildren<IProp
 				</span>
 			</>
 		);
-		validationMessageClassName = classes['validationMessageError'] ?? '';
+		validationMessageClassName = classes['validationMessageError'];
 	}
 
 	return (
@@ -75,17 +71,13 @@ const JoinWishlistView: React.FC<IProps> = (props: React.PropsWithChildren<IProp
 						</span>
 						<Trans i18nKey="joinWishlist.headerSecondPart" />
 					</h2>
-					<form
-						className={classes['joinWishlistForm']}
-						noValidate
-						onSubmit={props.formSubmitHandler}
-					>
+					<form className={classes['joinWishlistForm']} noValidate onSubmit={props.onFormSubmit}>
 						<input
 							className={classes['joinWishlistForm__input']}
 							type="email"
 							placeholder={t('joinWishlist.formPlaceholder')}
 							value={props.emailInput ?? ''}
-							onChange={({ currentTarget: { value } }) => props.emailInputChangeHandler(value)}
+							onChange={({ currentTarget: { value } }) => props.onEmailInputChange(value)}
 						/>
 						<button className={classes['joinWishlistForm__submit']} type="submit">
 							{t('joinWishlist.button')}
@@ -94,9 +86,12 @@ const JoinWishlistView: React.FC<IProps> = (props: React.PropsWithChildren<IProp
 						<button className={classes['joinWishlistForm__mobileSubmit']} type="submit">
 							<VSvg name="submitButton" />
 						</button>
-						{props.emailValidation && (
-							<span className={validationMessageClassName ?? ''}>{validationMessage}</span>
-						)}
+						<span
+							className={validationMessageClassName}
+							style={{ visibility: props.isEmailInputOnError === null ? 'hidden' : 'visible' }}
+						>
+							{validationMessage}
+						</span>
 					</form>
 				</div>
 			</section>

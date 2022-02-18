@@ -18,7 +18,6 @@ interface IProps {
 }
 
 const VSelect: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
-	const [selectedOptionState, setSelectedOptionState] = useState<string | null>(null);
 	const [isOpenState, setIsOpenState] = useState<boolean>(false);
 
 	const selectRef = useRef<HTMLDivElement>(null);
@@ -44,7 +43,6 @@ const VSelect: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const onSelectOption = (event: React.MouseEvent<HTMLSpanElement, MouseEvent>, index: number) => {
 		event.stopPropagation();
 
-		setSelectedOptionState(() => props.options[index]!);
 		setIsOpenState(() => false);
 		props.onSelectOption(index);
 	};
@@ -56,9 +54,9 @@ const VSelect: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	return (
 		<VSelectView
 			innerRef={selectRef}
+			selectedIndex={props.selectedIndex}
 			placeholder={props.placeholder}
 			options={props.options}
-			selectedOption={selectedOptionState}
 			isOpen={isOpenState}
 			className={props.className}
 			placeholderClassName={props.placeholderClassName}
