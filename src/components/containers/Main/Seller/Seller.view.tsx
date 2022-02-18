@@ -13,6 +13,7 @@ interface IProps {
 	readonly isEmailOnError: boolean;
 	readonly isNameOnError: boolean;
 	readonly isCountryOnError: boolean;
+	readonly isFormOnSuccess: boolean;
 	readonly onEmailInputChange: (_: string) => void;
 	readonly onNameInputChange: (_: string) => void;
 	readonly onCountrySelect: (_: string) => void;
@@ -90,10 +91,14 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 								primary25: '#f4f5f7',
 							},
 						})}
+						value={{
+							label: props.country ?? t('seller.form.countryInput'),
+							value: props.country,
+						}}
 						filterOption={(option, input) =>
 							option.value.toLowerCase().startsWith(input.toLowerCase())
 						}
-						onChange={(selected) => props.onCountrySelect(selected!.value)}
+						onChange={(selected) => props.onCountrySelect(selected!.value!)}
 					/>
 					<span
 						className={classes['sellersSectionForm__errorValidationMessage']}
@@ -102,9 +107,16 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 						{t('seller.form.errorValidationCountryMessage')}
 					</span>
 
-					<button className={classes['sellersSectionForm__submit']} type="submit">
-						{t('seller.form.submitButton')}
-					</button>
+					<div className={classes['formSubmitContainer']}>
+						<button className={classes['formSubmitContainer__submit']} type="submit">
+							{t('seller.form.submitButton')}
+						</button>
+						{props.isFormOnSuccess && (
+							<span className={classes['formSubmitContainer__successMessage']}>
+								<Trans i18nKey="seller.form.successMessage" />
+							</span>
+						)}
+					</div>
 				</form>
 			</div>
 		</section>

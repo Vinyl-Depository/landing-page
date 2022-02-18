@@ -101,15 +101,27 @@
 			color: #813333;
 		}
 
-		&__submit {
-			align-self: flex-start;
-			width: 120px;
-			padding: 12px;
+		.formSubmitContainer {
+			display: flex;
+			align-items: center;
 			margin: 20px 0 10px;
-			font-weight: 700;
-			color: #fff;
-			background-color: #18191f;
-			border-radius: 5px;
+
+			&__submit {
+				align-self: flex-start;
+				width: 120px;
+				padding: 12px;
+				font-weight: 700;
+				color: #fff;
+				background-color: #18191f;
+				border-radius: 5px;
+			}
+
+			&__successMessage {
+				margin-left: 10px;
+				font-size: 1.2rem;
+				font-weight: bold;
+				color: #3e8133;
+			}
 		}
 	}
 }
