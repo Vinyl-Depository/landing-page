@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { validateEmail } from '@/utils/validators';
+import useBackend from '@/hooks/backend';
+import { ISubscribeSellerResponse } from '@/models/api/response/subscribe';
+import { countriesList } from '@/data/countries';
 
 import SellerView from './Seller.view';
 
@@ -13,6 +16,22 @@ const Seller: React.FC<IProps> = () => {
 	const [isEmailOnErrorState, setIsEmailOnErrorState] = useState<boolean>(false);
 	const [isNameOnErrorState, setIsNameOnErrorState] = useState<boolean>(false);
 	const [isCountryOnErrorState, setIsCountryOnErrorState] = useState<boolean>(false);
+
+	const {
+		response: subscriptionResponse,
+		error: subscriptionError,
+		request: subscriptionRequest,
+	} = useBackend<ISubscribeSellerResponse>('/api/subscribe-seller', 'POST', {
+		email: emailInputState,
+		firstName: nameInputState,
+		country: countriesList[countrySelectedIndexState!],
+	});
+
+	useEffect(() => {
+		setEmailInputState(() => null);
+		setNameInputState(() => null);
+		setCountrySelectedIndexState(() => null);
+	}, [subscriptionResponse, subscriptionError]);
 
 	const onEmailInputChange = (input: string) => setEmailInputState(() => input);
 
@@ -48,9 +67,7 @@ const Seller: React.FC<IProps> = () => {
 		}
 
 		if (!formHasFailed) {
-			setEmailInputState(() => null);
-			setNameInputState(() => null);
-			setCountrySelectedIndexState(() => null);
+			subscriptionRequest();
 		}
 	};
 

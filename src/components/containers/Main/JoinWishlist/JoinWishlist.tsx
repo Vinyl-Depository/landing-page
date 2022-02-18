@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { validateEmail } from '@/utils/validators';
+import useBackend from '@/hooks/backend';
+import { ISubscribeResponse } from '@/models/api/response/subscribe';
 
 import JoinWishlistView from './JoinWishlist.view';
 
@@ -11,6 +13,23 @@ interface IProps {
 const JoinWishlist: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const [emailInputState, setEmailInputState] = useState<string | null>(null);
 	const [isEmailInputOnErrorState, setIsEmailInputOnErrorState] = useState<boolean | null>(null);
+
+	const {
+		response: subscriptionResponse,
+		error: subscriptionError,
+		request: subscriptionRequest,
+	} = useBackend<ISubscribeResponse>('/api/subscribe', 'POST', {
+		email: emailInputState,
+	});
+
+	useEffect(() => {
+		if (subscriptionResponse) {
+			setIsEmailInputOnErrorState(() => false);
+			setEmailInputState(() => null);
+		} else if (subscriptionError) {
+			setIsEmailInputOnErrorState(() => true);
+		}
+	}, [subscriptionResponse, subscriptionError]);
 
 	const onEmailInputChange = (input: string) => setEmailInputState(() => input);
 
@@ -25,10 +44,8 @@ const JoinWishlist: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) 
 			return setIsEmailInputOnErrorState(() => true);
 		}
 
-		// If the email is valid then set a success state and reset the email input
-
-		setIsEmailInputOnErrorState(() => false);
-		setEmailInputState(() => null);
+		// If the email is valid - try to subscribe
+		subscriptionRequest();
 	};
 
 	return (

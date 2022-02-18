@@ -12,16 +12,20 @@ interface IHookResponse<T extends IHTTPResponeData> {
 	request: () => Promise<() => void>;
 }
 
+const backendInstance = axios.create({
+	baseURL: 'http://localhost/',
+});
+
 /**
- * The hook receives the request configuration and returns an object to use
- * @param url the url to send the request to
+ * The hook receives the request configuration and returns an object to use a request against the backend
+ * @param url the url segment to send the request to
  * @param method the method to use
  * @param body the request body
  * @param headers the request headers
  * @param timeout the request timeout
  * @returns an object of response, error, loading state and request to use
  */
-const useHTTP = <T extends IHTTPResponeData>(
+const useBackend = <T extends IHTTPResponeData>(
 	url: string,
 	method: Extract<Method, 'GET' | 'POST'>,
 	body?: object,
@@ -42,7 +46,7 @@ const useHTTP = <T extends IHTTPResponeData>(
 
 		try {
 			if (method === 'GET') {
-				const response = await axios.get(url, {
+				const response = await backendInstance.get(url, {
 					cancelToken: axiosSource.token,
 					timeout: HTTPTimeout,
 				});
@@ -50,7 +54,7 @@ const useHTTP = <T extends IHTTPResponeData>(
 				setResponseState(() => response);
 				setLoadingState(() => false);
 			} else if (method === 'POST') {
-				const response = await axios.post(url, body, {
+				const response = await backendInstance.post(url, body, {
 					cancelToken: axiosSource.token,
 					timeout: HTTPTimeout,
 					headers,
@@ -74,4 +78,4 @@ const useHTTP = <T extends IHTTPResponeData>(
 	return { response: responseState, error: errorState, loading: loadingState, request };
 };
 
-export default useHTTP;
+export default useBackend;
