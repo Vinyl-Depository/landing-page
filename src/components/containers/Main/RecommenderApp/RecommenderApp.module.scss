@@ -42,7 +42,6 @@
 		flex-direction: column;
 
 		&__title {
-			font-family: Inter, sans-serif;
 			font-size: 4.8rem;
 			font-weight: 800;
 			color: map.get($colors, text-color);
@@ -50,14 +49,12 @@
 
 		&__text {
 			margin: 12px 0 35px;
-			font-family: Inter, sans-serif;
 			font-size: 1.8rem;
 			line-height: 32px;
 			color: map.get($colors, text-color);
 		}
 
 		&__getAppText {
-			font-family: Inter, sans-serif;
 			font-size: 1.8rem;
 			font-weight: 500;
 			color: map.get($colors, text-color);

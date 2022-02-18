@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Trans, useTranslation } from 'react-i18next';
-import { EmailValidation } from '@/models/email';
+import { EmailValidation } from '@/models/form';
 
 import vinylLogo from '@/images/join-whistlist-vinyl-logo.png';
 import emailLogo from '@/images/join-whistlist-emails.png';

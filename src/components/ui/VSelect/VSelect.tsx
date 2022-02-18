@@ -5,6 +5,7 @@ import icons from 'src/icons';
 import VSelectView from './VSelect.view';
 
 interface IProps {
+	readonly selectedIndex: number | null;
 	readonly placeholder: string;
 	readonly options: ReadonlyArray<string>;
 	readonly className?: string;
@@ -13,6 +14,7 @@ interface IProps {
 	readonly optionTextClassName?: string;
 	readonly iconClassName?: string;
 	readonly iconName?: keyof typeof icons | null;
+	readonly onSelectOption: (_: number) => void;
 }
 
 const VSelect: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
@@ -39,11 +41,12 @@ const VSelect: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 		};
 	}, []);
 
-	const onSelectOption = (event: React.MouseEvent<HTMLSpanElement, MouseEvent>, option: string) => {
+	const onSelectOption = (event: React.MouseEvent<HTMLSpanElement, MouseEvent>, index: number) => {
 		event.stopPropagation();
 
-		setSelectedOptionState(() => option);
+		setSelectedOptionState(() => props.options[index]!);
 		setIsOpenState(() => false);
+		props.onSelectOption(index);
 	};
 
 	const onCloseOptions = () => setIsOpenState(() => false);

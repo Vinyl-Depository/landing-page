@@ -5,7 +5,16 @@ import VSelect from './VSelect';
 
 describe('<VSelect>', () => {
 	it('Should render the component unchanged', () => {
-		const { container } = render(<VSelect placeholder="test" options={['test']} />);
+		const { container } = render(
+			<VSelect
+				selectedIndex={0}
+				placeholder="test"
+				options={['test']}
+				onSelectOption={() => {
+					return;
+				}}
+			/>,
+		);
 
 		expect(container).toMatchSnapshot();
 	});

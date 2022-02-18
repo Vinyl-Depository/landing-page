@@ -33,7 +33,6 @@
 			align-items: center;
 
 			&__text {
-				font-family: Inter, sans-serif;
 				font-size: 1.8rem;
 				font-weight: 700;
 				color: map.get($colors, text-color);

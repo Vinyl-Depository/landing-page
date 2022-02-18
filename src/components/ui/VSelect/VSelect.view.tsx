@@ -22,7 +22,7 @@ interface IProps {
 	readonly optionTextClassName?: string;
 	readonly iconClassName?: string;
 	readonly iconName?: keyof typeof icons | null;
-	readonly onSelectOption: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>, option: string) => void;
+	readonly onSelectOption: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>, index: number) => void;
 	readonly onCloseOptions: () => void;
 	readonly onOpenOptions: () => void;
 }
@@ -47,7 +47,7 @@ const VSelectView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =
 						<span
 							key={index}
 							className={classesMap.optionText}
-							onClick={(event) => props.onSelectOption(event, option)}
+							onClick={(event) => props.onSelectOption(event, index)}
 						>
 							{option}
 						</span>

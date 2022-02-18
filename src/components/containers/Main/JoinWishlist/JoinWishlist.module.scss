@@ -36,20 +36,18 @@
 		margin-left: 50px;
 
 		.joinWishlistHeader {
-			font-family: Inter, sans-serif;
 			font-size: 4rem;
 			font-weight: 800;
 			color: #fff;
 
 			&__counter {
-				font-family: Inter, sans-serif;
 				color: map.get($colors, text-color);
 			}
 		}
 
 		.joinWishlistForm {
-			display: flex;
 			position: relative;
+			display: flex;
 			align-items: center;
 			height: 50px;
 			margin-top: 40px;
@@ -58,7 +56,6 @@
 				width: 55%;
 				height: 100%;
 				padding: 8px 15px;
-				font-family: Inter, sans-serif;
 				font-size: 1.4rem;
 				color: #474a57;
 				border-top-left-radius: 5px;
@@ -68,7 +65,6 @@
 			&__submit {
 				height: 100%;
 				padding: 8px 20px;
-				font-family: Inter, sans-serif;
 				font-size: 1.4rem;
 				font-weight: 500;
 				color: #fff;
@@ -79,9 +75,8 @@
 
 			.validationMessageSuccess {
 				position: absolute;
-				margin: 0 auto;
 				top: calc(100% + 15px);
-				font-family: Inter, sans-serif;
+				margin: 0 auto;
 				font-size: 1.8rem;
 				font-weight: 700;
 				color: #fff;
@@ -90,12 +85,11 @@
 
 			.validationMessageError {
 				position: absolute;
+				top: calc(100% + 5px);
 				margin: 0 auto;
-				font-family: Inter, sans-serif;
 				font-size: 1.5rem;
 				font-weight: 500;
 				color: #fff;
-				top: calc(100% + 5px);
 
 				&__firstRow {
 					white-space: nowrap;
@@ -198,11 +192,11 @@
 				&__input {
 					width: 100%;
 				}
+
 				.validationMessageSuccess {
 					position: absolute;
-					margin: 0 auto;
 					top: calc(100% + 15px);
-					font-family: Inter, sans-serif;
+					margin: 0 auto;
 					font-size: 1.8rem;
 					font-weight: 700;
 					color: #fff;
