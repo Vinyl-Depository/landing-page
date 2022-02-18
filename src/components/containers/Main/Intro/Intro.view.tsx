@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import introImgMobileResponsive from '@/images/intro-logo-mobile.png';
 import introImgWebResponsive from '@/images/intro-logo-web.png';
-import { EmailValidation } from '@/models/email';
+import { EmailValidation } from '@/models/form';
 
 import VSvg from '@/ui/VSvg';
 

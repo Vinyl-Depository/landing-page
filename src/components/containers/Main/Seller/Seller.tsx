@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
 import { validateEmail } from '@/utils/validators';
-import { EmailValidation } from '@/models/email';
-import { NameValidation } from '@/models/name';
 
 import SellerView from './Seller.view';
 
@@ -11,46 +9,45 @@ interface IProps {}
 const Seller: React.FC<IProps> = () => {
 	const [emailInputState, setEmailInputState] = useState<string | null>(null);
 	const [nameInputState, setNameInputState] = useState<string | null>(null);
+	const [isEmailOnErrorState, setIsEmailOnErrorState] = useState<boolean>(false);
+	const [isNameOnErrorState, setIsNameOnErrorState] = useState<boolean>(false);
 
-	const [emailValidationState, setEmailValidationState] = useState<EmailValidation | null>(null);
-	const [nameValidationState, setNameValidationState] = useState<NameValidation | null>(null);
+	const onEmailInputChange = (input: string) => setEmailInputState(() => input);
 
-	const emailInputChangeHandler = (input: string) => setEmailInputState(() => input);
-	const nameInputChangeHandler = (input: string) => setNameInputState(() => input);
+	const onNameInputChange = (input: string) => setNameInputState(() => input);
 
-	const formSubmitHandler = (event: React.FormEvent) => {
+	const onFormSubmit = (event: React.FormEvent) => {
 		event.preventDefault();
 
-		if (emailInputState === null || emailInputState === '' || !validateEmail(emailInputState)) {
-			setEmailValidationState(() => EmailValidation.BadInput);
-			alert('emailFail');
+		let formHasFailed = false;
 
-			return;
+		if (!emailInputState || !validateEmail(emailInputState)) {
+			setIsEmailOnErrorState(() => true);
+
+			formHasFailed = true;
 		}
 
-		if (nameInputState === '' || nameInputState === null) {
-			setNameValidationState(() => NameValidation.BadInput);
-			alert('name failed');
+		if (!nameInputState) {
+			setIsNameOnErrorState(() => true);
 
-			return;
+			formHasFailed = true;
 		}
 
-		setEmailValidationState(() => EmailValidation.Success);
-		setEmailInputState(() => null);
-		setNameInputState(() => null);
-
-		return;
+		if (!formHasFailed) {
+			setEmailInputState(() => null);
+			setNameInputState(() => null);
+		}
 	};
 
 	return (
 		<SellerView
-			emailInputChangeHandler={emailInputChangeHandler}
-			nameInputChangeHandler={nameInputChangeHandler}
-			formSubmitHandler={formSubmitHandler}
 			emailInput={emailInputState}
 			nameInput={nameInputState}
-			emailValidation={emailValidationState}
-			nameValidation={nameValidationState}
+			isEmailOnError={isEmailOnErrorState}
+			isNameOnError={isNameOnErrorState}
+			onEmailInputChange={onEmailInputChange}
+			onNameInputChange={onNameInputChange}
+			onFormSubmit={onFormSubmit}
 		/>
 	);
 };

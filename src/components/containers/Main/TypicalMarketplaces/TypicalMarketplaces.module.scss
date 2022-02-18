@@ -13,7 +13,6 @@
 		margin: 0 auto;
 
 		&__header {
-			font-family: Inter, sans-serif;
 			font-size: 4.5rem;
 			font-weight: 800;
 			color: map.get($colors, text-color);
@@ -27,7 +26,6 @@
 
 			&__text {
 				width: 580px;
-				font-family: Inter, sans-serif;
 				font-size: 1.6rem;
 				line-height: 1.7;
 				color: map.get($colors, text-color);

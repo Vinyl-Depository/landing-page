@@ -60,13 +60,16 @@ const en = {
 		description:
 			'Sounds interesting? We would love to tell you more about our product, and your<br>part in changing how records are sold online with Vinyl Depository.',
 		form: {
+			emailLabel: 'Your email address',
 			emailInput: 'Your work email address',
+			nameLabel: 'Name / Store name',
 			nameInput: 'Your name / Store name',
 			countryTitle: 'Country',
 			countryInput: 'Select country',
-			errorValidationMessageFirstRow: "Whoops, this doesn't seem to be a valid email!",
-			errorValidationMessageSecondRow: '(Should be something like Jimi@Hendrix.com)',
-			errorValidationNameMessage: "That dosn't seems to be right 🧐",
+			errorValidationEmailMessage: 'Please use a work email address..',
+			errorValidationNameMessage: 'Please enter a name so we’ll know how to contact you back!',
+			errorValidationCountryMessage: 'Please select a country from the list above.',
+			submitButton: 'Send',
 		},
 	},
 	footer: {

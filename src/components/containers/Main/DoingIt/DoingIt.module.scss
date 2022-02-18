@@ -13,7 +13,6 @@
 		margin: 0 auto;
 
 		&__header {
-			font-family: Inter, sans-serif;
 			font-size: 4.5rem;
 			font-weight: 800;
 			color: map.get($colors, text-color);
@@ -51,7 +50,6 @@
 
 			&__title {
 				margin: 7px 0 3px;
-				font-family: Inter, sans-serif;
 				font-size: 2.4rem;
 				font-weight: 600;
 				color: map.get($colors, text-color);
@@ -59,7 +57,6 @@
 			}
 
 			&__text {
-				font-family: Inter, sans-serif;
 				font-size: 1.6rem;
 				color: map.get($colors, text-color);
 				text-align: center;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { validateEmail } from '@/utils/validators';
-import { EmailValidation } from '@/models/email';
+import { EmailValidation } from '@/models/form';
 
 import JoinWishlistView from './JoinWishlist.view';
 

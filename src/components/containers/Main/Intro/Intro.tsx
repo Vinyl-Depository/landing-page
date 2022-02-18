@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import axios from 'axios';
 
 import { validateEmail } from '@/utils/validators';
-import { EmailValidation } from '@/models/email';
+import { EmailValidation } from '@/models/form';
 
 import IntroView from './Intro.view';
 
