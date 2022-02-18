@@ -1,7 +1,7 @@
 import React from 'react';
+import Select from 'react-select';
 import { Trans, useTranslation } from 'react-i18next';
 
-import VSelect from '@/ui/VSelect';
 import { countriesList } from '@/data/countries';
 
 import classes from './Seller.module.scss';
@@ -9,18 +9,23 @@ import classes from './Seller.module.scss';
 interface IProps {
 	readonly emailInput: string | null;
 	readonly nameInput: string | null;
-	readonly countrySelectedIndex: number | null;
+	readonly country: string | null;
 	readonly isEmailOnError: boolean;
 	readonly isNameOnError: boolean;
 	readonly isCountryOnError: boolean;
 	readonly onEmailInputChange: (_: string) => void;
 	readonly onNameInputChange: (_: string) => void;
-	readonly onCountrySelectIndexSelected: (_: number) => void;
+	readonly onCountrySelect: (_: string) => void;
 	readonly onFormSubmit: (_: React.FormEvent) => void;
 }
 
 const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const { t } = useTranslation();
+
+	const countrySelectOptions = countriesList.map((country) => ({
+		value: country,
+		label: country,
+	}));
 
 	return (
 		<section id="seller" className={classes['sellersSection']}>
@@ -71,13 +76,24 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 					<label className={classes['sellersSectionForm__label']}>
 						{t('seller.form.countryTitle')}
 					</label>
-					<VSelect
-						selectedIndex={props.countrySelectedIndex}
-						placeholder={t('seller.form.countryInput')}
-						options={countriesList}
+					<Select
 						className={classes['sellersSectionForm__selectCountry']}
-						iconName="arrowDown"
-						onSelectOption={props.onCountrySelectIndexSelected}
+						isSearchable
+						options={countrySelectOptions}
+						placeholder={t('seller.form.countryInput')}
+						components={{ IndicatorSeparator: () => null }}
+						theme={(theme) => ({
+							...theme,
+							colors: {
+								...theme.colors,
+								primary: '#afb3da',
+								primary25: '#f4f5f7',
+							},
+						})}
+						filterOption={(option, input) =>
+							option.value.toLowerCase().startsWith(input.toLowerCase())
+						}
+						onChange={(selected) => props.onCountrySelect(selected!.value)}
 					/>
 					<span
 						className={classes['sellersSectionForm__errorValidationMessage']}

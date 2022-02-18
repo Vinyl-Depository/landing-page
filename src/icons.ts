@@ -1,10 +1,4 @@
 const icons = {
-	arrowDown: [
-		'12 7',
-		`
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M11.761 1.429 6.576 6.755a.8.8 0 0 1-1.152 0L.239 1.429a.853.853 0 0 1 0-1.184.8.8 0 0 1 1.152 0L6 4.98 10.61.245a.8.8 0 0 1 1.151 0 .853.853 0 0 1 0 1.184Z" fill="#3A3A3A"/>
-    	`,
-	],
 	submitButton: [
 		'19 22',
 		`

@@ -46,6 +46,7 @@
 		"react-dom": "17.0.2",
 		"react-i18next": "^11.15.3",
 		"react-responsive-carousel": "^3.2.22",
+		"react-select": "^5.2.2",
 		"sharp": "^0.30.1"
 	},
 	"devDependencies": {
