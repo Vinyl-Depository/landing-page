@@ -73,9 +73,6 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 							</span>
 							{t('intro.waitListSecondPartDescription')}
 						</span>
-						<span className={classes['introWishlistTextContainer__sub']}>
-							{t('intro.waitListDescriptionSub')}
-						</span>
 					</p>
 					<form
 						className={classes['introWishlistFormContainer']}

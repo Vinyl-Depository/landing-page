@@ -53,12 +53,6 @@
 			&__counter {
 				color: map.get($colors, text-color);
 			}
-
-			&__sub {
-				font-size: 1.4rem;
-				font-weight: 600;
-				color: #b8b8b8;
-			}
 		}
 
 		.introWishlistFormContainer {
