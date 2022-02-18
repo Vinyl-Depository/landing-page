@@ -21,30 +21,25 @@ const Seller: React.FC<IProps> = () => {
 	const formSubmitHandler = (event: React.FormEvent) => {
 		event.preventDefault();
 
-		if (emailInputState === null) {
-			return setEmailValidationState(() => EmailValidation.BadInput);
-		}
-
-		if (nameInputState === null) {
-			setNameValidationState(() => NameValidation.BadInput);
-		}
-
-		if (emailInputState === '') {
-			return setEmailValidationState(() => EmailValidation.BadInput);
-		}
-
-		if (nameInputState === '') {
-			return setNameValidationState(() => NameValidation.BadInput);
-		}
-
-		// If the email is valid then set a success state and reset the email input
-		if (validateEmail(emailInputState)) {
-			setEmailValidationState(() => EmailValidation.Success);
-			setEmailInputState(() => null);
-			setNameInputState(() => null);
+		if (emailInputState === null || emailInputState === '' || !validateEmail(emailInputState)) {
+			setEmailValidationState(() => EmailValidation.BadInput);
+			alert('emailFail');
 
 			return;
 		}
+
+		if (nameInputState === '' || nameInputState === null) {
+			setNameValidationState(() => NameValidation.BadInput);
+			alert('name failed');
+
+			return;
+		}
+
+		setEmailValidationState(() => EmailValidation.Success);
+		setEmailInputState(() => null);
+		setNameInputState(() => null);
+
+		return;
 	};
 
 	return (

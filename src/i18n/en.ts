@@ -64,6 +64,8 @@ const en = {
 			nameInput: 'Your name / Store name',
 			countryTitle: 'Country',
 			countryInput: 'Select country',
+			errorValidationMessageFirstRow: "Whoops, this doesn't seem to be a valid email!",
+			errorValidationMessageSecondRow: '(Should be something like Jimi@Hendrix.com)',
 			errorValidationNameMessage: "That dosn't seems to be right 🧐",
 		},
 	},

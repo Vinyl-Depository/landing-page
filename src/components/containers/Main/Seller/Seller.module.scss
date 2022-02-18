@@ -67,7 +67,7 @@
 			border-radius: 5px;
 		}
 
-		.validationMessageError {
+		.emailValidationMessageError {
 			position: absolute;
 			left: calc(100% + 15px);
 			font-family: Inter, sans-serif;
@@ -75,6 +75,21 @@
 			font-weight: 500;
 			color: #813333;
 			white-space: nowrap;
+
+			&__firstRow {
+				white-space: nowrap;
+			}
+
+			&__secondRow {
+				font-weight: normal;
+				white-space: nowrap;
+			}
+		}
+
+		.nameValidationMessageError {
+			&__name {
+				border: 1px solid blue;
+			}
 		}
 
 		.sellersSectionFormSelect {

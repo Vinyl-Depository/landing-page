@@ -21,33 +21,39 @@ interface IProps {
 const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	const { t } = useTranslation();
 
-	let validationMessage: JSX.Element | string | null = null;
-	let validationMessageName: JSX.Element | string | null = null;
-
-	let validationMessageClassName: string | null = null;
+	let emailValidationMessage: JSX.Element | string | null = null;
+	let nameValidationMessage: JSX.Element | string | null = null;
+	let emailValidationMessageClassName: JSX.Element | string | null = null;
+	let nameValidationMessageClassName: JSX.Element | string | null = null;
 
 	if (props.emailValidation === EmailValidation.BadInput) {
-		validationMessage = (
+		emailValidationMessage = (
 			<>
-				<span className={classes['validationMessageError__firstRow']}>
-					<b>{t('intro.errorValidationMessageFirstRow')}</b>
+				<span className={classes['emailValidationMessageError__firstRow']}>
+					<b>the email had been failed</b>
+
+					{/* <b>{t('seller.form.errorValidationMessageFirstRow')}</b> */}
 				</span>
 				<br />
-				<span className={classes['validationMessageError__secondRow']}>
-					{t('intro.errorValidationMessageSecondRow')}
+				<span className={classes['emailValidationMessageError__secondRow']}>
+					second row
+					{/* {t('seller.form.errorValidationMessageSecondRow')} */}
 				</span>
 			</>
 		);
-		validationMessageClassName = classes['validationMessageError'] ?? '';
+		emailValidationMessageClassName = classes['emailValidationMessageError'] ?? '';
 	}
 
 	if (props.nameValidation === NameValidation.BadInput) {
-		validationMessageName = (
-			<span className={classes['validationMessageError__name']}>
-				<b>{t('seller.form.errorValidationNameMessage')}</b>
-			</span>
+		nameValidationMessage = (
+			<>
+				<span className={classes['validationMessageError__name']}>
+					<b>{t('seller.form.errorValidationNameMessage')}</b>
+				</span>
+				;
+			</>
 		);
-		validationMessageClassName = classes['validationMessageError'] ?? '';
+		nameValidationMessageClassName = classes['nameValidationMessageError'] ?? '';
 	}
 
 	return (
@@ -73,7 +79,9 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 						onChange={({ currentTarget: { value } }) => props.emailInputChangeHandler(value)}
 					/>
 					{props.emailValidation && (
-						<span className={validationMessageClassName ?? ''}>{validationMessage}</span>
+						<span className={emailValidationMessageClassName ?? ''}>
+							{emailValidationMessage}
+						</span>
 					)}
 					<label className={classes['sellersSectionForm__label']}>
 						{t('seller.form.nameInput')}
@@ -86,7 +94,7 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 						onChange={({ currentTarget: { value } }) => props.nameInputChangeHandler(value)}
 					/>
 					{props.nameValidation && (
-						<span className={validationMessageClassName ?? ''}>{validationMessageName}</span>
+						<span className={nameValidationMessageClassName ?? ''}>{nameValidationMessage}</span>
 					)}
 					<label className={classes['sellersSectionForm__label']}>
 						{t('seller.form.countryTitle')}
