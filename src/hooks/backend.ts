@@ -13,7 +13,7 @@ interface IHookResponse<T extends IHTTPResponeData> {
 }
 
 const backendInstance = axios.create({
-	baseURL: 'http://localhost/',
+	baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
 });
 
 /**
@@ -49,6 +49,7 @@ const useBackend = <T extends IHTTPResponeData>(
 				const response = await backendInstance.get(url, {
 					cancelToken: axiosSource.token,
 					timeout: HTTPTimeout,
+					headers,
 				});
 
 				setResponseState(() => response);

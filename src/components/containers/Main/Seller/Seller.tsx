@@ -33,9 +33,11 @@ const Seller: React.FC<IProps> = () => {
 			setIsFormOnSuccessState(() => true);
 		}
 
-		setEmailInputState(() => null);
-		setNameInputState(() => null);
-		setCountryState(() => null);
+		if (subscriptionResponse || subscriptionError) {
+			setEmailInputState(() => null);
+			setNameInputState(() => null);
+			setCountryState(() => null);
+		}
 	}, [subscriptionResponse, subscriptionError]);
 
 	const onEmailInputChange = (input: string) => setEmailInputState(() => input);
