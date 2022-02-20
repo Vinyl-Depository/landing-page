@@ -46,7 +46,7 @@ const useBackend = <T extends IHTTPResponeData>(
 
 		try {
 			if (method === 'GET') {
-				const response = await backendInstance.get(url, {
+				const response = await backendInstance.get<T>(url, {
 					cancelToken: axiosSource.token,
 					timeout: HTTPTimeout,
 					headers,
@@ -55,7 +55,7 @@ const useBackend = <T extends IHTTPResponeData>(
 				setResponseState(() => response);
 				setLoadingState(() => false);
 			} else if (method === 'POST') {
-				const response = await backendInstance.post(url, body, {
+				const response = await backendInstance.post<T>(url, body, {
 					cancelToken: axiosSource.token,
 					timeout: HTTPTimeout,
 					headers,

@@ -42,7 +42,7 @@ const useHTTP = <T extends IHTTPResponeData>(
 
 		try {
 			if (method === 'GET') {
-				const response = await axios.get(url, {
+				const response = await axios.get<T>(url, {
 					cancelToken: axiosSource.token,
 					timeout: HTTPTimeout,
 				});
@@ -50,7 +50,7 @@ const useHTTP = <T extends IHTTPResponeData>(
 				setResponseState(() => response);
 				setLoadingState(() => false);
 			} else if (method === 'POST') {
-				const response = await axios.post(url, body, {
+				const response = await axios.post<T>(url, body, {
 					cancelToken: axiosSource.token,
 					timeout: HTTPTimeout,
 					headers,
