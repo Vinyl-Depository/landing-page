@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VSvg> Should render the component unchanged 1`] = `
+<div>
+  <svg
+    class="container"
+    version="1.1"
+    viewBox="0 0 31 54"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    
+			
+    <path
+      d="m0 48.807 4.335 4.336L30.767 26.57 4.335 0 0 4.335l22.236 22.236L0 48.807Z"
+    />
+    
+		
+  </svg>
+</div>
+`;

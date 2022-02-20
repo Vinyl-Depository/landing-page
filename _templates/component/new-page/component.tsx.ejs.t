@@ -1,5 +1,5 @@
 ---
-to: src/components/pages/<%= h.changeCase.pascalCase(name.toLowerCase()) %>/<%= h.changeCase.pascalCase(name.toLowerCase()) %>.tsx
+to: src/components/containers/<%= h.changeCase.pascalCase(name.toLowerCase()) %>/<%= h.changeCase.pascalCase(name.toLowerCase()) %>.tsx
 ---
 <% name = name.toLowerCase() %>import React from 'react';
 
@@ -8,7 +8,7 @@ import <%= h.changeCase.pascalCase(name) %>View from './<%= h.changeCase.pascalC
 interface IProps {}
 
 const <%= h.changeCase.pascalCase(name) %>: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
-  return <<%= h.changeCase.pascalCase(name) %>View>{props.children}</<%= h.changeCase.pascalCase(name) %>View>;
+  return <<%= h.changeCase.pascalCase(name) %>View />;
 };
 
 <%= h.changeCase.pascalCase(name) %>.displayName = '<%= h.changeCase.pascalCase(name) %>';

@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react';
 
-import icons from '../../../assets/icons';
+import icons from 'src/icons';
 
 import classes from './VSvg.module.scss';
 
@@ -24,7 +24,7 @@ const VSvgView: React.FC<Props> = (props: React.PropsWithChildren<Props>) => {
 			viewBox={'0 0 ' + icons[props.name][0]}
 			dangerouslySetInnerHTML={{ __html: icons[props.name][1] ?? '' }}
 			onClick={props.onClick}
-		></svg>
+		/>
 	);
 };
 

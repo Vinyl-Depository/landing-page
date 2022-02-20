@@ -1,0 +1,212 @@
+@use 'sass:map';
+
+@import '../../../../styles/variables.scss';
+
+.joinWishlistSectionContainer {
+	padding: 0 map.get($sizes, minimal-padding);
+	margin: 70px 0;
+
+	.joinWishlistSection {
+		display: flex;
+		align-items: center;
+		max-width: 1100px;
+		padding: 50px 25px;
+		margin: 0 auto;
+		background-image: url('/images/join-wishlist-background.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		border-radius: 16px;
+
+		.joinWishlistSectionLogos {
+			display: flex;
+
+			&__logo {
+				position: relative;
+				width: 130px;
+				height: 130px;
+			}
+		}
+	}
+
+	.joinWishlistText {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 0;
+		margin-left: 50px;
+
+		.joinWishlistHeader {
+			font-size: 4rem;
+			font-weight: 800;
+			color: #fff;
+
+			&__counter {
+				color: map.get($colors, text-color);
+			}
+		}
+
+		.joinWishlistForm {
+			position: relative;
+			display: flex;
+			align-items: center;
+			height: 50px;
+			margin-top: 40px;
+
+			&__input {
+				width: 55%;
+				height: 100%;
+				padding: 8px 15px;
+				font-size: 1.4rem;
+				color: #474a57;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+
+			&__submit {
+				height: 100%;
+				padding: 8px 20px;
+				font-size: 1.4rem;
+				font-weight: 500;
+				color: #fff;
+				background-color: #18191f;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+
+			.validationMessageSuccess {
+				position: absolute;
+				top: calc(100% + 15px);
+				margin: 0 auto;
+				font-size: 1.8rem;
+				font-weight: 700;
+				color: #fff;
+				white-space: nowrap;
+			}
+
+			.validationMessageError {
+				position: absolute;
+				top: calc(100% + 5px);
+				margin: 0 auto;
+				font-size: 1.5rem;
+				font-weight: 500;
+				color: #fff;
+
+				&__firstRow {
+					white-space: nowrap;
+				}
+
+				&__secondRow {
+					font-weight: normal;
+					white-space: nowrap;
+				}
+			}
+
+			&__mobileSubmit {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.joinWishlistSectionContainer {
+		max-width: map.get($sizes, ipad-width);
+		padding: 0 40px;
+
+		.joinWishlistSection {
+			flex-direction: column-reverse;
+			padding: 15px 70px;
+			margin: 0 auto;
+			background-image: url('/images/join-wishlist-background-mobile.png');
+
+			.joinWishlistSectionLogos {
+				&__logo {
+					width: 97px;
+					height: 97px;
+				}
+			}
+		}
+
+		.joinWishlistText {
+			margin: 15px 0 60px;
+
+			.joinWishlistHeader {
+				margin-bottom: 0;
+				font-size: 3rem;
+			}
+
+			.joinWishlistForm {
+				width: 100%;
+				padding: 0 3px;
+				margin: 20px auto 0;
+				background-color: #fff;
+				border-radius: 5px;
+
+				&__input {
+					width: 100%;
+				}
+
+				&__submit {
+					display: none;
+				}
+
+				&__mobileSubmit {
+					display: block;
+					width: 50px;
+					height: 90%;
+					background-color: #18191f;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.joinWishlistSectionContainer {
+		order: 5;
+		width: 100%;
+		padding: 0 20px;
+		margin-top: 25px;
+		background-image: url('/images/join-wishlist-background.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		.joinWishlistSection {
+			padding: 0;
+			margin: 30px 0;
+			background-image: none;
+		}
+
+		.joinWishlistText {
+			.joinWishlistHeader {
+				margin-bottom: 20px;
+				line-height: 40px;
+			}
+
+			.joinWishlistForm {
+				width: 100%;
+				margin: 0;
+
+				&__input {
+					width: 100%;
+				}
+
+				.validationMessageSuccess {
+					position: absolute;
+					top: calc(100% + 15px);
+					margin: 0 auto;
+					font-size: 1.8rem;
+					font-weight: 700;
+					color: #fff;
+					white-space: nowrap;
+				}
+
+				.validationMessageError {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}

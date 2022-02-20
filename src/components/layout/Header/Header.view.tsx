@@ -1,9 +1,15 @@
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
-import brandLogo from '../../../assets/images/brand-logo.png';
-import playStoreLogo from '../../../assets/images/google-play.png';
-import appStoreLogo from '../../../assets/images/app-store.png';
+import brandLogo from '@/images/brand-logo.png';
+// import playStoreLogo from '@/images/google-play.png';
+// import appStoreLogo from '@/images/app-store.png';
+
+// import VSvg from '@/ui/VSvg';
+
+// import { concatClasses } from '@/utils/component';
 
 import classes from './Header.module.scss';
 
@@ -15,39 +21,56 @@ const HeaderView: React.FC<IProps> = () => {
 	return (
 		<div className={classes['headerContainer']}>
 			<header className={classes['header']}>
-				<div className={classes['mobileHeadrMenu']}>
-					<svg
-						className={classes['mobileHeadrMenu__icon']}
-						viewBox="0 0 37 33"
-						width="37"
-						height="33"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M.875.833h35.25V4.75H.875V.833Zm0 13.709h35.25v3.916H.875v-3.916Zm0 13.708h35.25v3.917H.875V28.25Z"
-							fill="#232233"
-						/>
-					</svg>
-				</div>
+				{/* <div className={classes['mobileHeadrMenu']}>
+					<VSvg className={classes['mobileHeaderMenu__icon']} name="hamburgerMenu" />
+				</div> */}
 				<div className={classes['leftHeader']}>
-					<a className={classes['headerLogo']} href="../../pages/Main/Main.tsx">
-						<img className={classes['headerLogo__img']} src={brandLogo} alt="Vinyl Depository" />
-					</a>
-					<a className={classes['headerContact']}>{t('header.contactUs')}</a>
+					<Link href="/" passHref>
+						<a className={classes['leftHeader__logo']}>
+							<Image
+								src={brandLogo}
+								alt="Vinyl Depository"
+								placeholder="blur"
+								layout="fill"
+								objectFit="contain"
+							/>
+						</a>
+					</Link>
+					<Link href="#seller" passHref>
+						<a className={classes['headerContact']}>{t('header.contactUs')}</a>
+					</Link>
 				</div>
-				<div className={classes['rightHeader']}>
+				{/* <div className={classes['rightHeader']}>
 					<p className={classes['rightHeader__text']}>{t('header.rightHeaderText')}</p>
-					<a
-						className={`${classes['rightHeaderButton']} ${classes['rightHeaderButton--android']}`}
-						href="../../pages/Main/Main.tsx"
-					>
-						<img className={classes['rightHeaderButton__img']} src={playStoreLogo} alt="android button" />
-					</a>
-					<a className={classes['rightHeaderButton']} href="../../pages/Main/Main.tsx">
-						<img className={classes['rightHeaderButton__img']} src={appStoreLogo} alt="apple button" />
-					</a>
-				</div>
+					<Link href="/" passHref>
+						<a
+							className={concatClasses(
+								classes,
+								'rightHeader__button',
+								'rightHeader__button--android',
+							)}
+						>
+							<Image
+								src={playStoreLogo}
+								alt="android button"
+								placeholder="blur"
+								layout="fill"
+								objectFit="contain"
+							/>
+						</a>
+					</Link>
+					<Link href="/" passHref>
+						<a className={classes['rightHeader__button']}>
+							<Image
+								src={appStoreLogo}
+								alt="apple button"
+								placeholder="blur"
+								layout="fill"
+								objectFit="contain"
+							/>
+						</a>
+					</Link>
+				</div> */}
 			</header>
 		</div>
 	);

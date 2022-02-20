@@ -1,0 +1,104 @@
+@use 'sass:map';
+
+@import '../../../../styles/variables.scss';
+
+.typicalMarketplacesSectionContainer {
+	padding: 0 map.get($sizes, minimal-padding);
+	margin-top: 20px;
+
+	.typicalMarketplacesSection {
+		display: flex;
+		flex-direction: column;
+		max-width: map.get($sizes, sub-web-width);
+		margin: 0 auto;
+
+		&__header {
+			font-size: 4.5rem;
+			font-weight: 800;
+			color: map.get($colors, text-color);
+		}
+
+		.typicalMarketplacesTextContainer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 5px;
+
+			&__text {
+				width: 580px;
+				font-size: 1.6rem;
+				line-height: 1.7;
+				color: map.get($colors, text-color);
+			}
+
+			&__img {
+				width: 340px;
+				min-width: 340px;
+			}
+
+			&__mobileImg {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.typicalMarketplacesSectionContainer {
+		margin-top: 40px;
+	}
+
+	.typicalMarketplacesSection {
+		&__header {
+			margin-bottom: 15px;
+			font-size: 3.4rem;
+			text-align: center;
+		}
+
+		.typicalMarketplacesTextContainer {
+			margin-top: 15px;
+
+			&__text {
+				font-size: 1.9rem;
+				line-height: 31px;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.typicalMarketplacesSectionContainer {
+		order: 2;
+		padding: 0;
+
+		.typicalMarketplacesSection {
+			&__header {
+				padding: 0 20px;
+				margin-bottom: 0;
+				font-size: 2.5rem;
+			}
+
+			.typicalMarketplacesTextContainer {
+				flex-direction: column;
+				justify-content: center;
+
+				&__text {
+					width: 100%;
+					padding: 0 10px;
+					margin: 20px 0;
+					font-size: 1.4rem;
+					line-height: 23px;
+				}
+
+				&__img {
+					display: none;
+				}
+
+				&__mobileImg {
+					display: initial;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

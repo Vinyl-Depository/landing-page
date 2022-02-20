@@ -1,0 +1,20 @@
+name: Landing Page Integration
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - run: yarn install --immutable --immutable-cache --check-cache
+      - run: yarn run type-check
+      - run: yarn run lint
+      - run: yarn run stylelint
+      - run: yarn run test:cov
+      - run: yarn run build

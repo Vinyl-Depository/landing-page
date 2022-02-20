@@ -3,8 +3,6 @@ build
 dist
 public
 coverage
+.next
 package.json
-package-lock.json
-tsconfig.json
-.eslintrc.json
-.vscode
+.github

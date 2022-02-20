@@ -1,0 +1,47 @@
+@use 'sass:map';
+
+@import '../../../../styles/variables.scss';
+
+.carousel {
+	display: none;
+}
+
+@media (max-width: 500px) {
+	.carousel {
+		display: flex;
+		order: 4;
+		padding: 0 map.get($sizes, minimal-padding);
+		margin-top: 30px;
+	}
+
+	.indicator {
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 20px;
+		border: 2px solid #a1a7d4;
+		border-radius: 50%;
+
+		&--selected {
+			background-color: #e8ebff;
+		}
+	}
+
+	.arrow {
+		position: absolute;
+		top: 70px;
+		z-index: 1;
+		width: auto;
+		height: 53px;
+		margin: 0 10px;
+		cursor: pointer;
+		fill: #595d8b;
+
+		&--prev {
+			transform: rotate(180deg);
+		}
+
+		&--next {
+			right: 0;
+		}
+	}
+}

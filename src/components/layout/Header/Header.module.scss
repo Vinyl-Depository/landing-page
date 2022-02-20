@@ -1,15 +1,17 @@
+@use 'sass:map';
+
 @import '../../../styles/variables.scss';
 
 .headerContainer {
-	padding: 0 map-get($sizes, minimal-padding);
+	padding: 0 map.get($sizes, minimal-padding);
 	border-bottom: 1px solid #dddbdb;
 
 	.header {
-		margin: 0 auto;
-		max-width: map-get($sizes, main-web-width);
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		justify-content: center;
+		max-width: map.get($sizes, main-web-width);
+		margin: 0 auto;
 
 		.mobileHeadrMenu {
 			display: none;
@@ -18,45 +20,42 @@
 		.leftHeader {
 			display: flex;
 			align-items: center;
-		}
 
-		.rightHeader {
-			display: flex;
-			align-items: center;
-
-			&__text {
-				font-weight: 700;
-				font-size: 1.8rem;
-				font-family: 'Inter';
-				color: map-get($colors, text-color);
-				white-space: nowrap;
-			}
-
-			.rightHeaderButton {
-				&--android {
-					margin: 0 10px;
-				}
-
-				&__img {
-					object-fit: contain;
-					width: 135px;
-				}
-			}
-		}
-
-		.headerLogo {
-			&__img {
+			&__logo {
+				position: relative;
+				width: 150px;
 				height: 64px;
-				object-fit: contain;
 			}
 		}
+
+		// .rightHeader {
+		// 	display: flex;
+		// 	align-items: center;
+
+		// 	&__text {
+		// 		font-size: 1.8rem;
+		// 		font-weight: 700;
+		// 		color: map.get($colors, text-color);
+		// 		white-space: nowrap;
+		// 	}
+
+		// 	&__button {
+		// 		position: relative;
+		// 		width: 135px;
+		// 		height: 45px;
+
+		// 		&--android {
+		// 			margin: 0 10px;
+		// 		}
+		// 	}
+		// }
 
 		.headerContact {
 			margin-left: 30px;
-			text-decoration: none;
-			font-weight: 500;
 			font-size: 1.4rem;
-			color: map-get($colors, text-color);
+			font-weight: 500;
+			color: map.get($colors, text-color);
+			text-decoration: none;
 			white-space: nowrap;
 		}
 	}
@@ -64,48 +63,48 @@
 
 @media (max-width: 850px) {
 	.headerContainer {
-		border-bottom-color: transparent;
 		padding-top: 10px;
+		border-bottom-color: transparent;
 
 		.header {
-			max-width: map-get($sizes, ipad-width);
+			max-width: map.get($sizes, ipad-width);
 
 			.mobileHeadrMenu {
 				display: block;
 				width: 145px;
 
 				&__icon {
-					height: 30px;
 					width: auto;
+					height: 30px;
 				}
 			}
 
-			.rightHeader {
-				flex-direction: column;
-
-				&__text {
-					display: none;
-				}
-
-				.rightHeaderButton {
-					&--android {
-						margin: 0 0 5px 0;
-					}
-
-					&__img {
-						width: 145px;
-					}
+			.leftHeader {
+				&__logo {
+					width: 180px;
+					height: 77px;
 				}
 			}
+
+			// .rightHeader {
+			// 	flex-direction: column;
+
+			// 	&__text {
+			// 		display: none;
+			// 	}
+
+			// 	&__button {
+			// 		width: 145px;
+			// 		height: 45px;
+
+			// 		&--android {
+			// 			margin: 0 0 5px;
+			// 		}
+			// 	}
+			// }
 
 			.headerContact {
 				display: none;
-			}
-
-			.headerLogo {
-				&__img {
-					height: 77px;
-				}
 			}
 		}
 	}
@@ -114,31 +113,30 @@
 @media (max-width: 500px) {
 	.headerContainer {
 		.header {
-			max-width: map-get($sizes, main-mobile-width);
+			max-width: map.get($sizes, main-mobile-width);
 
 			.mobileHeadrMenu {
 				width: 72px;
 
 				&__icon {
-					height: 16px;
 					width: auto;
+					height: 16px;
 				}
 			}
 
-			.rightHeader {
-				.rightHeaderButton {
-					&__img {
-						width: 85px;
-					}
+			.leftHeader {
+				&__logo {
+					width: 122px;
+					height: 55px;
 				}
 			}
-		}
 
-		.headerLogo {
-			&__img {
-				width: 122px;
-				object-fit: contain;
-			}
+			// .rightHeader {
+			// 	&__button {
+			// 		width: 85px;
+			// 		height: 28px;
+			// 	}
+			// }
 		}
 	}
 }

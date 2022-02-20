@@ -1,4 +1,9 @@
 {
 	"editor.formatOnSave": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/.next": true,
+		"**/coverage": true
+	}
 }

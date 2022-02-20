@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run lint && npm run test:cov && npm run format && git add .
+yarn run type-check && lint-staged && yarn run test:cov

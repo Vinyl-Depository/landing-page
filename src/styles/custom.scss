@@ -1,34 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
 	box-sizing: border-box;
 }
 
 html {
-	height: 100%;
 	width: 100%;
-	height: -webkit-fill-available;
 	width: -webkit-fill-available;
-	font-size: 10px;
+	height: 100%;
+	height: -webkit-fill-available;
 	overflow-x: hidden;
+	font-size: 10px;
 }
 
 body {
-	direction: ltr;
 	height: 100%;
 	margin: 0;
-	font-family: 'Rubik', sans-serif;
+	overflow-x: hidden;
+	font-family: Inter, sans-serif;
+	direction: ltr;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	overflow-x: hidden;
 }
 
-#root {
-	white-space: pre-line;
-	height: 100%;
+#__next {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
+	white-space: pre-line;
 }
 
 code {
@@ -69,11 +68,12 @@ ul {
 }
 
 button {
-	outline: none;
-	border: none;
 	padding: 0;
-	background-color: transparent;
 	user-select: none;
+	background-color: transparent;
+	border: none;
+	outline: none;
+
 	&:enabled {
 		cursor: pointer;
 	}
@@ -84,13 +84,13 @@ a {
 }
 
 input {
-	outline: none;
 	border: none;
+	outline: none;
 }
 
 textarea {
-	outline: none;
 	border: none;
+	outline: none;
 }
 
 mark {
@@ -102,6 +102,6 @@ menu {
 }
 
 hr {
-	border: none;
 	margin: 0;
+	border: none;
 }

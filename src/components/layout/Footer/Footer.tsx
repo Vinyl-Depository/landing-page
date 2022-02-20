@@ -5,7 +5,7 @@ import FooterView from './Footer.view';
 interface IProps {}
 
 const Footer: React.FC<IProps> = () => {
-	return <FooterView></FooterView>;
+	return <FooterView />;
 };
 
 Footer.displayName = 'Footer';

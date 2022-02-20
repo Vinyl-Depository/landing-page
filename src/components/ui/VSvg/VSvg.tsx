@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react';
 
-import icons from '../../../assets/icons';
+import icons from 'src/icons';
 
 import VSvgView from './VSvg.view';
 
@@ -13,9 +13,7 @@ interface IProps {
 
 const VSvg: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	return (
-		<VSvgView style={props.style} className={props.className} name={props.name} onClick={props.onClick}>
-			{props.children}
-		</VSvgView>
+		<VSvgView style={props.style} className={props.className} name={props.name} onClick={props.onClick} />
 	);
 };
 

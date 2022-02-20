@@ -1,7 +1,10 @@
 import React from 'react';
+import Image from 'next/image';
 import { Trans } from 'react-i18next';
 
-import brandLogo from '../../../assets/images/brand-logo-white.png';
+import { concatClasses } from '@/utils/component';
+
+import brandLogo from '@/images/brand-logo-white.png';
 
 import classes from './Footer.module.scss';
 
@@ -10,9 +13,18 @@ interface IProps {}
 const FooterView: React.FC<IProps> = () => {
 	return (
 		<footer className={classes['footer']}>
-			<img className={classes['footer__logo']} src={brandLogo} alt="Vinyl Depository" />
+			<div className={classes['footer__logo']}>
+				<Image
+					src={brandLogo}
+					alt="Vinyl Depository"
+					placeholder="blur"
+					layout="fill"
+					objectFit="contain"
+				/>
+			</div>
+
 			<div className={classes['footerText']}>
-				<span className={`${classes['footerText__text']} ${classes['footerText__text--withMargin']}`}>
+				<span className={concatClasses(classes, 'footerText__text', 'footerText__text--withMargin')}>
 					<Trans i18nKey="footer.middleText" />
 				</span>
 				<span className={classes['footerText__text']}>
