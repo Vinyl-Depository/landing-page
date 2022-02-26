@@ -22,18 +22,23 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			margin-top: 5px;
+			margin-top: 12px;
 
 			&__text {
 				width: 580px;
+				margin-bottom: 50px;
 				font-size: 1.6rem;
+				font-weight: 400;
+				line-height: 32px;
 				line-height: 1.7;
 				color: map.get($colors, text-color);
 			}
 
 			&__img {
-				width: 340px;
-				min-width: 340px;
+				width: 280px;
+				min-width: 280px;
+				height: 251px;
+				margin-right: 50px;
 			}
 
 			&__mobileImg {

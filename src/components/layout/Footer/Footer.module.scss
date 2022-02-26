@@ -20,9 +20,11 @@
 		display: flex;
 		align-items: center;
 
-		&__text {
-			font-size: 1.2rem;
-			color: #d9dbe1;
+		.rightFooterTextContainer {
+			&__text {
+				font-size: 1.2rem;
+				color: #d9dbe1;
+			}
 
 			&--withMargin {
 				margin-right: 100px;
