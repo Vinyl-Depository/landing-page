@@ -8,6 +8,8 @@ COPY package.json ./
 
 RUN yarn install --immutable --immutable-cache --check-cache
 
-COPY . .
+COPY ./ .
 
 RUN yarn build
+
+CMD ["yarn", "run", "start"]
