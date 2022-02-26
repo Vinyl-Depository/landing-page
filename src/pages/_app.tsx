@@ -4,8 +4,8 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React, { useEffect } from 'react';
-// import ReactGA from 'react-ga';
-// import TagManager from 'react-gtm-module';
+import ReactGA from 'react-ga';
+import TagManager from 'react-gtm-module';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -17,9 +17,9 @@ import Footer from '@/layout/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	useEffect(() => {
-		// ReactGA.initialize('G-WL5GYCY5QG');
-		// ReactGA.pageview(window.location.pathname + window.location.search);
-		// TagManager.initialize({ gtmId: 'GTM-WSCGQG7' });
+		ReactGA.initialize('G-WL5GYCY5QG');
+		ReactGA.pageview(window.location.pathname + window.location.search);
+		TagManager.initialize({ gtmId: 'GTM-WSCGQG7' });
 	}, []);
 
 	return (
