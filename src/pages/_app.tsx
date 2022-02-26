@@ -32,6 +32,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta name="description" content="Vinyl Depository landing page" />
 
 				<title>Vinyl Depository</title>
+
+				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Header />
 			<Component {...pageProps} />
