@@ -1,12 +1,12 @@
 FROM node:14-alpine
 
-ENV NODE_ENV=production
-
 WORKDIR /app
 
 COPY package.json ./
 
 RUN yarn install --immutable --immutable-cache --check-cache
+
+ENV NODE_ENV=production
 
 COPY ./ .
 
