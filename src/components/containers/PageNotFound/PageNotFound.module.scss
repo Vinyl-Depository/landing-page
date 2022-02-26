@@ -1,0 +1,58 @@
+@use 'sass:map';
+
+@import '../../../styles/variables.scss';
+
+.pageNotFoundContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 5px map.get($sizes, minimal-padding);
+	margin: auto 0;
+
+	&__image {
+		width: 371px;
+		height: 328px;
+	}
+
+	&__header {
+		font-size: 4.8rem;
+		font-weight: 800;
+		color: map.get($colors, text-color);
+	}
+
+	.pageNotFoundSubText {
+		margin-top: 20px;
+		color: #1b20a1;
+
+		&__subText {
+			font-size: 1.9rem;
+			font-weight: 700;
+		}
+
+		&__link {
+			font-size: 1.9rem;
+			font-weight: 700;
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.pageNotFoundContainer__header {
+		font-size: 2.7rem;
+	}
+
+	.pageNotFoundSubText__subText {
+		font-size: 1.3rem !important;
+	}
+
+	.pageNotFoundSubText__link {
+		font-size: 1.3rem !important;
+	}
+}
+
+@media (max-width: 500px) {
+	.pageNotFoundContainer__header {
+		font-size: 2.5rem;
+	}
+}
