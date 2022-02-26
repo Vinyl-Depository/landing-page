@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import { Trans } from 'react-i18next';
 
-// import Link from 'next/link';
 import { concatClasses } from '@/utils/component';
 
 import brandLogo from '@/images/brand-logo-white.png';
