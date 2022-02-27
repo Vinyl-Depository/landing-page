@@ -82,7 +82,7 @@ const en = {
 
 	notFoundPage: {
 		header: 'mmmmmmm..... looks suspicious',
-		subText: 'The best 404 page doesn’t exi.... Get back on track ',
+		subText: 'The best 404 page doesn’t exi.... Get back on track',
 		clickHere: 'here',
 	},
 };
