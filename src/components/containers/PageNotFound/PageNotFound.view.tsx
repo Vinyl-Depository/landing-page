@@ -11,18 +11,18 @@ const PageNotFoundView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 
 	return (
-		<div className={classes['pageNotFoundContainer']}>
-			<div className={classes['pageNotFoundContainer__image']}>
+		<section className={classes['container']}>
+			<div className={classes['container__image']}>
 				<Image src={yazifImage} alt="Intro image" placeholder="blur" objectFit="contain" />
 			</div>
-			<h1 className={classes['pageNotFoundContainer__header']}>{t('notFoundPage.header')}</h1>
+			<h1 className={classes['container__header']}>{t('notFoundPage.header')}</h1>
 			<div className={classes['pageNotFoundSubText']}>
 				<span className={classes['pageNotFoundSubText__subText']}>{t('notFoundPage.subText')}</span>
 				<a href="https://vinyldepository.com" className={classes['pageNotFoundSubText__link']}>
 					<Trans i18nKey="notFoundPage.clickHere" />
 				</a>
 			</div>
-		</div>
+		</section>
 	);
 };
 
