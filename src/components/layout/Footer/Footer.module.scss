@@ -23,10 +23,10 @@
 		&__text {
 			font-size: 1.2rem;
 			color: #d9dbe1;
+		}
 
-			&--withMargin {
-				margin-right: 100px;
-			}
+		&--withMargin {
+			margin-right: 100px;
 		}
 	}
 }
@@ -43,13 +43,14 @@
 
 	.footerText {
 		flex-direction: column;
+
 		// TODO: align-items is not working here, check with tal to fix it
 		align-items: left !important;
 		margin: 0 20px 0 0;
 
 		&__text {
 			&--withMargin {
-				margin: 0 !important;
+				margin: 0;
 			}
 		}
 	}
