@@ -28,12 +28,12 @@ const FooterView: React.FC<IProps> = () => {
 					<Trans i18nKey="footer.middleText" />
 				</span>
 				<div className={classes['rightFooterTextContainer']}>
-					<span className={classes['rightFooterTextContainer__text']}>
+					<span className={classes['footerText__text']}>
 						<Trans i18nKey="footer.rightText" />
 					</span>
 					<a
 						href="http://pages.flycricket.io/vinyl-depository-br/privacy.html "
-						className={classes['rightFooterTextContainer__text']}
+						className={classes['footerText__text']}
 					>
 						<Trans i18nKey="footer.privacyPolicy" />
 					</a>
