@@ -16,7 +16,7 @@ env:
 
 jobs:
   deploy:
-    name: Deploy
+    name: Deploy to AWS
     runs-on: ubuntu-latest
     environment: production
 
