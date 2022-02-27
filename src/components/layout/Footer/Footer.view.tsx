@@ -30,6 +30,7 @@ const FooterView: React.FC<IProps> = () => {
 				<div className={classes['rightFooterTextContainer']}>
 					<span className={classes['footerText__text']}>
 						<Trans i18nKey="footer.rightText" />
+						&nbsp;
 					</span>
 					<a
 						href="http://pages.flycricket.io/vinyl-depository-br/privacy.html "
