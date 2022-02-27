@@ -38,21 +38,25 @@
 }
 
 @media (max-width: 850px) {
-	.container__header {
-		font-size: 2.7rem;
-	}
+	.container {
+		&__header {
+			font-size: 2.7rem;
+		}
 
-	.container__subText {
-		font-size: 1.3rem !important;
-	}
+		&__subText {
+			font-size: 1.3rem !important;
+		}
 
-	.container__link {
-		font-size: 1.3rem !important;
+		&__link {
+			font-size: 1.3rem !important;
+		}
 	}
 }
 
 @media (max-width: 500px) {
-	.container__header {
-		font-size: 2.5rem;
+	.container {
+		&r__header {
+			font-size: 2.5rem;
+		}
 	}
 }
