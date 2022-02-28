@@ -80,7 +80,7 @@ const en = {
 		privacyPolicy: 'Privacy Policy',
 	},
 
-	notFoundPage: {
+	pageNotFound: {
 		header: 'mmmmmmm..... looks suspicious',
 		subText: 'The best 404 page doesn’t exi.... Get back on track',
 		clickHere: 'here',

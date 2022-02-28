@@ -19,13 +19,15 @@
 		font-size: 4.8rem;
 		font-weight: 800;
 		color: map.get($colors, text-color);
+		text-align: center;
 	}
 
 	.pageNotFoundSubText {
 		margin-top: 20px;
 		color: #1b20a1;
+		text-align: center;
 
-		&__subText {
+		&__text {
 			font-size: 1.9rem;
 			font-weight: 700;
 		}
@@ -43,7 +45,7 @@
 			font-size: 2.7rem;
 		}
 
-		&__subText {
+		&__text {
 			font-size: 1.3rem !important;
 		}
 
@@ -55,7 +57,7 @@
 
 @media (max-width: 500px) {
 	.container {
-		&r__header {
+		&__header {
 			font-size: 2.5rem;
 		}
 	}

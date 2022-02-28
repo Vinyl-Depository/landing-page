@@ -16,12 +16,12 @@ const PageNotFoundView: React.FC<IProps> = () => {
 			<div className={classes['container__image']}>
 				<Image src={yazifImage} alt="Intro image" placeholder="blur" objectFit="contain" />
 			</div>
-			<h1 className={classes['container__header']}>{t('notFoundPage.header')}</h1>
+			<h1 className={classes['container__header']}>{t('pageNotFound.header')}</h1>
 			<div className={classes['pageNotFoundSubText']}>
-				<span className={classes['pageNotFoundSubText__subText']}>{t('notFoundPage.subText')}</span>
-				&nbsp;
+				<span className={classes['pageNotFoundSubText__text']}>{t('pageNotFound.subText')}</span>
+				<span>&nbsp;</span>
 				<a href="https://vinyldepository.com" className={classes['pageNotFoundSubText__link']}>
-					<Trans i18nKey="notFoundPage.clickHere" />
+					<Trans i18nKey="pageNotFound.clickHere" />
 				</a>
 			</div>
 		</section>
