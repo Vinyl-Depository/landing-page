@@ -3,10 +3,12 @@
 }
 
 html {
+	/* stylelint-disable declaration-block-no-duplicate-properties */
 	width: 100%;
 	width: -webkit-fill-available;
 	height: 100%;
 	height: -webkit-fill-available;
+	/* stylelint-enable declaration-block-no-duplicate-properties */
 	font-size: 10px;
 }
 
