@@ -49,8 +49,10 @@
 			font-size: 1.3rem !important;
 		}
 
-		&__link {
-			font-size: 1.3rem !important;
+		.pageNotFoundSubText {
+			&__link {
+				font-size: 1.3rem !important;
+			}
 		}
 	}
 }
