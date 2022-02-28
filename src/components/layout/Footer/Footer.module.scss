@@ -43,9 +43,6 @@
 
 	.footerText {
 		flex-direction: column;
-
-		// TODO: align-items is not working here, check with tal to fix it
-		align-items: left !important;
 		margin: 0 20px 0 0;
 
 		&__text {
