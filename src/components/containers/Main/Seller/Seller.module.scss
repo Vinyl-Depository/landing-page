@@ -92,6 +92,18 @@
 				font-size: 1.4rem;
 				color: #474a57;
 			}
+
+			[class$='-Input'] {
+				width: 100%;
+				font-size: 1.4rem;
+				color: #474a57;
+			}
+
+			[class$='-NoOptionsMessage'] {
+				padding: 5px 0;
+				font-size: 1.3rem;
+				color: #474a57;
+			}
 		}
 
 		&__errorValidationMessage {

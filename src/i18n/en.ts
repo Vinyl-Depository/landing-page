@@ -79,6 +79,12 @@ const en = {
 			'*The Vinyl Depository: Recommender app is non-commercial and not for profit.<br />*By subscribing to our newsletter you agree to our',
 		privacyPolicy: 'Privacy Policy',
 	},
+
+	pageNotFound: {
+		header: 'mmmmmmm..... looks suspicious',
+		subText: 'The best 404 page doesn’t exi.... Get back on track',
+		clickHere: 'here',
+	},
 };
 
 export default en;

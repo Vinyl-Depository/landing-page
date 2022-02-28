@@ -14,6 +14,7 @@ import '../styles/custom.scss';
 
 import Header from '@/layout/Header';
 import Footer from '@/layout/Footer';
+import Main from '@/layout/Main';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	useEffect(() => {
@@ -35,7 +36,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Header />
-			<Component {...pageProps} />
+			<Main>
+				<Component {...pageProps} />
+			</Main>
 			<Footer />
 		</>
 	);
