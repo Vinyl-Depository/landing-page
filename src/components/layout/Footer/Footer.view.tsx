@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import { Trans } from 'react-i18next';
 
-// import Link from 'next/link';
 import { concatClasses } from '@/utils/component';
 
 import brandLogo from '@/images/brand-logo-white.png';
@@ -32,8 +31,9 @@ const FooterView: React.FC<IProps> = () => {
 					<span className={classes['rightFooterTextContainer__text']}>
 						<Trans i18nKey="footer.rightText" />
 					</span>
+					<span className={classes['rightFooterTextContainer__text']}>&nbsp;</span>
 					<a
-						href="http://pages.flycricket.io/vinyl-depository-br/privacy.html "
+						href="http://pages.flycricket.io/vinyl-depository-br/privacy.html"
 						className={classes['rightFooterTextContainer__text']}
 					>
 						<Trans i18nKey="footer.privacyPolicy" />

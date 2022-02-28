@@ -21,9 +21,9 @@ const RecommenderAppView: React.FC<IProps> = () => {
 		<section className={classes['recommenderAppSection']}>
 			<div className={classes['recommenderAppSectionInner']}>
 				<div className={classes['recommenderAppSectionDataContainer']}>
-					<h1 className={classes['recommenderAppSectionDataContainer__title']}>
+					<h2 className={classes['recommenderAppSectionDataContainer__title']}>
 						<Trans i18nKey="recommenderApp.header" />
-					</h1>
+					</h2>
 					<p className={classes['recommenderAppSectionDataContainer__text']}>
 						<Trans i18nKey="recommenderApp.description" />
 					</p>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import { Trans, useTranslation } from 'react-i18next';
+import { Element } from 'react-scroll';
 
 import { countriesList } from '@/data/countries';
 
@@ -30,11 +31,11 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 
 	return (
 		<section id="seller" className={classes['sellersSection']}>
-			<div className={classes['sellersSectionInner']}>
+			<Element className={classes['sellersSectionInner']} name="sellerSection">
 				<div className={classes['sellersSectionText']}>
-					<h1 className={classes['sellersSectionText__title']}>
+					<h2 className={classes['sellersSectionText__title']}>
 						<Trans i18nKey="seller.title" />
-					</h1>
+					</h2>
 					<p className={classes['sellersSectionText__text']}>
 						<Trans i18nKey="seller.description" />
 					</p>
@@ -118,7 +119,7 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 						)}
 					</div>
 				</form>
-			</div>
+			</Element>
 		</section>
 	);
 };

@@ -76,6 +76,10 @@
 				background-color: #fafafa;
 			}
 
+			[class$='-MenuList'] {
+				height: 200px;
+			}
+
 			[class$='-option'] {
 				font-size: 1.4rem;
 				color: #474a57;
@@ -90,6 +94,18 @@
 			[class$='-singleValue'] {
 				width: 100%;
 				font-size: 1.4rem;
+				color: #474a57;
+			}
+
+			[class$='-Input'] {
+				width: 100%;
+				font-size: 1.4rem;
+				color: #474a57;
+			}
+
+			[class$='-NoOptionsMessage'] {
+				padding: 5px 0;
+				font-size: 1.3rem;
 				color: #474a57;
 			}
 		}

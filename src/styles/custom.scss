@@ -9,7 +9,6 @@ html {
 	width: -webkit-fill-available;
 	height: 100%;
 	height: -webkit-fill-available;
-	overflow-x: hidden;
 	font-size: 10px;
 }
 
@@ -17,7 +16,7 @@ body {
 	height: 100%;
 	margin: 0;
 	overflow-x: hidden;
-	font-family: Inter, sans-serif;
+	font-family: 'Inter', sans-serif;
 	direction: ltr;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -31,7 +30,7 @@ body {
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
 }
 
 img {
