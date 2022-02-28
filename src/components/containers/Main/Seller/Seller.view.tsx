@@ -34,9 +34,9 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 			<section id="seller" className={classes['sellersSection']}>
 				<div className={classes['sellersSectionInner']}>
 					<div className={classes['sellersSectionText']}>
-						<h1 className={classes['sellersSectionText__title']}>
+						<h2 className={classes['sellersSectionText__title']}>
 							<Trans i18nKey="seller.title" />
-						</h1>
+						</h2>
 						<p className={classes['sellersSectionText__text']}>
 							<Trans i18nKey="seller.description" />
 						</p>

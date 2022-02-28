@@ -11,6 +11,7 @@ module.exports = {
 		],
 		'value-no-vendor-prefix': null,
 		'selector-id-pattern': null,
+		'font-family-name-quotes': ['always-unless-keyword'],
 
 		'scss/at-import-partial-extension': null,
 	},
