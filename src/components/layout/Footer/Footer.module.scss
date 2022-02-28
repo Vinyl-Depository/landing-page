@@ -20,15 +20,13 @@
 		display: flex;
 		align-items: center;
 
-		.rightFooterTextContainer {
-			&__text {
-				font-size: 1.2rem;
-				color: #d9dbe1;
-			}
+		&__text {
+			font-size: 1.2rem;
+			color: #d9dbe1;
+		}
 
-			&--withMargin {
-				margin-right: 100px;
-			}
+		&--withMargin {
+			margin-right: 100px;
 		}
 	}
 }
