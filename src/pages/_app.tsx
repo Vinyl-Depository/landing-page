@@ -29,7 +29,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 				<meta name="theme-color" content="#000000" />
-				<meta name="description" content="Vinyl Depository landing page" />
+				<meta
+					name="description"
+					content="We're about to change how you discover and buy records online. Vinyl Depository is a soon to be Marketplace, aiming to deliver the best user experience for both record lovers and collectors."
+				/>
 
 				<title>Vinyl Depository</title>
 
