@@ -76,6 +76,10 @@
 				background-color: #fafafa;
 			}
 
+			[class$='-MenuList'] {
+				height: 200px;
+			}
+
 			[class$='-option'] {
 				font-size: 1.4rem;
 				color: #474a57;

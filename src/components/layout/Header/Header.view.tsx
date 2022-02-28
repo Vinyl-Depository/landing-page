@@ -37,7 +37,7 @@ const HeaderView: React.FC<IProps> = () => {
 							/>
 						</a>
 					</Link>
-					<ScrollLink className={classes['headerContact']} to="sellerForm" smooth>
+					<ScrollLink className={classes['headerContact']} to="sellerSection" smooth>
 						{t('header.contactUs')}
 					</ScrollLink>
 				</div>
