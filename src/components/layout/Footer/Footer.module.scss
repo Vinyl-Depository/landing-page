@@ -23,9 +23,17 @@
 		&__text {
 			font-size: 1.2rem;
 			color: #d9dbe1;
+			text-align: left;
 
 			&--withMargin {
 				margin-right: 100px;
+			}
+		}
+
+		.rightFooterTextContainer {
+			&__text {
+				font-size: 1.2rem;
+				color: #d9dbe1;
 			}
 		}
 	}
