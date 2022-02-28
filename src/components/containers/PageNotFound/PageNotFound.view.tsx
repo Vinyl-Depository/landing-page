@@ -19,7 +19,7 @@ const PageNotFoundView: React.FC<IProps> = () => {
 			<h1 className={classes['container__header']}>{t('pageNotFound.header')}</h1>
 			<div className={classes['pageNotFoundSubText']}>
 				<span className={classes['pageNotFoundSubText__text']}>{t('pageNotFound.subText')}</span>
-				<span>&nbsp;</span>
+				&nbsp;
 				<a href="https://vinyldepository.com" className={classes['pageNotFoundSubText__link']}>
 					<Trans i18nKey="pageNotFound.clickHere" />
 				</a>
