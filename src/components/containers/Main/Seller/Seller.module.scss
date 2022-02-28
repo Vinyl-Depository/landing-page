@@ -66,48 +66,6 @@
 		&__selectCountry {
 			width: 50%;
 			min-width: 160px;
-
-			[class$='-control'] {
-				background-color: #f4f5f7;
-				border: none;
-			}
-
-			[class$='-menu'] {
-				background-color: #fafafa;
-			}
-
-			[class$='-MenuList'] {
-				height: 200px;
-			}
-
-			[class$='-option'] {
-				font-size: 1.4rem;
-				color: #474a57;
-			}
-
-			[class$='-placeholder'] {
-				width: 100%;
-				font-size: 1.4rem;
-				color: #474a57;
-			}
-
-			[class$='-singleValue'] {
-				width: 100%;
-				font-size: 1.4rem;
-				color: #474a57;
-			}
-
-			[class$='-Input'] {
-				width: 100%;
-				font-size: 1.4rem;
-				color: #474a57;
-			}
-
-			[class$='-NoOptionsMessage'] {
-				padding: 5px 0;
-				font-size: 1.3rem;
-				color: #474a57;
-			}
 		}
 
 		&__errorValidationMessage {

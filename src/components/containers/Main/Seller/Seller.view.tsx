@@ -83,7 +83,7 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 						isSearchable
 						options={countrySelectOptions}
 						placeholder={t('seller.form.countryInput')}
-						components={{ IndicatorSeparator: () => null }}
+						components={{ IndicatorSeparator: null }}
 						theme={(theme) => ({
 							...theme,
 							colors: {
@@ -92,6 +92,50 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 								primary25: '#f4f5f7',
 							},
 						})}
+						styles={{
+							control: (provided) => ({
+								...provided,
+								backgroundColor: '#f4f5f7',
+								border: 'none',
+							}),
+							menu: (provided) => ({
+								...provided,
+								backgroundColor: '#fafafa',
+							}),
+							menuList: (provided) => ({
+								...provided,
+								maxHeight: '200px',
+							}),
+							option: (provided) => ({
+								...provided,
+								fontSize: '1.4rem',
+								color: '#474a57',
+							}),
+							placeholder: (provided) => ({
+								...provided,
+								width: '100%',
+								fontSize: '1.4rem',
+								color: '#474a57',
+							}),
+							singleValue: (provided) => ({
+								...provided,
+								width: '100%',
+								fontSize: '1.4rem',
+								color: '#474a57',
+							}),
+							input: (provided) => ({
+								...provided,
+								width: '100%',
+								fontSize: '1.4rem',
+								color: '#474a57',
+							}),
+							noOptionsMessage: (provided) => ({
+								...provided,
+								padding: '5px 0',
+								fontSize: '1.3rem',
+								color: '#474a57',
+							}),
+						}}
 						value={{
 							label: props.country ?? t('seller.form.countryInput'),
 							value: props.country,
