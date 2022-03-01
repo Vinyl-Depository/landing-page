@@ -1,6 +1,6 @@
 module.exports = {
 	branches: ['main'],
-	repositoryUrl: 'https://github.com/Vinyl-Depository/landing-page.git/',
+	repositoryUrl: 'git+https://github.com/Vinyl-Depository/landing-page.git/',
 	plugins: [
 		'@semantic-release/commit-analyzer',
 		'@semantic-release/release-notes-generator',
