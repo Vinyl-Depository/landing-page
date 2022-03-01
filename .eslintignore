@@ -5,6 +5,7 @@ jest.setup.js
 .prettierrc.js
 next.config.js
 stylelint.config.js
+release.config.js
 next-sitemap.config.js
 dist
 build
