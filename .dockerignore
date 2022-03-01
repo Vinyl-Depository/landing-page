@@ -19,3 +19,4 @@ coverage
 .github
 _templates
 build
+CHANGELOG.md
