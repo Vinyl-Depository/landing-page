@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Vinyl-Depository/landing-page.git//compare/v1.0.0...v1.0.1) (2022-03-01)
+
+
+### Bug Fixes
+
+* 🐞 fix release bug config url ([13ef999](https://github.com/Vinyl-Depository/landing-page.git//commit/13ef999ca295d2c99e3ff28f4f779a418d3a0176))
+
 # 1.0.0 (2022-03-01)
 
 
