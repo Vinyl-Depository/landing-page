@@ -10,6 +10,7 @@ changelog.config.js
 .eslintrc.js
 .eslintignore
 .editorconfig
+release.config.js
 node_modules
 coverage
 .vscode
