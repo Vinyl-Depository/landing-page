@@ -35,7 +35,7 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
-      - name: get-npm-version
+      - name: Get package.json version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master
 
