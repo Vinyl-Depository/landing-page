@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Vinyl-Depository/landing-page/compare/v1.0.1...v1.1.0) (2022-03-02)
+
+
+### Features
+
+* 🔥 Lighthouse added ([377d95d](https://github.com/Vinyl-Depository/landing-page/commit/377d95d0da5b224788280f81dceb5184483af914))
+
 ## [1.0.1](https://github.com/Vinyl-Depository/landing-page.git//compare/v1.0.0...v1.0.1) (2022-03-01)
 
 
