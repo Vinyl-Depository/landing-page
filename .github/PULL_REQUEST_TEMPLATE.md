@@ -4,6 +4,7 @@ Please check if your PR fulfills the following requirements:
 
 - [ ] Tests for the changes have been added (for bug fixes / features)
 - [ ] UI changes have been reviewed
+- [ ] No UI review needed
 
 ## PR Type
 
