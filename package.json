@@ -20,7 +20,8 @@
 		"template:page": "hygen component new-page",
 		"template:container": "hygen component new-container",
 		"template:layout": "hygen component new-layout",
-		"template:ui": "hygen component new-ui"
+		"template:ui": "hygen component new-ui",
+		"ci:lighthouse": "lhci autorun"
 	},
 	"lint-staged": {
 		"src/**/*.{ts,tsx}": "eslint --fix",
@@ -54,6 +55,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^16.1.0",
 		"@commitlint/config-conventional": "^16.0.0",
+		"@lhci/cli": "^0.9.0",
 		"@testing-library/jest-dom": "^5.16.2",
 		"@testing-library/react": "^12.1.2",
 		"@testing-library/react-hooks": "^7.0.2",

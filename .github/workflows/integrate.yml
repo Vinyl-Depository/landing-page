@@ -18,3 +18,4 @@ jobs:
       - run: yarn run stylelint
       - run: yarn run test:cov
       - run: yarn run build
+      - run: yarn run ci:lighthouse

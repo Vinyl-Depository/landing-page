@@ -5,9 +5,10 @@ module.exports = {
 			staticDistDir: './.next',
 		},
 		assert: {
-			assertions: {
-				'first-contentful-paint': ['warn', { maxNumericValue: 4000 }],
-			},
+			preset: 'lighthouse:recommended',
+			// assertions: {
+			// 	'first-contentful-paint': ['warn', { maxNumericValue: 4000 }],
+			// },
 		},
 		upload: {
 			target: 'temporary-public-storage',
