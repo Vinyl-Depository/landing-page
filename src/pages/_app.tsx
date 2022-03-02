@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 				<meta name="theme-color" content="#000000" />
+				<meta property="og:image" content="../../public/images/meta-image.png" />
 				<meta
 					name="description"
 					content="We're about to change how you discover and buy records online. Vinyl Depository is a soon to be Marketplace, aiming to deliver the best user experience for both record lovers and collectors."
@@ -36,7 +37,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 				<title>Vinyl Depository</title>
 
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="favicon.ico" type="image/x-icon" />
+				<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 			</Head>
 			<Header />
 			<Main>
