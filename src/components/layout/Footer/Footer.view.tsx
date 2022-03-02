@@ -35,7 +35,8 @@ const FooterView: React.FC<IProps> = () => {
 					<a
 						href="http://pages.flycricket.io/vinyl-depository-br/privacy.html"
 						target="_blank"
-						className={classes['rightFooterTextContainer__text']} rel="noreferrer"
+						className={classes['rightFooterTextContainer__text']}
+						rel="noreferrer"
 					>
 						<Trans i18nKey="footer.privacyPolicy" />
 					</a>

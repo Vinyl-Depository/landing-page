@@ -1,4 +1,5 @@
 changelog.config.js
+lighthouserc.js
 jest.config.js
 jest.setup.js
 .eslintrc.js

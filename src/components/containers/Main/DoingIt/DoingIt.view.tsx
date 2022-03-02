@@ -2,8 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslation, Trans } from 'react-i18next';
 
-import browseImg from '@/images/doing-it-browse.png';
 import searchImg from '@/images/doing-it-search.png';
+import browseImg from '@/images/doing-it-browse.png';
 import pileUpImg from '@/images/doing-it-pileup.png';
 import personalizedImg from '@/images/doing-it-personalized.png';
 import sellerImg from '@/images/doing-it-seller.png';

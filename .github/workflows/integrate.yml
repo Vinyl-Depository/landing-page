@@ -35,3 +35,6 @@ jobs:
 
       - name: Check build command
         run: yarn run build
+
+      - name: Lighthouse Benchmark
+        run: yarn run lighthouse
