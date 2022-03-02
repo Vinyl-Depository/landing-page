@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.0...v1.1.1) (2022-03-02)
+
+
+### Bug Fixes
+
+* 🐞 fix the release config order ([a6ca3c2](https://github.com/Vinyl-Depository/landing-page/commit/a6ca3c233e24d34b858e650074e0ab436ef4218e))
+
 # [1.1.0](https://github.com/Vinyl-Depository/landing-page/compare/v1.0.1...v1.1.0) (2022-03-02)
 
 
