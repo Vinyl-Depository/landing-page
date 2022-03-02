@@ -19,11 +19,11 @@
 		"test:watch": "jest --watch",
 		"test:cov": "jest --coverage",
 		"test:update-snaps": "jest --updateSnapshot",
+		"lighthouse": "lhci autorun",
 		"template:page": "hygen component new-page",
 		"template:container": "hygen component new-container",
 		"template:layout": "hygen component new-layout",
-		"template:ui": "hygen component new-ui",
-		"ci:lighthouse": "lhci autorun"
+		"template:ui": "hygen component new-ui"
 	},
 	"lint-staged": {
 		"src/**/*.{ts,tsx}": "eslint --fix",

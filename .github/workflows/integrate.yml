@@ -37,4 +37,4 @@ jobs:
         run: yarn run build
 
       - name: Lighthouse Benchmark
-        run: yarn run ci:lighthouse
+        run: yarn run lighthouse
