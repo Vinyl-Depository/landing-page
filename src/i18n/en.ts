@@ -15,9 +15,9 @@ const en = {
 		errorValidationMessageSecondRow: '(Should be something like Jimi@Hendrix.com)',
 	},
 	typicalMarketplaces: {
-		header: 'Forget about those typical marketplaces',
+		header: 'Forget about those typical "marketplaces"',
 		description:
-			'A record store should feel like one. Todays marketplaces make it seem like theyre made only for expert comparison researchers. You never know what to buy, and if you do, you go through hell just to find the right record. Imagine a world where you can find and buy records online, and it won’t be a frustrating, boring mess of an experience! ',
+			"A record store should feel like one. Todays marketplaces make it seem like they're made only for expert comparison researchers. You never know what to buy, and if you do, you go through hell just to find the right record. Imagine a world where you can find and buy records online, and it won’t be a frustrating, boring mess of an experience! ",
 	},
 	doingIt: {
 		header: 'How we’re doing it',
@@ -75,7 +75,15 @@ const en = {
 	},
 	footer: {
 		middleText: '© 2021 Vinyl Depository. All rights reserved',
-		rightText: 'The Vinyl Depository: Recommender app is non-commercial and not for profit.',
+		rightText:
+			'*The Vinyl Depository: Recommender app is non-commercial and not for profit.<br />*By subscribing to our newsletter you agree to our',
+		privacyPolicy: 'Privacy Policy',
+	},
+
+	pageNotFound: {
+		header: 'mmmmmmm..... looks suspicious',
+		subText: 'The best 404 page doesn’t exi.... Get back on track',
+		clickHere: 'here',
 	},
 };
 

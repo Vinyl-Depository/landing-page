@@ -1,6 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import { Trans, useTranslation } from 'react-i18next';
+import { Element } from 'react-scroll';
 
 import { countriesList } from '@/data/countries';
 
@@ -30,11 +31,11 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 
 	return (
 		<section id="seller" className={classes['sellersSection']}>
-			<div className={classes['sellersSectionInner']}>
+			<Element className={classes['sellersSectionInner']} name="sellerSection">
 				<div className={classes['sellersSectionText']}>
-					<h1 className={classes['sellersSectionText__title']}>
+					<h2 className={classes['sellersSectionText__title']}>
 						<Trans i18nKey="seller.title" />
-					</h1>
+					</h2>
 					<p className={classes['sellersSectionText__text']}>
 						<Trans i18nKey="seller.description" />
 					</p>
@@ -82,7 +83,7 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 						isSearchable
 						options={countrySelectOptions}
 						placeholder={t('seller.form.countryInput')}
-						components={{ IndicatorSeparator: () => null }}
+						components={{ IndicatorSeparator: null }}
 						theme={(theme) => ({
 							...theme,
 							colors: {
@@ -91,6 +92,50 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 								primary25: '#f4f5f7',
 							},
 						})}
+						styles={{
+							control: (provided) => ({
+								...provided,
+								backgroundColor: '#f4f5f7',
+								border: 'none',
+							}),
+							menu: (provided) => ({
+								...provided,
+								backgroundColor: '#fafafa',
+							}),
+							menuList: (provided) => ({
+								...provided,
+								maxHeight: '200px',
+							}),
+							option: (provided) => ({
+								...provided,
+								fontSize: '1.4rem',
+								color: '#474a57',
+							}),
+							placeholder: (provided) => ({
+								...provided,
+								width: '100%',
+								fontSize: '1.4rem',
+								color: '#474a57',
+							}),
+							singleValue: (provided) => ({
+								...provided,
+								width: '100%',
+								fontSize: '1.4rem',
+								color: '#474a57',
+							}),
+							input: (provided) => ({
+								...provided,
+								width: '100%',
+								fontSize: '1.4rem',
+								color: '#474a57',
+							}),
+							noOptionsMessage: (provided) => ({
+								...provided,
+								padding: '5px 0',
+								fontSize: '1.3rem',
+								color: '#474a57',
+							}),
+						}}
 						value={{
 							label: props.country ?? t('seller.form.countryInput'),
 							value: props.country,
@@ -118,7 +163,7 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 						)}
 					</div>
 				</form>
-			</div>
+			</Element>
 		</section>
 	);
 };

@@ -18,7 +18,7 @@ const DoingItView: React.FC<IProps> = () => {
 	return (
 		<div className={classes['doingItSectionContainer']}>
 			<section className={classes['doingItSection']}>
-				<h1 className={classes['doingItSection__header']}>{t('doingIt.header')}</h1>
+				<h2 className={classes['doingItSection__header']}>{t('doingIt.header')}</h2>
 				<div className={classes['doingItFirstRow']}>
 					<div className={classes['doingItItem']}>
 						<div className={classes['doingItItem__img']}>

@@ -6,16 +6,35 @@ on:
 
 jobs:
   test_pull_request:
+    name: Testing & Checking the code
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: yarn install --immutable --immutable-cache --check-cache
-      - run: yarn run type-check
-      - run: yarn run lint
-      - run: yarn run stylelint
-      - run: yarn run test:cov
-      - run: yarn run build
-      - run: yarn run ci:lighthouse
+
+      - name: Installing dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: Check Typescript
+        run: yarn run type-check
+
+      - name: Check ESLint
+        run: yarn run lint
+
+      - name: Check Stylelint
+        run: yarn run stylelint
+
+      - name: Testing with coverage
+        run: yarn run test:cov
+
+      - name: Check build command
+        run: yarn run build
+
+      - name: Lighthouse Benchmark
+        run: yarn run ci:lighthouse

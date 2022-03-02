@@ -14,12 +14,12 @@ import '../styles/custom.scss';
 
 import Header from '@/layout/Header';
 import Footer from '@/layout/Footer';
+import Main from '@/layout/Main';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	useEffect(() => {
 		ReactGA.initialize('G-WL5GYCY5QG');
 		ReactGA.pageview(window.location.pathname + window.location.search);
-
 		TagManager.initialize({ gtmId: 'GTM-WSCGQG7' });
 	}, []);
 
@@ -29,12 +29,19 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 				<meta name="theme-color" content="#000000" />
-				<meta name="description" content="Vinyl Depository landing page" />
+				<meta
+					name="description"
+					content="We're about to change how you discover and buy records online. Vinyl Depository is a soon to be Marketplace, aiming to deliver the best user experience for both record lovers and collectors."
+				/>
 
 				<title>Vinyl Depository</title>
+
+				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Header />
-			<Component {...pageProps} />
+			<Main>
+				<Component {...pageProps} />
+			</Main>
 			<Footer />
 		</>
 	);

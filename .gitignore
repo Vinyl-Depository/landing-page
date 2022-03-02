@@ -13,8 +13,6 @@
 /out/
 
 # production
-/build
-
 # misc
 .DS_Store
 *.pem
@@ -38,3 +36,7 @@ yarn-error.log*
 
 # lighthouse
 .lighthouseci
+
+build
+public/robots.txt
+public/sitemap*.xml

@@ -23,9 +23,17 @@
 		&__text {
 			font-size: 1.2rem;
 			color: #d9dbe1;
+			text-align: left;
 
 			&--withMargin {
 				margin-right: 100px;
+			}
+		}
+
+		.rightFooterTextContainer {
+			&__text {
+				font-size: 1.2rem;
+				color: #d9dbe1;
 			}
 		}
 	}
@@ -43,11 +51,12 @@
 
 	.footerText {
 		flex-direction: column;
+		align-items: flex-start !important;
 		margin: 0 20px 0 0;
 
 		&__text {
 			&--withMargin {
-				margin: 0;
+				margin: 0 !important;
 			}
 		}
 	}

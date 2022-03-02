@@ -27,9 +27,20 @@ const FooterView: React.FC<IProps> = () => {
 				<span className={concatClasses(classes, 'footerText__text', 'footerText__text--withMargin')}>
 					<Trans i18nKey="footer.middleText" />
 				</span>
-				<span className={classes['footerText__text']}>
-					<Trans i18nKey="footer.rightText" />
-				</span>
+				<div className={classes['rightFooterTextContainer']}>
+					<span className={classes['rightFooterTextContainer__text']}>
+						<Trans i18nKey="footer.rightText" />
+					</span>
+					<span className={classes['rightFooterTextContainer__text']}>&nbsp;</span>
+					<a
+						href="http://pages.flycricket.io/vinyl-depository-br/privacy.html"
+						target="_blank"
+						className={classes['rightFooterTextContainer__text']}
+						rel="noreferrer"
+					>
+						<Trans i18nKey="footer.privacyPolicy" />
+					</a>
+				</div>
 			</div>
 		</footer>
 	);
