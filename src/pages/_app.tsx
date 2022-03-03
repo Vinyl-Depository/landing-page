@@ -35,10 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta property="og:image:type" content="image/png" />
 				<meta property="og:image:width" content="685" />
 				<meta property="og:image:height" content="685" />
-				<meta
-					property="og:image:alt"
-					content="Draw a pile of records with a fade purple background"
-				/>
+				<meta property="og:image:alt" content="Vinyl Depository" />
 				<meta property="og:url" content="https://vinyldepository.com/" />
 				<meta
 					name="description"
