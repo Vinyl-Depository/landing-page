@@ -1,3 +1,11 @@
+## [1.1.2](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.1...v1.1.2) (2022-03-03)
+
+
+### Bug Fixes
+
+* 🐞 changed meta image alt content ([c4f3ef3](https://github.com/Vinyl-Depository/landing-page/commit/c4f3ef389aba994799ffc4dac54cd8f9def42e6c))
+* 🐞 fixed meta image type ([5ae3eca](https://github.com/Vinyl-Depository/landing-page/commit/5ae3ecaa14173f84d8af222cb3b5bf0b8eef93d4))
+
 ## [1.1.1](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.0...v1.1.1) (2022-03-02)
 
 
