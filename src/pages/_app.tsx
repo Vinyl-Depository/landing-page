@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 				<meta name="theme-color" content="#000000" />
+
 				<meta name="og:title" content="Vinyl Depository" />
 				<meta property="og:type" content="website" />
 				<meta property="og:image" content="/images/meta-image.png" />
@@ -37,6 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta property="og:image:height" content="685" />
 				<meta property="og:image:alt" content="Vinyl Depository" />
 				<meta property="og:url" content="https://vinyldepository.com/" />
+
 				<meta
 					name="description"
 					content="We're about to change how you discover and buy records online. Vinyl Depository is a soon to be Marketplace, aiming to deliver the best user experience for both record lovers and collectors."
