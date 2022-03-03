@@ -45,7 +45,7 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 				<div className={classes['introSection__ipadImg']}>
 					<Image
 						src={introImgWebResponsive}
-						alt="Intro image"
+						alt="Intro"
 						placeholder="blur"
 						objectFit="contain"
 						priority
@@ -55,7 +55,7 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 				<div className={classes['introSection__mobileImg']}>
 					<Image
 						src={introImgMobileResponsive}
-						alt="Intro image"
+						alt="Intro"
 						placeholder="blur"
 						objectFit="contain"
 						priority
@@ -105,7 +105,7 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 				<div className={classes['introSection__webImg']}>
 					<Image
 						src={introImgWebResponsive}
-						alt="Intro image"
+						alt="Intro"
 						placeholder="blur"
 						objectFit="contain"
 						priority
