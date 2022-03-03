@@ -56,10 +56,5 @@ module.exports = {
 			emoji: '✅',
 			value: 'test',
 		},
-		work: {
-			description: 'General & Daily work',
-			emoji: '🍻',
-			value: 'work',
-		},
 	},
 };
