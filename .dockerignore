@@ -11,8 +11,11 @@ changelog.config.js
 .eslintignore
 .editorconfig
 release.config.js
+commitlint.config.js
+lint-staged.config.js
 node_modules
 coverage
+.czrc
 .vscode
 .next
 .husky

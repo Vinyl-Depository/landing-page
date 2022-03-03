@@ -25,21 +25,6 @@
 		"template:layout": "hygen component new-layout",
 		"template:ui": "hygen component new-ui"
 	},
-	"lint-staged": {
-		"src/**/*.{ts,tsx}": "eslint --fix",
-		"src/**/*.scss": "stylelint --fix",
-		"*.{ts,tsx,scss,js,json}": "prettier --write"
-	},
-	"config": {
-		"commitizen": {
-			"path": "git-cz"
-		}
-	},
-	"commitlint": {
-		"extends": [
-			"@commitlint/config-conventional"
-		]
-	},
 	"dependencies": {
 		"axios": "^0.26.0",
 		"i18next": "^21.6.10",
