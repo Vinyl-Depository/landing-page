@@ -15,11 +15,19 @@ Home.displayName = 'Home';
 Home.defaultProps = {};
 
 export const getStaticProps: GetStaticProps = () => {
-	const joinersCount = 20;
+	const randomNumber = (min: number, max: number) => {
+		return Math.floor(Math.random() * (max - min)) + min + 1;
+	};
+
+	const today = new Date();
+	const day = today.getDate();
+	const month = today.getMonth() + 1;
+
+	const joinersCount = day * randomNumber(17, 21) + month * 10;
 
 	return {
 		props: { joinersCount },
-		revalidate: 60 * 5,
+		revalidate: 86400,
 	};
 };
 
