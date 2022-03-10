@@ -1,6 +1,7 @@
 {
 	"name": "landing-page",
-	"version": "1.0.0",
+	"description": "Nextjs project for Vinyl Depository landing page",
+	"version": "1.1.2",
 	"private": true,
 	"scripts": {
 		"prepare": "husky install",
@@ -18,25 +19,11 @@
 		"test:watch": "jest --watch",
 		"test:cov": "jest --coverage",
 		"test:update-snaps": "jest --updateSnapshot",
+		"lighthouse": "lhci autorun",
 		"template:page": "hygen component new-page",
 		"template:container": "hygen component new-container",
 		"template:layout": "hygen component new-layout",
 		"template:ui": "hygen component new-ui"
-	},
-	"lint-staged": {
-		"src/**/*.{ts,tsx}": "eslint --fix",
-		"src/**/*.scss": "stylelint --fix",
-		"*.{ts,tsx,scss,js,json}": "prettier --write"
-	},
-	"config": {
-		"commitizen": {
-			"path": "git-cz"
-		}
-	},
-	"commitlint": {
-		"extends": [
-			"@commitlint/config-conventional"
-		]
 	},
 	"dependencies": {
 		"axios": "^0.26.0",
@@ -56,6 +43,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^16.1.0",
 		"@commitlint/config-conventional": "^16.0.0",
+		"@lhci/cli": "^0.9.0",
 		"@testing-library/jest-dom": "^5.16.2",
 		"@testing-library/react": "^12.1.2",
 		"@testing-library/react-hooks": "^7.0.2",

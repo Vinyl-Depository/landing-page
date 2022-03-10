@@ -11,6 +11,8 @@ module.exports = {
 		],
 		'value-no-vendor-prefix': null,
 		'selector-id-pattern': null,
+		'color-named': ['never'],
+		'declaration-block-no-duplicate-properties': [true],
 
 		'scss/at-import-partial-extension': null,
 	},

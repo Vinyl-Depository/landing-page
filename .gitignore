@@ -34,7 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-build
+# lighthouse
+.lighthouseci
 
+build
 public/robots.txt
 public/sitemap*.xml
