@@ -1,0 +1,6 @@
+[init]
+	defaultBranch = main
+[alias]
+    cmt = "!npx git-cz"
+[color "branch"]
+	current = red bold

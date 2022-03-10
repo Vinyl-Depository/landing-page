@@ -5,6 +5,7 @@
 	"private": true,
 	"scripts": {
 		"prepare": "husky install",
+		"git:config": "git config --local include.path ../.gitconfig",
 		"dev": "next dev -p 80",
 		"build": "next build",
 		"postbuild": "next-sitemap --config next-sitemap.config.js",
