@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.2...v1.1.3) (2022-03-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v0.26.1 ([ca28f9a](https://github.com/Vinyl-Depository/landing-page/commit/ca28f9a271dc2f21a08a411d39ac0ea357cc910e))
+
 ## [1.1.2](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.1...v1.1.2) (2022-03-03)
 
 
