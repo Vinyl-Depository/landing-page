@@ -31,6 +31,8 @@ This repository uses number of open source projects to work properly:
 - [Stylelint] - Linting CSS(SCSS) code
 - [Yarn] - Package manager
 - [i18n] - Cross-languages for the repository
+- [Renovate] - Automatically update repository dependencies
+- [GitGuardian] - Scanner for cross-repository secrets
 
 ## Installation
 
