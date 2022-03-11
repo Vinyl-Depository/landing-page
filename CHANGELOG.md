@@ -1,3 +1,12 @@
+## [1.1.4](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.3...v1.1.4) (2022-03-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency i18next to v21.6.14 ([00acd22](https://github.com/Vinyl-Depository/landing-page/commit/00acd2232cf4d7f3e69ff9bda661384d196dfa92))
+* **deps:** update dependency react-scroll to v1.8.6 ([5c4c4f4](https://github.com/Vinyl-Depository/landing-page/commit/5c4c4f41d1422e17ee3bd6e5e96640b2f5ce7d25))
+* **deps:** update dependency sharp to v0.30.2 ([284b871](https://github.com/Vinyl-Depository/landing-page/commit/284b87115a7097efb3a2cf68f1ead1ee3c9d11e1))
+
 ## [1.1.3](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.2...v1.1.3) (2022-03-11)
 
 
