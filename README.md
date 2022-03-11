@@ -1,7 +1,7 @@
 # Landing Page
 ### _Vinyl Depository_
 
-Landing page for Vinyl depository. This repository contains both backend and frontend code, using Next.js farmework.
+Landing page for Vinyl depository. This repository contains both backend and frontend code, using Next.js framework.
 
 - CI with github action
 - CD with AWS
