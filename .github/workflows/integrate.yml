@@ -1,4 +1,4 @@
-name: Landing Page Integration
+name: Integration
 
 on:
   pull_request:
@@ -20,6 +20,9 @@ jobs:
 
       - name: Installing dependencies
         run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: Check unused dependencies
+        run: yarn run dep-check
 
       - name: Check Typescript
         run: yarn run type-check

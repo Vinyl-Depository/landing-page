@@ -4,7 +4,12 @@ const createJestConfig = nextJest({
 });
 const customJestConfig = {
 	collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts'],
-	coveragePathIgnorePatterns: ['<rootDir>/src/pages/', '<rootDir>/src/i18n/', '<rootDir>/src/icons.ts'],
+	coveragePathIgnorePatterns: [
+		'<rootDir>/src/pages/',
+		'<rootDir>/src/i18n/',
+		'<rootDir>/src/icons.ts',
+		'<rootDir>/src/data',
+	],
 	coverageThreshold: {
 		global: {
 			branches: 5,
