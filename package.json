@@ -27,7 +27,7 @@
 		"template:ui": "hygen component new-ui"
 	},
 	"dependencies": {
-		"axios": "0.26.0",
+		"axios": "0.26.1",
 		"i18next": "21.6.10",
 		"mailchimp-api-v3": "1.15.0",
 		"next": "12.0.10",
