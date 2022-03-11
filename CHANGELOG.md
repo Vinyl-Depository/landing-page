@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.4...v1.1.5) (2022-03-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-responsive-carousel to v3.2.23 ([b0d3289](https://github.com/Vinyl-Depository/landing-page/commit/b0d32892bd040a669ea3464fbc8a78e1a7e6b9b4))
+
 ## [1.1.4](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.3...v1.1.4) (2022-03-11)
 
 
