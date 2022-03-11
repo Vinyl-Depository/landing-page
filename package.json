@@ -73,7 +73,7 @@
 		"lint-staged": "12.3.5",
 		"next-sitemap": "2.5.7",
 		"prettier": "2.5.1",
-		"sass": "1.49.7",
+		"sass": "1.49.9",
 		"stylelint": "14.5.0",
 		"stylelint-config-prettier-scss": "0.0.1",
 		"stylelint-config-recess-order": "3.0.0",
