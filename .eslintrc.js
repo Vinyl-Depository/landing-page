@@ -107,6 +107,7 @@ module.exports = {
 				],
 			},
 		],
+		'no-restricted-imports': ['lodash'],
 
 		'@typescript-eslint/no-unused-vars': ['error'],
 		'@typescript-eslint/no-empty-interface': 'off',
