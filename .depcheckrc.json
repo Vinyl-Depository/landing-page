@@ -1,0 +1,19 @@
+{
+	"ignores": [
+		"sharp",
+
+		"stylelint-config-prettier-scss",
+		"stylelint-config-recess-order",
+		"stylelint-config-standard-scss",
+		"lint-staged",
+		"git-cz",
+		"cz-conventional-changelog",
+		"commitizen",
+		"@types/node",
+		"@types/react-dom",
+		"@types/jest",
+		"@commitlint/config-conventional",
+		"@commitlint/cli"
+	],
+	"skipMissing": true
+}

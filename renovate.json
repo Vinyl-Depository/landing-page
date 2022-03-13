@@ -1,0 +1,9 @@
+{
+	"extends": ["config:base", ":semanticCommitTypeAll(chore)"],
+	"packageRules": [
+		{
+			"updateTypes": ["minor", "patch"],
+			"automerge": true
+		}
+	]
+}

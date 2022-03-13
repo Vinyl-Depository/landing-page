@@ -5,5 +5,9 @@
 		"**/node_modules": true,
 		"**/.next": true,
 		"**/coverage": true
+	},
+	"files.associations": {
+		".czrc": "json",
+		"commit-msg": "shellscript"
 	}
 }

@@ -13,7 +13,7 @@ module.exports = {
 		},
 		ci: {
 			description: 'CI related changes',
-			emoji: '😺',
+			emoji: '🚀',
 			value: 'ci',
 		},
 		docs: {
@@ -33,7 +33,7 @@ module.exports = {
 		},
 		perf: {
 			description: 'A code change that improves performance',
-			emoji: '🏎',
+			emoji: '⚡️',
 			value: 'perf',
 		},
 		refactor: {
@@ -43,17 +43,17 @@ module.exports = {
 		},
 		release: {
 			description: 'Create a release commit',
-			emoji: '🤩',
+			emoji: '🔖',
 			value: 'release',
 		},
 		style: {
 			description: 'Markup, white-space, formatting, missing semi-colons...',
-			emoji: '💄',
+			emoji: '🎨',
 			value: 'style',
 		},
 		test: {
 			description: 'Adding missing tests',
-			emoji: '🥳',
+			emoji: '✅',
 			value: 'test',
 		},
 	},

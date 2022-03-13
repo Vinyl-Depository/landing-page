@@ -5,11 +5,9 @@ module.exports = {
 	},
 	extends: [
 		'eslint:recommended',
-		'plugin:react/recommended',
-		'plugin:@typescript-eslint/recommended',
-		'plugin:react/jsx-runtime',
-		'plugin:import/typescript',
 		'next/core-web-vitals',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:import/typescript',
 		'prettier',
 	],
 	parserOptions: {
@@ -20,7 +18,7 @@ module.exports = {
 		project: 'tsconfig.json',
 		sourceType: 'module',
 	},
-	plugins: ['react', '@typescript-eslint', 'unused-imports', 'import', 'react-hooks', 'import', 'node'],
+	plugins: ['@typescript-eslint', 'unused-imports', 'react-hooks', 'node'],
 	rules: {
 		'indent': ['error', 'tab'],
 		'quotes': ['error', 'single', { avoidEscape: true }],
@@ -124,6 +122,14 @@ module.exports = {
 		'@next/next/no-img-element': 'error',
 
 		'jsx-a11y/alt-text': 'error',
+		'jsx-a11y/html-has-lang': 'error',
+		'jsx-a11y/img-redundant-alt': [
+			'error',
+			{
+				components: ['Image'],
+			},
+		],
+		'jsx-a11y/lang': 'error',
 
 		'react/jsx-fragments': 'error',
 		'react/jsx-wrap-multilines': [

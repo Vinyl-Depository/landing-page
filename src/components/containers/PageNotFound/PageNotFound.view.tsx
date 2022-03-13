@@ -15,7 +15,7 @@ const PageNotFoundView: React.FC<IProps> = () => {
 	return (
 		<section className={classes['container']}>
 			<div className={classes['container__image']}>
-				<Image src={yazifImage} alt="404 image" placeholder="blur" objectFit="contain" />
+				<Image src={yazifImage} alt="404" placeholder="blur" objectFit="contain" />
 			</div>
 			<h2 className={classes['container__header']}>{t('pageNotFound.header')}</h2>
 			<div className={classes['pageNotFoundSubText']}>

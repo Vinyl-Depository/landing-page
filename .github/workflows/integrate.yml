@@ -1,4 +1,4 @@
-name: Landing Page Integration
+name: Integration
 
 on:
   pull_request:
@@ -11,15 +11,18 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Installing dependencies
         run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: Check unused dependencies
+        run: yarn run dep-check
 
       - name: Check Typescript
         run: yarn run type-check
@@ -35,6 +38,3 @@ jobs:
 
       - name: Check build command
         run: yarn run build
-
-      - name: Lighthouse Benchmark
-        run: yarn run lighthouse
