@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.6...v1.1.7) (2022-03-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-i18next to v11.15.7 ([4939e5b](https://github.com/Vinyl-Depository/landing-page/commit/4939e5b30269c76d5c2771382be3111b1cc91539))
+
 ## [1.1.6](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.5...v1.1.6) (2022-03-11)
 
 
