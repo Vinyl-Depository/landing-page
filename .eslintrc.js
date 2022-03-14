@@ -107,8 +107,13 @@ module.exports = {
 				],
 			},
 		],
-		'no-restricted-imports': ['lodash'],
-
+		'no-restricted-imports': [
+			'error',
+			{
+				name: 'lodash',
+				message: 'The year is not 2015 anymore',
+			},
+		],
 		'@typescript-eslint/no-unused-vars': ['error'],
 		'@typescript-eslint/no-empty-interface': 'off',
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
