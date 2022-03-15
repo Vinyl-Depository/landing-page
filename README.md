@@ -1,7 +1,7 @@
 # Landing Page
 ### _Vinyl Depository_
 
-Landing page for Vinyl depository. This repository contains both backend and frontend code, using Next.js farmework.
+Landing page for Vinyl depository. This repository contains both backend and frontend code, using Next.js framework.
 
 - CI with github action
 - CD with AWS
@@ -10,7 +10,7 @@ Landing page for Vinyl depository. This repository contains both backend and fro
 
 ## Tech
 
-This repository uses a number of open source projects to work properly:
+This repository uses number of open source projects to work properly:
 
 - [Github Actions] - Uses workflows to run linters, releasing, and deployments
 - [Next.js] - Full stack framework for building web applications
@@ -31,6 +31,8 @@ This repository uses a number of open source projects to work properly:
 - [Stylelint] - Linting CSS(SCSS) code
 - [Yarn] - Package manager
 - [i18n] - Cross-languages for the repository
+- [Renovate] - Automatically update repository dependencies
+- [GitGuardian] - Scanner for cross-repository secrets
 
 ## Installation
 
@@ -55,7 +57,7 @@ yarn run start
 Landing page uses the following APIs.
 Instructions on how to use them in your own application are linked below.
 
-| Plugin | README |
+| API | Documentation |
 | ------ | ------ |
 | Mailchimp | https://mailchimp.com/developer/marketing/api/ |
 | Google Analytics | https://developers.google.com/analytics/devguides/reporting/core/v4/ |

@@ -1,3 +1,40 @@
+## [1.1.7](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.6...v1.1.7) (2022-03-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-i18next to v11.15.7 ([4939e5b](https://github.com/Vinyl-Depository/landing-page/commit/4939e5b30269c76d5c2771382be3111b1cc91539))
+
+## [1.1.6](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.5...v1.1.6) (2022-03-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-i18next to v11.15.6 ([c9e807a](https://github.com/Vinyl-Depository/landing-page/commit/c9e807acec7ad7f135316a6e344156669ae6e9a3))
+
+## [1.1.5](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.4...v1.1.5) (2022-03-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-responsive-carousel to v3.2.23 ([b0d3289](https://github.com/Vinyl-Depository/landing-page/commit/b0d32892bd040a669ea3464fbc8a78e1a7e6b9b4))
+
+## [1.1.4](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.3...v1.1.4) (2022-03-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency i18next to v21.6.14 ([00acd22](https://github.com/Vinyl-Depository/landing-page/commit/00acd2232cf4d7f3e69ff9bda661384d196dfa92))
+* **deps:** update dependency react-scroll to v1.8.6 ([5c4c4f4](https://github.com/Vinyl-Depository/landing-page/commit/5c4c4f41d1422e17ee3bd6e5e96640b2f5ce7d25))
+* **deps:** update dependency sharp to v0.30.2 ([284b871](https://github.com/Vinyl-Depository/landing-page/commit/284b87115a7097efb3a2cf68f1ead1ee3c9d11e1))
+
+## [1.1.3](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.2...v1.1.3) (2022-03-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency axios to v0.26.1 ([ca28f9a](https://github.com/Vinyl-Depository/landing-page/commit/ca28f9a271dc2f21a08a411d39ac0ea357cc910e))
+
 ## [1.1.2](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.1...v1.1.2) (2022-03-03)
 
 

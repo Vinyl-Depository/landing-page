@@ -5,11 +5,9 @@ module.exports = {
 	},
 	extends: [
 		'eslint:recommended',
-		'plugin:react/recommended',
-		'plugin:@typescript-eslint/recommended',
-		'plugin:react/jsx-runtime',
-		'plugin:import/typescript',
 		'next/core-web-vitals',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:import/typescript',
 		'prettier',
 	],
 	parserOptions: {
@@ -20,7 +18,7 @@ module.exports = {
 		project: 'tsconfig.json',
 		sourceType: 'module',
 	},
-	plugins: ['react', '@typescript-eslint', 'unused-imports', 'import', 'react-hooks', 'import', 'node'],
+	plugins: ['@typescript-eslint', 'unused-imports', 'react-hooks', 'node'],
 	rules: {
 		'indent': ['error', 'tab'],
 		'quotes': ['error', 'single', { avoidEscape: true }],
@@ -109,7 +107,13 @@ module.exports = {
 				],
 			},
 		],
-
+		'no-restricted-imports': [
+			'error',
+			{
+				name: 'lodash',
+				message: 'The year is not 2015 anymore',
+			},
+		],
 		'@typescript-eslint/no-unused-vars': ['error'],
 		'@typescript-eslint/no-empty-interface': 'off',
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
