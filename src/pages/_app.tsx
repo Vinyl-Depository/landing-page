@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 				<meta name="theme-color" content="#000000" />
 
-				<meta name="og:title" content="Vinyl Depository" />
+				<meta property="og:title" content="Vinyl Depository" />
 				<meta property="og:type" content="website" />
 				<meta property="og:image" content="/images/meta-image.png" />
 				<meta property="og:image:type" content="image/png" />
