@@ -46,14 +46,15 @@ export const getStaticProps: GetStaticProps = async () => {
 
 		return {
 			props: { joinersCount: listMembersData.stats.member_count + counter },
-			//revalidate every 24 hours
-			revalidate: 86400,
+			//revalidate every 8 hours to update the REAL leads.
+			//every 3 revalidates (24 hours) adding 17 more FAKE leads
+			revalidate: 28800,
 		};
 	} catch {
 		return {
 			props: { joinersCount: counter },
-			//revalidate every 24 hours
-			revalidate: 86400,
+			//every 3 revalidates (24 hours) adding 17 more FAKE leads without real leads
+			revalidate: 28800,
 		};
 	}
 };
