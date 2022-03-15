@@ -5,7 +5,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
 import TagManager from 'react-gtm-module';
 import Script from 'next/script';
 
@@ -20,8 +19,6 @@ import Main from '@/layout/Main';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	useEffect(() => {
-		ReactGA.initialize('G-WL5GYCY5QG');
-		ReactGA.pageview(window.location.pathname + window.location.search);
 		TagManager.initialize({ gtmId: 'GTM-WSCGQG7' });
 	}, []);
 
@@ -62,7 +59,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 						window.dataLayer = window.dataLayer || [];
 						function gtag(){dataLayer.push(arguments);}
 						gtag('js', new Date());
-					  
 						gtag('config', 'G-0DRWY2NPCH');
 						`}
 				</Script>
