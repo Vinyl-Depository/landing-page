@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/inline-script-id */
 /* eslint-disable react/display-name */
 /* eslint-disable react/function-component-definition */
 /* eslint-disable react/destructuring-assignment */
@@ -6,6 +7,7 @@ import Head from 'next/head';
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
 import TagManager from 'react-gtm-module';
+import Script from 'next/script';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -51,6 +53,19 @@ function MyApp({ Component, pageProps }: AppProps) {
 			</Head>
 			<Header />
 			<Main>
+				<Script
+					strategy="lazyOnload"
+					src="https://www.googletagmanager.com/gtag/js?id=G-0DRWY2NPCH"
+				/>
+				<Script strategy="lazyOnload">
+					{`
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+					  
+						gtag('config', 'G-0DRWY2NPCH');
+						`}
+				</Script>
 				<Component {...pageProps} />
 			</Main>
 			<Footer />
