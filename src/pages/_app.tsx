@@ -47,14 +47,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Main>
 				<Script
 					strategy="lazyOnload"
-					src="https://www.googletagmanager.com/gtag/js?id=G-0DRWY2NPCH"
+					src="https://www.googletagmanager.com/gtag/js?id=G-GGGBSW2113"
 				/>
 				<Script strategy="lazyOnload">
 					{`
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
-						gtag('config', 'G-0DRWY2NPCH');
+					  window.dataLayer = window.dataLayer || [];
+					  function gtag(){dataLayer.push(arguments);}
+					  gtag('js', new Date());
+					  gtag('config', 'G-GGGBSW2113');
 						`}
 				</Script>
 

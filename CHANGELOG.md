@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.8...v1.1.9) (2022-03-19)
+
+
+### Bug Fixes
+
+* 🐞 fixed the confliced code ([a620d6f](https://github.com/Vinyl-Depository/landing-page/commit/a620d6fdb3a91788e208d2e333c179d709f061d0))
+
 ## [1.1.8](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.7...v1.1.8) (2022-03-16)
 
 
