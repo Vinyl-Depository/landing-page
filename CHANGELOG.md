@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.7...v1.1.8) (2022-03-16)
+
+
+### Bug Fixes
+
+* 🐞 fixed the connection to GTM ([3469388](https://github.com/Vinyl-Depository/landing-page/commit/3469388157304c7d419b3fad596b427882917526))
+
 ## [1.1.7](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.6...v1.1.7) (2022-03-13)
 
 
