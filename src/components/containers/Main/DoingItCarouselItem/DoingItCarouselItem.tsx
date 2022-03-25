@@ -6,10 +6,18 @@ interface IProps {
 	readonly image: StaticImageData;
 	readonly title: string;
 	readonly text: string | JSX.Element;
+	readonly testId?: string;
 }
 
 const DoingItCarouselItem: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
-	return <DoingItCarouselItemView image={props.image} title={props.title} text={props.text} />;
+	return (
+		<DoingItCarouselItemView
+			image={props.image}
+			title={props.title}
+			text={props.text}
+			testId={props.testId}
+		/>
+	);
 };
 
 DoingItCarouselItem.displayName = 'DoingItCarouselItem';

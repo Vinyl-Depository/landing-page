@@ -13,7 +13,10 @@ const TypicalMarketplacesView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 
 	return (
-		<div className={classes['typicalMarketplacesSectionContainer']}>
+		<div
+			className={classes['typicalMarketplacesSectionContainer']}
+			data-test-id="typical-marketplaces-section"
+		>
 			<section className={classes['typicalMarketplacesSection']}>
 				<h3 className={classes['typicalMarketplacesSection__header']}>
 					{t('typicalMarketplaces.header')}

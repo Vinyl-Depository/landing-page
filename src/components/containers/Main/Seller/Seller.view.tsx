@@ -30,7 +30,7 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 	}));
 
 	return (
-		<section id="seller" className={classes['sellersSection']}>
+		<section id="seller" className={classes['sellersSection']} data-test-id="seller-section">
 			<Element className={classes['sellersSectionInner']} name="sellerSection">
 				<div className={classes['sellersSectionText']}>
 					<h2 className={classes['sellersSectionText__title']}>

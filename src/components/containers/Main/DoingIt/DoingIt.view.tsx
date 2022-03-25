@@ -16,7 +16,7 @@ const DoingItView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 
 	return (
-		<div className={classes['doingItSectionContainer']}>
+		<div className={classes['doingItSectionContainer']} data-test-id="doing-it-section">
 			<section className={classes['doingItSection']}>
 				<h2 className={classes['doingItSection__header']}>{t('doingIt.header')}</h2>
 				<div className={classes['doingItFirstRow']}>

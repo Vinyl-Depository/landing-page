@@ -2,7 +2,3 @@
 	defaultBranch = main
 [alias]
     cmt = "!npx git-cz"
-[color "branch"]
-	current = red bold
-	local = black bold
-	remote = green bold

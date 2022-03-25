@@ -7,12 +7,13 @@ interface IProps {
 	readonly image: StaticImageData;
 	readonly title: string;
 	readonly text: string | JSX.Element;
+	readonly testId?: string;
 	readonly children?: React.ReactNode;
 }
 
 const DoingItCarouselItemView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => {
 	return (
-		<div className={classes['container']}>
+		<div className={classes['container']} data-test-id={props.testId}>
 			<div className={classes['container__img']}>
 				<Image
 					src={props.image}

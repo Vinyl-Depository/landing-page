@@ -39,7 +39,7 @@ const JoinWishlistView: React.FC<IProps> = (props: React.PropsWithChildren<IProp
 	}
 
 	return (
-		<div className={classes['joinWishlistSectionContainer']}>
+		<div className={classes['joinWishlistSectionContainer']} data-test-id="join-wishlist-section">
 			<section className={classes['joinWishlistSection']}>
 				<div className={classes['joinWishlistSectionLogos']}>
 					<div className={classes['joinWishlistSectionLogos__logo']}>
@@ -71,12 +71,18 @@ const JoinWishlistView: React.FC<IProps> = (props: React.PropsWithChildren<IProp
 						</span>
 						<Trans i18nKey="joinWishlist.headerSecondPart" />
 					</h2>
-					<form className={classes['joinWishlistForm']} noValidate onSubmit={props.onFormSubmit}>
+					<form
+						className={classes['joinWishlistForm']}
+						data-test-id="join-wishlist-form"
+						noValidate
+						onSubmit={props.onFormSubmit}
+					>
 						<input
 							className={classes['joinWishlistForm__input']}
 							type="email"
 							placeholder={t('joinWishlist.formPlaceholder')}
 							value={props.emailInput ?? ''}
+							data-test-id="join-wishlist-input"
 							onChange={({ currentTarget: { value } }) => props.onEmailInputChange(value)}
 						/>
 						<button className={classes['joinWishlistForm__submit']} type="submit">
@@ -89,6 +95,7 @@ const JoinWishlistView: React.FC<IProps> = (props: React.PropsWithChildren<IProp
 						<span
 							className={validationMessageClassName}
 							style={{ visibility: props.isEmailInputOnError === null ? 'hidden' : 'visible' }}
+							data-test-id="join-wishlist-validation-message"
 						>
 							{validationMessage}
 						</span>

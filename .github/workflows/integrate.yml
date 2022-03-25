@@ -41,3 +41,6 @@ jobs:
 
       - name: Check build command
         run: yarn run build
+
+      - name: Testing e2e
+        run: yarn run test:e2e

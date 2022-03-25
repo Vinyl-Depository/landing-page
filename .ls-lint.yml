@@ -7,9 +7,12 @@ ls:
         .dir: PascalCase | regex:__snapshots__
     src/components/ui/**/*:
         .dir: regex:\bV[A-Z][a-z]*([A-Z][a-z]*)*\b | regex:__snapshots__
+    tests:
+        .dir: kebab-case
     .ts: kebab-case
     .d.ts: kebab-case
     .test.ts: kebab-case
+    .spec.ts: kebab-case
     .tsx: PascalCase
     .test.tsx: PascalCase
     .scss: kebab-case
