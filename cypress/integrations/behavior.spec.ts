@@ -14,8 +14,8 @@ describe('Behavior tests', () => {
 			.submit()
 			.get('[data-test-id=intro-validation-message]')
 			.should('be.visible')
-			.and('satisfy', ($element) => {
-				const classList = Array.from<string>($element[0].classList);
+			.and('satisfy', ($element: JQuery) => {
+				const classList = ($element.attr('class') ?? '').split(/\s+/);
 
 				return classList.some((className) => className.includes('validationMessageError'));
 			})
@@ -39,8 +39,8 @@ describe('Behavior tests', () => {
 			.submit()
 			.get('[data-test-id=intro-validation-message]')
 			.should('be.visible')
-			.and('satisfy', ($element) => {
-				const classList = Array.from<string>($element[0].classList);
+			.and('satisfy', ($element: JQuery) => {
+				const classList = ($element.attr('class') ?? '').split(/\s+/);
 
 				return classList.some((className) => className.includes('validationMessageSuccess'));
 			})
@@ -64,8 +64,8 @@ describe('Behavior tests', () => {
 			.submit()
 			.get('[data-test-id=intro-validation-message]')
 			.should('be.visible')
-			.and('satisfy', ($element) => {
-				const classList = Array.from<string>($element[0].classList);
+			.and('satisfy', ($element: JQuery) => {
+				const classList = ($element.attr('class') ?? '').split(/\s+/);
 
 				return classList.some((className) => className.includes('validationMessageError'));
 			})
@@ -88,8 +88,8 @@ describe('Behavior tests', () => {
 			.submit()
 			.get('[data-test-id=join-wishlist-validation-message]')
 			.should('be.visible')
-			.and('satisfy', ($element) => {
-				const classList = Array.from<string>($element[0].classList);
+			.and('satisfy', ($element: JQuery) => {
+				const classList = ($element.attr('class') ?? '').split(/\s+/);
 
 				return classList.some((className) => className.includes('validationMessageError'));
 			})
@@ -113,8 +113,8 @@ describe('Behavior tests', () => {
 			.submit()
 			.get('[data-test-id=join-wishlist-validation-message]')
 			.should('be.visible')
-			.and('satisfy', ($element) => {
-				const classList = Array.from<string>($element[0].classList);
+			.and('satisfy', ($element: JQuery) => {
+				const classList = ($element.attr('class') ?? '').split(/\s+/);
 
 				return classList.some((className) => className.includes('validationMessageSuccess'));
 			})
@@ -138,8 +138,8 @@ describe('Behavior tests', () => {
 			.submit()
 			.get('[data-test-id=join-wishlist-validation-message]')
 			.should('be.visible')
-			.and('satisfy', ($element) => {
-				const classList = Array.from<string>($element[0].classList);
+			.and('satisfy', ($element: JQuery) => {
+				const classList = ($element.attr('class') ?? '').split(/\s+/);
 
 				return classList.some((className) => className.includes('validationMessageError'));
 			})
