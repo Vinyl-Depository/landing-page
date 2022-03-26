@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Vinyl-Depository/landing-page/compare/v1.2.0...v1.2.1) (2022-03-26)
+
+
+### Bug Fixes
+
+* 🐞 remove contact header from non-home-page routes ([a2c7007](https://github.com/Vinyl-Depository/landing-page/commit/a2c700773533973d0bbf92178b2756e8a6717c69))
+
 # [1.2.0](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.10...v1.2.0) (2022-03-26)
 
 
