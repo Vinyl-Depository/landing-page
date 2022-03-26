@@ -44,3 +44,6 @@ jobs:
 
       - name: Testing e2e
         run: yarn run test:e2e
+
+      - name: Check Lighthouse
+        run: yarn run lighthouse
