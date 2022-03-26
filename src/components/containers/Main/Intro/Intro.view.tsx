@@ -39,7 +39,7 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 	}
 
 	return (
-		<div className={classes['introSectionContainer']}>
+		<div className={classes['introSectionContainer']} data-test-id="intro-section">
 			<section className={classes['introSection']}>
 				<h1 className={classes['introSection__header']}>{t('intro.mainHeader')}</h1>
 				<div className={classes['introSection__ipadImg']}>
@@ -76,6 +76,7 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 					</p>
 					<form
 						className={classes['introWishlistFormContainer']}
+						data-test-id="intro-form"
 						noValidate
 						onSubmit={props.onFormSubmit}
 					>
@@ -84,6 +85,7 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 							type="email"
 							placeholder={t('intro.wishListFormPlaceHolder')}
 							value={props.emailInput ?? ''}
+							data-test-id="intro-input"
 							onChange={({ currentTarget: { value } }) => props.onEmailInputChange(value)}
 						/>
 						<button className={classes['introWishlistFormContainer__submit']} type="submit">
@@ -93,6 +95,7 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 						<span
 							className={validationMessageClassName}
 							style={{ visibility: props.isEmailInputOnError === null ? 'hidden' : 'visible' }}
+							data-test-id="intro-validation-message"
 						>
 							{validationMessage}
 						</span>

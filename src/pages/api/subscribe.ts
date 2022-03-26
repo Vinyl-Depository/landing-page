@@ -38,7 +38,7 @@ export default async function handler(req: ISubscribeRequest, res: NextApiRespon
 			return;
 		} catch (e) {
 			// The API request above might fail due to duplicate subscription try - in this case return successful response
-			const isDuplicateError = (e as IMailchimpError).title === MAILCHIMP_MEMBER_EXISTS_MESSAGE;
+			const isDuplicateError = (e as IMailchimpError)?.title === MAILCHIMP_MEMBER_EXISTS_MESSAGE;
 
 			if (isDuplicateError) {
 				res.status(200).send({

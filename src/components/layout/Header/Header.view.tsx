@@ -20,7 +20,7 @@ const HeaderView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
 
 	return (
-		<div className={classes['headerContainer']}>
+		<div className={classes['headerContainer']} data-test-id="header">
 			<header className={classes['header']}>
 				{/* <div className={classes['mobileHeadrMenu']}>
 					<VSvg className={classes['mobileHeaderMenu__icon']} name="hamburgerMenu" />

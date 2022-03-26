@@ -12,7 +12,7 @@ interface IProps {}
 
 const FooterView: React.FC<IProps> = () => {
 	return (
-		<footer className={classes['footer']}>
+		<footer className={classes['footer']} data-test-id="footer">
 			<div className={classes['footer__logo']}>
 				<Image
 					src={brandLogo}

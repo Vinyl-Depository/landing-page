@@ -91,6 +91,7 @@ const DoingItCarouselView: React.FC<IProps> = (props: React.PropsWithChildren<IP
 				image={browseImg}
 				title={t('doingIt.browse.title')}
 				text={<Trans i18nKey="doingIt.browse.description" />}
+				testId="doing-it-carousel-first-item"
 			/>
 			<DoingItCarouselItem
 				image={searchImg}

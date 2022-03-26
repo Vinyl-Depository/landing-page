@@ -3,6 +3,7 @@ const createJestConfig = nextJest({
 	dir: './',
 });
 const customJestConfig = {
+	testPathIgnorePatterns: ['cypress'],
 	collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts'],
 	coveragePathIgnorePatterns: [
 		'<rootDir>/src/pages/',

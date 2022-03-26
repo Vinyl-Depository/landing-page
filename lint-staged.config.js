@@ -1,5 +1,6 @@
 module.exports = {
-	'src/**/*.{ts,tsx}': 'eslint --fix',
+	'{src,tests}/**/*.{ts,tsx}': 'eslint --fix',
+	'cypress/**/*.ts': 'eslint -c cypress/.eslintrc.js --fix',
 	'src/**/*.scss': 'stylelint --fix',
 	'*.{ts,tsx,scss,js,json}': 'prettier --write',
 };
