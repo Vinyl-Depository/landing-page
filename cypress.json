@@ -1,5 +1,5 @@
 {
-	"baseUrl": "http://localhost",
+	"baseUrl": "http://localhost:8080",
 	"testFiles": "**/*.spec.ts",
 	"integrationFolder": "cypress/integrations",
 	"screenshotOnRunFailure": false,

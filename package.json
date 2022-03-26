@@ -24,7 +24,7 @@
 		"test:update-snaps": "jest --updateSnapshot",
 		"cy:start": "run-s build start",
 		"cy:run": "cypress run",
-		"test:e2e": "start-server-and-test start:cypress :8080 cy:run",
+		"test:e2e": "start-server-and-test start:cypress / cy:run",
 		"lighthouse": "lhci autorun",
 		"depcheck": "depcheck",
 		"template:page": "hygen component new-page",
