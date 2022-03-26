@@ -1,3 +1,10 @@
+## [1.1.10](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.9...v1.1.10) (2022-03-26)
+
+
+### Bug Fixes
+
+* 🐞 fixed PR template ([9ef6b70](https://github.com/Vinyl-Depository/landing-page/commit/9ef6b7074b12cb1c7bb2788901666baf544682d0))
+
 ## [1.1.9](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.8...v1.1.9) (2022-03-19)
 
 
