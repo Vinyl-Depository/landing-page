@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.10...v1.2.0) (2022-03-26)
+
+
+### Features
+
+* 🔥 using lighthouse to "monitor" SEO ([8896374](https://github.com/Vinyl-Depository/landing-page/commit/88963747ffeee305d3d279d282b3840e0676d64f))
+
 ## [1.1.10](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.9...v1.1.10) (2022-03-26)
 
 
