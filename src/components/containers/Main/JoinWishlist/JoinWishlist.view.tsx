@@ -83,7 +83,11 @@ const JoinWishlistView: React.FC<IProps> = (props: React.PropsWithChildren<IProp
 							{t('joinWishlist.button')}
 						</button>
 
-						<button className={classes['joinWishlistForm__mobileSubmit']} type="submit">
+						<button
+							className={classes['joinWishlistForm__mobileSubmit']}
+							type="submit"
+							aria-label="Form submit button"
+						>
 							<VSvg name="submitButton" />
 						</button>
 						<span

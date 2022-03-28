@@ -33,6 +33,7 @@ const DoingItCarouselView: React.FC<IProps> = (props: React.PropsWithChildren<IP
 			return (
 				<button
 					className={concatClasses(classes, 'indicator', 'indicator--selected')}
+					aria-label="Indicator"
 					type="button"
 					role="button"
 				/>
@@ -42,6 +43,7 @@ const DoingItCarouselView: React.FC<IProps> = (props: React.PropsWithChildren<IP
 		return (
 			<button
 				className={classes['indicator']}
+				aria-label="Indicator"
 				type="button"
 				role="button"
 				onClick={() => props.setSelectedItemIndex(index)}
