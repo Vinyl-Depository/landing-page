@@ -15,9 +15,9 @@ const TypicalMarketplacesView: React.FC<IProps> = () => {
 	return (
 		<div className={classes['typicalMarketplacesSectionContainer']}>
 			<section className={classes['typicalMarketplacesSection']}>
-				<h3 className={classes['typicalMarketplacesSection__header']}>
+				<h2 className={classes['typicalMarketplacesSection__header']}>
 					{t('typicalMarketplaces.header')}
-				</h3>
+				</h2>
 				<div className={classes['typicalMarketplacesTextContainer']}>
 					<p className={classes['typicalMarketplacesTextContainer__text']}>
 						{t('typicalMarketplaces.description')}
