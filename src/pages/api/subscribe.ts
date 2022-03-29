@@ -1,10 +1,10 @@
 import { NextApiResponse } from 'next';
-import Mailchimp from 'mailchimp-api-v3';
 
 import { ISubscribeRequest } from '@/models/api/request/subcribe';
 import { ISubscribeResponse } from '@/models/api/response/subscribe';
 import { IMailchimpError } from '@/models/mailchimp';
 import { validateEmail } from '@/utils/validators';
+import * as MailchimpAPI from '@/utils/mailchimp-api';
 
 const MAILCHIMP_MEMBER_EXISTS_MESSAGE = 'Member Exists';
 
@@ -20,11 +20,9 @@ export default async function handler(req: ISubscribeRequest, res: NextApiRespon
 			return;
 		}
 
-		const mailchimp = new Mailchimp(process.env.MAILCHIMP_API_KEY);
-
 		// Try to store the email in mailchimp
 		try {
-			await mailchimp.post(`/lists/${process.env.MAILCHIMP_LIST_ID}/members`, {
+			await MailchimpAPI.post<void>(`/lists/${process.env.MAILCHIMP_LIST_ID}/members`, {
 				email_address: req.body.email,
 				status: 'subscribed',
 				tags: [process.env.MAILCHIMP_APPROVAL_LANDING_SUB_TAG],
