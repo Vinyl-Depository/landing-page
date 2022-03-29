@@ -1,11 +1,12 @@
 {
 	"name": "landing-page",
 	"description": "Nextjs project for Vinyl Depository landing page",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"private": true,
 	"scripts": {
-		"prepare": "husky install",
+		"husky:install": "husky install",
 		"git:config": "git config --local include.path ../.gitconfig",
+		"prepare": "run-p husky:install git:config",
 		"dev": "next dev -p 8080",
 		"build": "next build",
 		"postbuild": "next-sitemap --config next-sitemap.config.js",
@@ -75,6 +76,7 @@
 		"jest": "27.5.1",
 		"lint-staged": "12.3.7",
 		"next-sitemap": "2.5.14",
+		"npm-run-all": "4.1.5",
 		"prettier": "2.6.1",
 		"sass": "1.49.9",
 		"start-server-and-test": "1.14.0",

@@ -17,6 +17,8 @@ ls:
     .test.tsx: PascalCase
     .scss: kebab-case
     .module.scss: PascalCase
+    .png: kebab-case
+    .jpg: kebab-case
 
 ignore:
     - _templates
@@ -28,4 +30,3 @@ ignore:
     - '@types'
     - coverage
     - node_modules
-    - public
