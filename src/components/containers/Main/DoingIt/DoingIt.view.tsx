@@ -30,7 +30,7 @@ const DoingItView: React.FC<IProps> = () => {
 								layout="fill"
 							/>
 						</div>
-						<h4 className={classes['doingItItem__title']}>{t('doingIt.browse.title')}</h4>
+						<h3 className={classes['doingItItem__title']}>{t('doingIt.browse.title')}</h3>
 						<span className={classes['doingItItem__text']}>
 							<Trans i18nKey="doingIt.browse.description" />
 						</span>
@@ -45,7 +45,7 @@ const DoingItView: React.FC<IProps> = () => {
 								layout="fill"
 							/>
 						</div>
-						<h4 className={classes['doingItItem__title']}>{t('doingIt.search.title')}</h4>
+						<h3 className={classes['doingItItem__title']}>{t('doingIt.search.title')}</h3>
 						<span className={classes['doingItItem__text']}>
 							{t('doingIt.search.description')}
 						</span>
@@ -60,7 +60,7 @@ const DoingItView: React.FC<IProps> = () => {
 								layout="fill"
 							/>
 						</div>
-						<h4 className={classes['doingItItem__title']}>{t('doingIt.pileUp.title')}</h4>
+						<h3 className={classes['doingItItem__title']}>{t('doingIt.pileUp.title')}</h3>
 						<span className={classes['doingItItem__text']}>
 							{t('doingIt.pileUp.description')}
 						</span>
@@ -77,9 +77,9 @@ const DoingItView: React.FC<IProps> = () => {
 								layout="fill"
 							/>
 						</div>
-						<h4 className={classes['doingItItem__title']}>
+						<h3 className={classes['doingItItem__title']}>
 							{t('doingIt.personalizedExperience.title')}
-						</h4>
+						</h3>
 						<span className={classes['doingItItem__text']}>
 							{t('doingIt.personalizedExperience.description')}
 						</span>
