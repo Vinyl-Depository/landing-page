@@ -43,7 +43,7 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 				<form className={classes['sellersSectionForm']} noValidate onSubmit={props.onFormSubmit}>
 					<label
 						className={classes['sellersSectionForm__label']}
-						htmlFor="sellersSectionForm__input"
+						htmlFor={classes['sellersSectionForm__input']}
 					>
 						{t('seller.form.emailInput')}
 					</label>
@@ -63,7 +63,7 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 
 					<label
 						className={classes['sellersSectionForm__label']}
-						htmlFor="sellersSectionForm__input"
+						htmlFor={classes['sellersSectionForm__input']}
 					>
 						{t('seller.form.nameInput')}
 					</label>
@@ -83,7 +83,7 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 
 					<label
 						className={classes['sellersSectionForm__label']}
-						htmlFor="sellersSectionForm__input"
+						htmlFor={classes['sellersSectionForm__input']}
 					>
 						{t('seller.form.countryTitle')}
 					</label>
