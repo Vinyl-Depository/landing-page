@@ -1,3 +1,3 @@
-export interface IMailchimpError {
-	readonly title: string;
+export enum MailchimpErrors {
+	MemberExists = 'Member Exists',
 }
