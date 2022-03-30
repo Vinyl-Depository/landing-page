@@ -100,7 +100,11 @@ const IntroView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) => 
 							{validationMessage}
 						</span>
 
-						<button className={classes['introWishlistFormContainer__submitIpad']} type="submit">
+						<button
+							className={classes['introWishlistFormContainer__submitIpad']}
+							type="submit"
+							aria-label="Form submit button"
+						>
 							<VSvg name="submitButton" />
 						</button>
 					</form>

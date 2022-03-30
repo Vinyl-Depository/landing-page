@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-				<meta name="theme-color" content="#000000" />
+				<meta name="theme-color" content="#9096CC" />
 
 				<meta property="og:title" content="Vinyl Depository" />
 				<meta property="og:type" content="website" />
@@ -40,6 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 				<title>Vinyl Depository</title>
 
+				<link rel="apple-touch-icon" href="/public/images/apple-touch-icon.png" />
 				<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			</Head>
