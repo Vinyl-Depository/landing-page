@@ -40,6 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 				<title>Vinyl Depository</title>
 
+				<link rel="canonical" href="https://www.vinyldepository.com/" />
 				<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			</Head>
