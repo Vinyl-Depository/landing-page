@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 				<title>Vinyl Depository</title>
 
-				<link rel="apple-touch-icon" href="/public/images/apple-touch-icon.png" />
+				<link rel="apple-touch-icon" href="/public/apple-touch-icon.png" />
 				<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			</Head>
