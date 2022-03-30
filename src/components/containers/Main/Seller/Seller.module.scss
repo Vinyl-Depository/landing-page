@@ -50,16 +50,16 @@
 			font-size: 1.8rem;
 			font-weight: 600;
 			color: #474a57;
+		}
 
-			.sellersSectionFormInput {
-				width: 100%;
-				padding: 14px 16px;
-				margin-bottom: 10px;
-				font-size: 1.4rem;
-				color: #474a57;
-				background-color: #f4f5f7;
-				border-radius: 5px;
-			}
+		&__input {
+			width: 100%;
+			padding: 14px 16px;
+			margin-bottom: 10px;
+			font-size: 1.4rem;
+			color: #474a57;
+			background-color: #f4f5f7;
+			border-radius: 5px;
 		}
 
 		&__selectCountry {

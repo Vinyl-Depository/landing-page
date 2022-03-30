@@ -43,14 +43,14 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 				<form className={classes['sellersSectionForm']} noValidate onSubmit={props.onFormSubmit}>
 					<label className={classes['sellersSectionForm__label']}>
 						{t('seller.form.emailInput')}
-						<input
-							className={classes['sellersSectionFormInput']}
-							type="email"
-							placeholder={t('seller.form.emailLabel')}
-							value={props.emailInput ?? ''}
-							onChange={({ currentTarget: { value } }) => props.onEmailInputChange(value)}
-						/>
 					</label>
+					<input
+						className={classes['sellersSectionForm__input']}
+						type="email"
+						placeholder={t('seller.form.emailLabel')}
+						value={props.emailInput ?? ''}
+						onChange={({ currentTarget: { value } }) => props.onEmailInputChange(value)}
+					/>
 					<span
 						className={classes['sellersSectionForm__errorValidationMessage']}
 						style={{ visibility: props.isEmailOnError ? 'visible' : 'hidden' }}
@@ -60,14 +60,14 @@ const SellerView: React.FC<IProps> = (props: React.PropsWithChildren<IProps>) =>
 
 					<label className={classes['sellersSectionForm__label']}>
 						{t('seller.form.nameInput')}
-						<input
-							className={classes['sellersSectionFormInput']}
-							type="text"
-							placeholder={t('seller.form.nameLabel')}
-							value={props.nameInput ?? ''}
-							onChange={({ currentTarget: { value } }) => props.onNameInputChange(value)}
-						/>
 					</label>
+					<input
+						className={classes['sellersSectionForm__input']}
+						type="text"
+						placeholder={t('seller.form.nameLabel')}
+						value={props.nameInput ?? ''}
+						onChange={({ currentTarget: { value } }) => props.onNameInputChange(value)}
+					/>
 					<span
 						className={classes['sellersSectionForm__errorValidationMessage']}
 						style={{ visibility: props.isNameOnError ? 'visible' : 'hidden' }}
