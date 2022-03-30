@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/Vinyl-Depository/landing-page/compare/v1.2.1...v1.2.2) (2022-03-30)
+
+
+### Performance Improvements
+
+* ⚡ fixed Duplicate pages without canonical ([85ad243](https://github.com/Vinyl-Depository/landing-page/commit/85ad2432c5d32cc339055291a587d96efb219315))
+
 ## [1.2.1](https://github.com/Vinyl-Depository/landing-page/compare/v1.2.0...v1.2.1) (2022-03-26)
 
 

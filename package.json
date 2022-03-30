@@ -1,7 +1,7 @@
 {
 	"name": "landing-page",
 	"description": "Nextjs project for Vinyl Depository landing page",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"private": true,
 	"scripts": {
 		"husky:install": "husky install",
