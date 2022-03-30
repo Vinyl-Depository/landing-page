@@ -6,6 +6,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import Script from 'next/script';
+import { Partytown } from '@builder.io/partytown/react';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -40,16 +41,19 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 				<title>Vinyl Depository</title>
 
+				<Partytown debug forward={['dataLayer.push']} />
+
 				<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			</Head>
 			<Header />
 			<Main>
 				<Script
+					type="text/partytown"
 					strategy="lazyOnload"
 					src="https://www.googletagmanager.com/gtag/js?id=G-GGGBSW2113"
 				/>
-				<Script strategy="lazyOnload">
+				<Script type="text/partytown" strategy="lazyOnload">
 					{`
 					  window.dataLayer = window.dataLayer || [];
 					  function gtag(){dataLayer.push(arguments);}
@@ -58,8 +62,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 						`}
 				</Script>
 
-				<Script strategy="lazyOnload" src="https://www.googletagmanager.com/ns.html?id=GTM-WGS32CD" />
-				<Script strategy="lazyOnload">
+				<Script
+					type="text/partytown"
+					strategy="lazyOnload"
+					src="https://www.googletagmanager.com/ns.html?id=GTM-WGS32CD"
+				/>
+				<Script type="text/partytown" strategy="lazyOnload">
 					{`
 						(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 						new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
