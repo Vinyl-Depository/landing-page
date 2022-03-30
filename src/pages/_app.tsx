@@ -43,6 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 				<Partytown debug forward={['dataLayer.push']} />
 
+				<link rel="canonical" href="https://www.vinyldepository.com/" />
 				<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			</Head>

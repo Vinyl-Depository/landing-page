@@ -1,9 +1,8 @@
 module.exports = {
 	ci: {
 		collect: {
-			numberOfRuns: 3,
-			startServerCommand: 'yarn run start',
-			url: ['http://localhost'],
+			startServerCommand: 'yarn run start:lhci',
+			url: ['http://localhost:8080'],
 		},
 		assert: {
 			preset: 'lighthouse:recommended',
