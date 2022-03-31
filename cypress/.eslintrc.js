@@ -134,7 +134,6 @@ module.exports = {
 		'import/no-unused-modules': ['error'],
 		'import/no-commonjs': ['error'],
 		'import/no-amd': ['error'],
-		'import/no-nodejs-modules': ['error'],
 		'import/first': ['error'],
 		'import/exports-last': ['error'],
 		'import/no-duplicates': ['error'],
