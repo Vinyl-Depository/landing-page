@@ -4,6 +4,7 @@
 	"version": "1.2.2",
 	"private": true,
 	"scripts": {
+		"preinstall": "npx only-allow yarn",
 		"husky:install": "husky install",
 		"git:config": "git config --local include.path ../.gitconfig",
 		"prepare": "run-p husky:install git:config",
