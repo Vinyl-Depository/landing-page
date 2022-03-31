@@ -12,7 +12,8 @@
 		"@types/react-dom",
 		"@types/jest",
 		"@commitlint/config-conventional",
-		"@commitlint/cli"
+		"@commitlint/cli",
+		"tsc-files"
 	],
 	"skipMissing": true
 }
