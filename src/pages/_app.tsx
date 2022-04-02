@@ -59,7 +59,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 					  function gtag(){dataLayer.push(arguments);}
 					  gtag('js', new Date());
 					  gtag('config', 'G-GGGBSW2113');
-						`}
+					`}
 				</Script>
 
 				<Script
@@ -74,7 +74,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 						j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 						})(window,document,'script','dataLayer','GTM-WGS32CD')
-						`}
+					`}
 				</Script>
 
 				<Component {...pageProps} />

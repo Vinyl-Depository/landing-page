@@ -4,6 +4,9 @@ const nextConfig = {
 	eslint: {
 		dirs: ['./src', './tests'],
 	},
+	experimental: {
+		nextScriptWorkers: true,
+	},
 };
 
 module.exports = nextConfig;
