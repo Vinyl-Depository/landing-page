@@ -70,7 +70,7 @@ module.exports = {
 					if (!commitRegex.test(header)) {
 						return [
 							false,
-							"header must be in format '<type>: <emoji?> <ticket?> <subject>\nexample => ci: 🚀 [V-123] example",
+							"header must be in format '<type>: <emoji?> <ticket?> <subject>\nexample => ci: 🚀 [V-123] example\n",
 						];
 					}
 
