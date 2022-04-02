@@ -49,7 +49,6 @@
 	},
 	"devDependencies": {
 		"@commitlint/cli": "16.2.3",
-		"@commitlint/config-conventional": "16.2.1",
 		"@lhci/cli": "0.9.0",
 		"@ls-lint/ls-lint": "1.11.0",
 		"@testing-library/jest-dom": "5.16.3",
