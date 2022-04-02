@@ -2,7 +2,7 @@ const commitTypeRegex = /chore|ci|docs|feat|fix|perf|refactor|release|style|test
 const commitEmojiRegex =
 	/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/;
 const commitTicketIdRegex = /(\[((((?<!([A-Z]{1,10})-?)[A-Z]+-\d+)))\])/;
-const commitMessageRegex = /([a-zA-Z0-9]+\s)*[a-zA-Z0-9]+/;
+const commitMessageRegex = /([^\s]+\s)*[^\s]+/;
 const commitRegex = new RegExp(
 	`^(${commitTypeRegex.source}): (${commitEmojiRegex.source} )?(${commitTicketIdRegex.source} )?(${commitMessageRegex.source})$`,
 );
