@@ -1,7 +1,7 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": ["config:base", ":semanticCommitTypeAll(chore)", ":semanticCommitScopeDisabled"],
-	"regexMangers": [
+	"regexManagers": [
 		{
 			"fileMatch": ["^Dockerfile$"],
 			"matchStrings": ["FROM node:(?<currentValue>.*?)-alpine\\n"],
