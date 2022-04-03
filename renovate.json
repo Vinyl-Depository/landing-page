@@ -23,7 +23,5 @@
 	],
 	"timezone": "Asia/Jerusalem",
 	"schedule": ["every weekend"],
-	"stabilityDays": 7,
-	"prCreation": "status-success",
 	"commitMessageAction": "🤖 Update"
 }
