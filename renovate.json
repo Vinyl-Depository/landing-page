@@ -14,6 +14,11 @@
 		{
 			"updateTypes": ["minor", "patch"],
 			"automerge": true
+		},
+		{
+			"matchPackageNames": ["node"],
+			"matchManagers": ["dockerfile"],
+			"enabled": false
 		}
 	],
 	"timezone": "Asia/Jerusalem",
