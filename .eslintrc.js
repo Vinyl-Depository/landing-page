@@ -19,7 +19,7 @@ module.exports = {
 		project: 'tsconfig.json',
 		sourceType: 'module',
 	},
-	plugins: ['@typescript-eslint', 'unused-imports', 'react-hooks', 'node'],
+	plugins: ['@typescript-eslint', 'unused-imports', 'node'],
 	rules: {
 		'indent': ['error', 'tab'],
 		'quotes': ['error', 'single', { avoidEscape: true }],
