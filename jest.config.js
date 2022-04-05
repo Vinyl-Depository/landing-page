@@ -3,6 +3,7 @@ const createJestConfig = nextJest({
 	dir: './',
 });
 const customJestConfig = {
+	testPathIgnorePatterns: ['cypress'],
 	collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts'],
 	coveragePathIgnorePatterns: [
 		'<rootDir>/src/pages/',
@@ -12,10 +13,10 @@ const customJestConfig = {
 	],
 	coverageThreshold: {
 		global: {
-			branches: 5,
-			functions: 5,
-			lines: 5,
-			statements: 5,
+			branches: 4,
+			functions: 4,
+			lines: 4,
+			statements: 4,
 		},
 	},
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],

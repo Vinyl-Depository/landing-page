@@ -1,4 +1,3 @@
-changelog.config.js
 lighthouserc.js
 jest.config.js
 jest.setup.js
@@ -10,6 +9,7 @@ commitlint.config.js
 lint-staged.config.js
 release.config.js
 next-sitemap.config.js
+.czferc.js
 dist
 build
 _templates

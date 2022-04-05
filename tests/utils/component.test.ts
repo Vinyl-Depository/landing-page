@@ -1,4 +1,4 @@
-import { concatClasses, concatDiverseClasses } from '../component';
+import { concatClasses, concatDiverseClasses } from '@/utils/component';
 
 describe('[utils/component]', () => {
 	it('concatClasses | Function should return empty string for given input of empty object', () => {

@@ -1,4 +1,4 @@
-import { validateEmail } from '../validators';
+import { validateEmail } from '@/utils/validators';
 
 describe('[utils/validators]', () => {
 	it('validateEmail | Function should return false for empty email', () => {

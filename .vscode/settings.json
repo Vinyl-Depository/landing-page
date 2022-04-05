@@ -7,7 +7,6 @@
 		"**/coverage": true
 	},
 	"files.associations": {
-		".czrc": "json",
 		"commit-msg": "shellscript"
 	}
 }

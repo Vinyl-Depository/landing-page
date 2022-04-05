@@ -1,3 +1,45 @@
+## [1.2.2](https://github.com/Vinyl-Depository/landing-page/compare/v1.2.1...v1.2.2) (2022-03-30)
+
+
+### Performance Improvements
+
+* ⚡ fixed Duplicate pages without canonical ([85ad243](https://github.com/Vinyl-Depository/landing-page/commit/85ad2432c5d32cc339055291a587d96efb219315))
+
+## [1.2.1](https://github.com/Vinyl-Depository/landing-page/compare/v1.2.0...v1.2.1) (2022-03-26)
+
+
+### Bug Fixes
+
+* 🐞 remove contact header from non-home-page routes ([a2c7007](https://github.com/Vinyl-Depository/landing-page/commit/a2c700773533973d0bbf92178b2756e8a6717c69))
+
+# [1.2.0](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.10...v1.2.0) (2022-03-26)
+
+
+### Features
+
+* 🔥 using lighthouse to "monitor" SEO ([8896374](https://github.com/Vinyl-Depository/landing-page/commit/88963747ffeee305d3d279d282b3840e0676d64f))
+
+## [1.1.10](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.9...v1.1.10) (2022-03-26)
+
+
+### Bug Fixes
+
+* 🐞 fixed PR template ([9ef6b70](https://github.com/Vinyl-Depository/landing-page/commit/9ef6b7074b12cb1c7bb2788901666baf544682d0))
+
+## [1.1.9](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.8...v1.1.9) (2022-03-19)
+
+
+### Bug Fixes
+
+* 🐞 fixed the confliced code ([a620d6f](https://github.com/Vinyl-Depository/landing-page/commit/a620d6fdb3a91788e208d2e333c179d709f061d0))
+
+## [1.1.8](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.7...v1.1.8) (2022-03-16)
+
+
+### Bug Fixes
+
+* 🐞 fixed the connection to GTM ([3469388](https://github.com/Vinyl-Depository/landing-page/commit/3469388157304c7d419b3fad596b427882917526))
+
 ## [1.1.7](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.6...v1.1.7) (2022-03-13)
 
 

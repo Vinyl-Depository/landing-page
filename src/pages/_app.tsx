@@ -1,11 +1,11 @@
+/* eslint-disable @next/next/inline-script-id */
 /* eslint-disable react/display-name */
 /* eslint-disable react/function-component-definition */
 /* eslint-disable react/destructuring-assignment */
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
-import TagManager from 'react-gtm-module';
+import React from 'react';
+import Script from 'next/script';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -17,12 +17,6 @@ import Footer from '@/layout/Footer';
 import Main from '@/layout/Main';
 
 function MyApp({ Component, pageProps }: AppProps) {
-	useEffect(() => {
-		ReactGA.initialize('G-WL5GYCY5QG');
-		ReactGA.pageview(window.location.pathname + window.location.search);
-		TagManager.initialize({ gtmId: 'GTM-WSCGQG7' });
-	}, []);
-
 	return (
 		<>
 			<Head>
@@ -30,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 				<meta name="theme-color" content="#000000" />
 
-				<meta name="og:title" content="Vinyl Depository" />
+				<meta property="og:title" content="Vinyl Depository" />
 				<meta property="og:type" content="website" />
 				<meta property="og:image" content="/images/meta-image.png" />
 				<meta property="og:image:type" content="image/png" />
@@ -46,11 +40,36 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 				<title>Vinyl Depository</title>
 
+				<link rel="canonical" href="https://www.vinyldepository.com/" />
 				<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			</Head>
 			<Header />
 			<Main>
+				<Script
+					strategy="lazyOnload"
+					src="https://www.googletagmanager.com/gtag/js?id=G-GGGBSW2113"
+				/>
+				<Script strategy="lazyOnload">
+					{`
+					  window.dataLayer = window.dataLayer || [];
+					  function gtag(){dataLayer.push(arguments);}
+					  gtag('js', new Date());
+					  gtag('config', 'G-GGGBSW2113');
+						`}
+				</Script>
+
+				<Script strategy="lazyOnload" src="https://www.googletagmanager.com/ns.html?id=GTM-WGS32CD" />
+				<Script strategy="lazyOnload">
+					{`
+						(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+						new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+						j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+						'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+						})(window,document,'script','dataLayer','GTM-WGS32CD')
+						`}
+				</Script>
+
 				<Component {...pageProps} />
 			</Main>
 			<Footer />

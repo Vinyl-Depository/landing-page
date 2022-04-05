@@ -2,7 +2,8 @@
 const nextConfig = {
 	reactStrictMode: true,
 	eslint: {
-		dirs: ['./'],
+		dirs: ['./src', './tests'],
+		ignoreDuringBuilds: true,
 	},
 };
 

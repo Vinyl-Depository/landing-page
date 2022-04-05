@@ -22,7 +22,10 @@ jobs:
         run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Check unused dependencies
-        run: yarn run dep-check
+        run: yarn run depcheck
+
+      - name: Check Files and Directories Linter
+        run: yarn run lslint
 
       - name: Check Typescript
         run: yarn run type-check
@@ -38,3 +41,6 @@ jobs:
 
       - name: Check build command
         run: yarn run build
+
+      - name: Testing e2e
+        run: yarn run test:e2e

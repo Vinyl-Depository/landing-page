@@ -3,7 +3,6 @@ stylelint.config.js
 README.md
 jest.setup.js
 jest.config.js
-changelog.config.js
 .prettierrc.js
 .prettierignore
 .gitignore
@@ -11,6 +10,7 @@ changelog.config.js
 .eslintignore
 .editorconfig
 release.config.js
+.czferc.js
 commitlint.config.js
 lint-staged.config.js
 node_modules
@@ -18,6 +18,8 @@ coverage
 .czrc
 .vscode
 .next
+cypress
+tests
 .husky
 .github
 _templates

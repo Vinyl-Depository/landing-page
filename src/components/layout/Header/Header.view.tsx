@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -18,9 +19,10 @@ interface IProps {}
 
 const HeaderView: React.FC<IProps> = () => {
 	const { t } = useTranslation();
+	const router = useRouter();
 
 	return (
-		<div className={classes['headerContainer']}>
+		<div className={classes['headerContainer']} data-test-id="header">
 			<header className={classes['header']}>
 				{/* <div className={classes['mobileHeadrMenu']}>
 					<VSvg className={classes['mobileHeaderMenu__icon']} name="hamburgerMenu" />
@@ -37,9 +39,11 @@ const HeaderView: React.FC<IProps> = () => {
 							/>
 						</a>
 					</Link>
-					<ScrollLink className={classes['headerContact']} to="sellerSection" smooth>
-						{t('header.contactUs')}
-					</ScrollLink>
+					{router.pathname === '/' && (
+						<ScrollLink className={classes['headerContact']} to="sellerSection" smooth>
+							{t('header.contactUs')}
+						</ScrollLink>
+					)}
 				</div>
 				{/* <div className={classes['rightHeader']}>
 					<p className={classes['rightHeader__text']}>{t('header.rightHeaderText')}</p>
