@@ -1,4 +1,5 @@
 import React from 'react';
+import type { StaticImageData } from 'next/image';
 
 import DoingItCarouselItemView from './DoingItCarouselItem.view';
 
