@@ -28,7 +28,8 @@ export const getStaticProps: GetStaticProps = async () => {
 	const currentMonthDate = new Date().getMonth() + 1;
 
 	// Coutner increased every day in the number of days that have been passed since the beginning of the count multiplied 17.
-	// Counter set up every day anew.
+	// Counter refvalidate every 24 hours
+
 	const counter = ((currentMonthDate - startedMonthDate) * 30 + (currentDayDate - startedDayDate)) * 17;
 
 	try {
@@ -38,7 +39,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
 		return {
 			props: { joinersCount: listMembersData.stats.member_count + counter },
-			// refvalidate every 24 hours
 			revalidate: 28800,
 		};
 	} catch {
