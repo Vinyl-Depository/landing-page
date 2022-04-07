@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/Vinyl-Depository/landing-page/compare/v1.2.2...v1.3.0) (2022-04-07)
+
+
+### Features
+
+* 🔥 added an dynamic join counter ([2b93d61](https://github.com/Vinyl-Depository/landing-page/commit/2b93d613826cbba10cc5e83587c005a74d5abe10))
+* 🔥 added automatic update for joiners count ([8813fe4](https://github.com/Vinyl-Depository/landing-page/commit/8813fe4f114d54bec2b0bb1775387029acdd5b86))
+
 ## [1.2.2](https://github.com/Vinyl-Depository/landing-page/compare/v1.2.1...v1.2.2) (2022-03-30)
 
 
