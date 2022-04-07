@@ -16,6 +16,9 @@ const MailchimpAPI = {
 	post: <T>(url: string, body: Record<string, unknown>) => {
 		return mailchimpAxios.post<T>(url, body);
 	},
+	get: <T>(url: string) => {
+		return mailchimpAxios.get<T>(url);
+	},
 };
 
 export interface IMailchimpError<T = unknown> extends AxiosError<T> {}
