@@ -1,3 +1,39 @@
+# [1.3.0](https://github.com/Vinyl-Depository/landing-page/compare/v1.2.2...v1.3.0) (2022-04-07)
+
+
+### Features
+
+* 🔥 added an dynamic join counter ([2b93d61](https://github.com/Vinyl-Depository/landing-page/commit/2b93d613826cbba10cc5e83587c005a74d5abe10))
+* 🔥 added automatic update for joiners count ([8813fe4](https://github.com/Vinyl-Depository/landing-page/commit/8813fe4f114d54bec2b0bb1775387029acdd5b86))
+
+## [1.2.2](https://github.com/Vinyl-Depository/landing-page/compare/v1.2.1...v1.2.2) (2022-03-30)
+
+
+### Performance Improvements
+
+* ⚡ fixed Duplicate pages without canonical ([85ad243](https://github.com/Vinyl-Depository/landing-page/commit/85ad2432c5d32cc339055291a587d96efb219315))
+
+## [1.2.1](https://github.com/Vinyl-Depository/landing-page/compare/v1.2.0...v1.2.1) (2022-03-26)
+
+
+### Bug Fixes
+
+* 🐞 remove contact header from non-home-page routes ([a2c7007](https://github.com/Vinyl-Depository/landing-page/commit/a2c700773533973d0bbf92178b2756e8a6717c69))
+
+# [1.2.0](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.10...v1.2.0) (2022-03-26)
+
+
+### Features
+
+* 🔥 using lighthouse to "monitor" SEO ([8896374](https://github.com/Vinyl-Depository/landing-page/commit/88963747ffeee305d3d279d282b3840e0676d64f))
+
+## [1.1.10](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.9...v1.1.10) (2022-03-26)
+
+
+### Bug Fixes
+
+* 🐞 fixed PR template ([9ef6b70](https://github.com/Vinyl-Depository/landing-page/commit/9ef6b7074b12cb1c7bb2788901666baf544682d0))
+
 ## [1.1.9](https://github.com/Vinyl-Depository/landing-page/compare/v1.1.8...v1.1.9) (2022-03-19)
 
 

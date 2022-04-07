@@ -1,11 +1,27 @@
 {
-	"extends": ["config:base", ":semanticCommitTypeAll(chore)"],
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["config:base", ":semanticCommitTypeAll(chore)", ":semanticCommitScopeDisabled"],
+	"regexManagers": [
+		{
+			"fileMatch": ["^Dockerfile$"],
+			"matchStrings": ["FROM node:(?<currentValue>.*?)-alpine\\n"],
+			"depNameTemplate": "node",
+			"datasourceTemplate": "node",
+			"versioningTemplate": "node"
+		}
+	],
 	"packageRules": [
 		{
 			"updateTypes": ["minor", "patch"],
 			"automerge": true
+		},
+		{
+			"matchPackageNames": ["node"],
+			"matchManagers": ["dockerfile"],
+			"enabled": false
 		}
 	],
 	"timezone": "Asia/Jerusalem",
-	"schedule": ["every weekend"]
+	"schedule": ["every weekend"],
+	"commitMessageAction": "🤖 Update"
 }

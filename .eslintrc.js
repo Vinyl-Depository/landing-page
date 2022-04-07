@@ -19,7 +19,7 @@ module.exports = {
 		project: 'tsconfig.json',
 		sourceType: 'module',
 	},
-	plugins: ['@typescript-eslint', 'unused-imports', 'react-hooks', 'node'],
+	plugins: ['@typescript-eslint', 'unused-imports', 'node'],
 	rules: {
 		'indent': ['error', 'tab'],
 		'quotes': ['error', 'single', { avoidEscape: true }],
@@ -208,7 +208,6 @@ module.exports = {
 		'import/no-unused-modules': ['error'],
 		'import/no-commonjs': ['error'],
 		'import/no-amd': ['error'],
-		'import/no-nodejs-modules': ['error'],
 		'import/first': ['error'],
 		'import/exports-last': ['error'],
 		'import/no-duplicates': ['error'],

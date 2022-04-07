@@ -1,10 +1,11 @@
 import { NextApiResponse } from 'next';
-import Mailchimp from 'mailchimp-api-v3';
 
 import { ISubscribeSellerRequest } from '@/models/api/request/subcribe';
 import { ISubscribeSellerResponse } from '@/models/api/response/subscribe';
 import { validateEmail } from '@/utils/validators';
 import { countriesList } from '@/data/countries';
+import MailchimpAPI, { IMailchimpError } from '@/utils/mailchimp-api';
+import { MailchimpErrors } from '@/models/mailchimp';
 
 export default async function handler(
 	req: ISubscribeSellerRequest,
@@ -41,11 +42,9 @@ export default async function handler(
 			return;
 		}
 
-		const mailchimp = new Mailchimp(process.env.MAILCHIMP_API_KEY);
-
 		// Try to store the email in mailchimp
 		try {
-			await mailchimp.post(`/lists/${process.env.MAILCHIMP_LIST_ID}/members`, {
+			await MailchimpAPI.post(`/lists/${process.env.MAILCHIMP_LIST_ID}/members`, {
 				email_address: req.body.email,
 				status: 'subscribed',
 				tags: [
@@ -65,9 +64,23 @@ export default async function handler(
 
 			return;
 		} catch (e) {
+			const mailchimpError = e as IMailchimpError<{ readonly title?: string }>;
+
+			// The API request above might fail due to duplicate subscription try - in this case return successful response
+			const isDuplicateError = mailchimpError.response?.data.title === MailchimpErrors.MemberExists;
+
+			if (isDuplicateError) {
+				res.status(200).send({
+					success: true,
+					message: 'Successfully fulfilled subscription action',
+				});
+
+				return;
+			}
+
 			res.status(500).send({
 				success: false,
-				message: e as string,
+				message: 'Failed to subscribe',
 			});
 
 			return;
