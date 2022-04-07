@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 
-const MAILCHIMP_SERVER = process.env.MAILCHIMP_API_KEY.split('-')[1];
+const MAILCHIMP_SERVER = process.env.MAILCHIMP_API_KEY?.split('-')[1];
 const AUTH_BUFFER = Buffer.from(`any:${process.env.MAILCHIMP_API_KEY}`).toString('base64');
 
 const mailchimpAxios = axios.create({
