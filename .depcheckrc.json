@@ -6,13 +6,12 @@
 		"stylelint-config-recess-order",
 		"stylelint-config-standard-scss",
 		"lint-staged",
-		"cz-format-extension",
 		"commitizen",
 		"@types/node",
-		"@types/react-dom",
 		"@types/jest",
+		"@types/react-dom",
 		"@commitlint/cli",
-		"tsc-files"
+		"cz-vinyl"
 	],
 	"skipMissing": true
 }

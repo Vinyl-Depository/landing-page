@@ -6,7 +6,7 @@
 	"scripts": {
 		"preinstall": "npx only-allow yarn",
 		"husky:install": "husky install",
-		"git:config": "git config --local include.path ../.gitconfig || exit 0",
+		"git:config": "git config --local include.path ../.gitconfig",
 		"prepare": "run-p husky:install git:config",
 		"dev": "next dev -p 8080",
 		"build": "next build",
@@ -63,7 +63,7 @@
 		"commitizen": "4.2.4",
 		"cross-env": "7.0.3",
 		"cypress": "9.5.3",
-		"cz-format-extension": "1.5.0",
+		"cz-vinyl": "1.0.5",
 		"depcheck": "1.4.3",
 		"eslint": "8.13.0",
 		"eslint-config-next": "12.1.4",
@@ -84,7 +84,6 @@
 		"stylelint-config-prettier-scss": "0.0.1",
 		"stylelint-config-recess-order": "3.0.0",
 		"stylelint-config-standard-scss": "3.0.0",
-		"typescript": "4.6.3",
-		"word-wrap": "1.2.3"
+		"typescript": "4.6.3"
 	}
 }
