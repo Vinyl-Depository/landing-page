@@ -6458,10 +6458,10 @@ negotiator@0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
-next-sitemap@2.5.17:
-  version "2.5.17"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.5.17.tgz#1d1360a0ae188adb13ae8e3ea47351c4284805fd"
-  integrity sha512-L0zwaqt5WBm8FL/mraA08YbsJD+dnc2gYO1FeawBVUDvFKDXhYXQBTAT2AbkXwCnKinM94/VvBQvw3n8LC9TpA==
+next-sitemap@2.5.19:
+  version "2.5.19"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.5.19.tgz#740643b23e7523a3f507a6c3c477a91f0c9df32b"
+  integrity sha512-skcjmCO9ZEDxUmfaSz9FGWt/TRhXvfwvJzuMj8NRCd46vhMNzsLu+2lq2T4KJp5kNYEp3ISajtVNxJ+iegcDDg==
   dependencies:
     "@corex/deepmerge" "^2.6.148"
     minimist "^1.2.6"
