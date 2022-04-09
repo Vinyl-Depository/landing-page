@@ -6,7 +6,6 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import Script from 'next/script';
-import { Partytown } from '@builder.io/partytown/react';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -40,8 +39,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 				/>
 
 				<title>Vinyl Depository</title>
-
-				<Partytown debug forward={['dataLayer.push']} />
 
 				<link rel="canonical" href="https://www.vinyldepository.com/" />
 				<link rel="icon" href="/favicon.ico" type="image/x-icon" />

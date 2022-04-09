@@ -12,7 +12,8 @@
 		"@types/react-dom",
 		"@types/jest",
 		"@commitlint/cli",
-		"tsc-files"
+		"tsc-files",
+		"@builder.io/partytown"
 	],
 	"skipMissing": true
 }
