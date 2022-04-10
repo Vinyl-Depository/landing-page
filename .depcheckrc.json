@@ -11,7 +11,6 @@
 		"@types/jest",
 		"@types/react-dom",
 		"@commitlint/cli",
-		"tsc-files",
 		"@builder.io/partytown",
 		"cz-vinyl"
 	],
