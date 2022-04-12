@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 
 module.exports = {
-	siteUrl: 'https://vinyldepository.com',
+	siteUrl: 'https://www.vinyldepository.com',
 	generateRobotsTxt: true,
 };
