@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/Vinyl-Depository/landing-page/compare/v1.3.0...v1.3.1) (2022-04-12)
+
+
+### Bug Fixes
+
+* 🐞 fix sitemap to include www ([1e4f14d](https://github.com/Vinyl-Depository/landing-page/commit/1e4f14dad0fe74402b4cac2ffa1cd3b1022845b2))
+
 # [1.3.0](https://github.com/Vinyl-Depository/landing-page/compare/v1.2.2...v1.3.0) (2022-04-07)
 
 
