@@ -11,6 +11,7 @@
 		"@types/jest",
 		"@types/react-dom",
 		"@commitlint/cli",
+		"@builder.io/partytown",
 		"cz-vinyl"
 	],
 	"skipMissing": true

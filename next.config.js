@@ -5,6 +5,9 @@ const nextConfig = {
 		dirs: ['./src', './tests'],
 		ignoreDuringBuilds: true,
 	},
+	experimental: {
+		nextScriptWorkers: true,
+	},
 };
 
 module.exports = nextConfig;
