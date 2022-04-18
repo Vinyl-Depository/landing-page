@@ -1,3 +1,17 @@
+# [1.4.0](https://github.com/Vinyl-Depository/landing-page/compare/v1.3.1...v1.4.0) (2022-04-18)
+
+
+### Features
+
+* 🔥 added partytown ([8b88b62](https://github.com/Vinyl-Depository/landing-page/commit/8b88b62727ae39a6eaf17997500e0a0597edfd57))
+* 🔥 Added partytown ([9683788](https://github.com/Vinyl-Depository/landing-page/commit/96837888abac5795d8f26912d0ca5bd52811bae1))
+* 🔥 Added partytown ([5ab483d](https://github.com/Vinyl-Depository/landing-page/commit/5ab483d0429bb279045193b9f1c0f1428af5e0eb))
+* 🔥 Added partytown ([0374250](https://github.com/Vinyl-Depository/landing-page/commit/037425083d3893cb382312ae14e838debefb8bf4))
+* 🔥 Added partytown ([4d65bbf](https://github.com/Vinyl-Depository/landing-page/commit/4d65bbf2be57a1748c45cad88e32cc571e76c428))
+* 🔥 Added partytown ([e3499a7](https://github.com/Vinyl-Depository/landing-page/commit/e3499a722e4f962ef3fc6d490a7a010f8388ced0))
+* 🔥 Added partytown ([ed6e652](https://github.com/Vinyl-Depository/landing-page/commit/ed6e652701ba44ce9428a8957e6a490cae58c0ac))
+* 🔥 Added pertytown ([eddd2b5](https://github.com/Vinyl-Depository/landing-page/commit/eddd2b5b1604bb7beaef17c54052c963cdb24c5e))
+
 ## [1.3.1](https://github.com/Vinyl-Depository/landing-page/compare/v1.3.0...v1.3.1) (2022-04-12)
 
 
