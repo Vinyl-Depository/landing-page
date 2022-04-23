@@ -974,18 +974,6 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kwsites/file-exists@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@kwsites/file-exists/-/file-exists-1.1.1.tgz#ad1efcac13e1987d8dbaf235ef3be5b0d96faa99"
-  integrity sha512-m9/5YGR18lIwxSFDwfE3oA7bWuq9kdau6ugN4H2rJeyhFQZcG9AgSHkQtSD15a8WvTgfz9aikZMrKPHvbpqFiw==
-  dependencies:
-    debug "^4.1.1"
-
-"@kwsites/promise-deferred@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@kwsites/promise-deferred/-/promise-deferred-1.1.1.tgz#8ace5259254426ccef57f3175bc64ed7095ed919"
-  integrity sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==
-
 "@lhci/cli@0.9.0":
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@lhci/cli/-/cli-0.9.0.tgz#aa8107766cdfd8138a2878c9b0ad252645db0c36"
@@ -2973,17 +2961,16 @@ cz-conventional-changelog@3.2.0:
   optionalDependencies:
     "@commitlint/load" ">6.1.1"
 
-cz-vinyl@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/cz-vinyl/-/cz-vinyl-1.2.0.tgz#344b7bad773f773771e7ba47cece8a18ba6fbef6"
-  integrity sha512-mO6W85O3Gmp2z9LFquRD7yU7pQAukWvmrLkhVVgwHpLgFKmdeBCUobTOUJL123jRcae91rd97RBERvEeZweDWQ==
+cz-vinyl@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/cz-vinyl/-/cz-vinyl-1.2.1.tgz#883ed6db5dd01ae5908c38b6e2685056047c11bc"
+  integrity sha512-yEnsWoBQsTcsluCCdclgTau8je76qP9Mq5IPU9WqqF/6mClGRf32cSLepHTYJon86c44g/KvIg3+d9oisDu6YA==
   dependencies:
     cosmiconfig "7.0.1"
     fuse.js "6.5.3"
     inquirer "8.2.2"
     inquirer-autocomplete-prompt "2.0.0"
     inquirer-maxlength-input-prompt "1.0.2"
-    simple-git "3.6.0"
     string-template "1.0.0"
     word-wrap "1.2.3"
 
@@ -7956,15 +7943,6 @@ simple-get@^4.0.0, simple-get@^4.0.1:
     decompress-response "^6.0.0"
     once "^1.3.1"
     simple-concat "^1.0.0"
-
-simple-git@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-3.6.0.tgz#28a9ebb7ca55495bb4e6cc5d367b4543e2d857a4"
-  integrity sha512-2e+4QhOVO59GeLsHgwSMKNrSKCnuACeA/gMNrLCYR8ID9qwm4hViVt4WsODcUGjx//KDv6GMLC6Hs/MeosgXxg==
-  dependencies:
-    "@kwsites/file-exists" "^1.1.1"
-    "@kwsites/promise-deferred" "^1.1.1"
-    debug "^4.3.3"
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
