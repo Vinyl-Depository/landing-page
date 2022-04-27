@@ -1,0 +1,3 @@
+src/pages/_document.tsx
+src/pages/_app.tsx
+src/pages/404.tsx
