@@ -79,7 +79,7 @@
 		"lint-staged": "12.5.0",
 		"next-sitemap": "2.5.28",
 		"npm-run-all": "4.1.5",
-		"prettier": "2.6.2",
+		"prettier": "2.7.1",
 		"sass": "1.52.3",
 		"start-server-and-test": "1.14.0",
 		"stylelint": "14.9.1",
