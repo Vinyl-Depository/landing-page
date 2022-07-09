@@ -4589,7 +4589,7 @@ html-encoding-sniffer@^2.0.1:
   dependencies:
     whatwg-encoding "^1.0.5"
 
-html-escaper@^2.0.0, html-escaper@^2.0.2:
+html-escaper@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
@@ -7424,13 +7424,12 @@ react-easy-swipe@^0.0.21:
   dependencies:
     prop-types "^15.5.8"
 
-react-i18next@11.17.4:
-  version "11.17.4"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-11.17.4.tgz#fe72ac0ccacc73ae0a00fed503eb3dd3f73016c1"
-  integrity sha512-LswEIl8KNDTP4Wk3c22XDstbR++Vc4BZyNwvGFGaYbYDjdDLkHDLwrgd7DN28f8jufFHaYhQvCG5YWLxFhRt/g==
+react-i18next@11.18.0:
+  version "11.18.0"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-11.18.0.tgz#38ec26e07f030f7f0109b3665759954dad2cc7f9"
+  integrity sha512-coJujU20xJ5Wa5rHjTyB5LFKZb1yfXo2A+40RRSyAF0FlZRHyy+3C1Mr92x1JPfS7W7v2TWNn8mRhpDFGJwXVg==
   dependencies:
     "@babel/runtime" "^7.14.5"
-    html-escaper "^2.0.2"
     html-parse-stringify "^3.0.1"
 
 react-is@^16.13.1, react-is@^16.7.0:
