@@ -432,10 +432,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@builder.io/partytown@0.6.3":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.6.3.tgz#a964e608f65b6376be80b2ee15a6c6176fc72d48"
-  integrity sha512-L76Tl41jXojNkYrNfTd+sddIs8J8K61px+3/pQe+SlsR7Z42pD2bnsJbAHS+GZfvobL37a6cnSJgsSm0M1VdpQ==
+"@builder.io/partytown@0.6.4":
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.6.4.tgz#8610c9e73cc52a95b963c1878760ebe628eee048"
+  integrity sha512-W6C7O0eSg6YNujHYZozXK5iJ+V69QVLLLRv+NlmYh1vFe0PUJ3kmAhRCx7rUqI3XAA/KpdyfdxLoopBg3GlfVA==
 
 "@commitlint/cli@16.3.0":
   version "16.3.0"
