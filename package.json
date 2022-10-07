@@ -36,7 +36,7 @@
 		"template:ui": "hygen component new-ui"
 	},
 	"dependencies": {
-		"@builder.io/partytown": "0.7.0",
+		"@builder.io/partytown": "0.7.1",
 		"axios": "0.27.2",
 		"i18next": "21.9.2",
 		"next": "12.3.1",
