@@ -62,7 +62,7 @@
 		"@typescript-eslint/parser": "5.39.0",
 		"commitizen": "4.2.5",
 		"cross-env": "7.0.3",
-		"cypress": "9.7.0",
+		"cypress": "10.11.0",
 		"cz-vinyl": "1.5.0",
 		"depcheck": "1.4.3",
 		"eslint": "8.25.0",
