@@ -3114,10 +3114,10 @@ cz-conventional-changelog@3.3.0:
   optionalDependencies:
     "@commitlint/load" ">6.1.1"
 
-cz-vinyl@1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/cz-vinyl/-/cz-vinyl-1.5.0.tgz#06393eda0f069b0c620f56a32b0acca2548abe11"
-  integrity sha512-8T3yCU0SZL+cGsCQ4V8/WfkpH3e9SkS05NwQuC8YK2iWEGpqjLeZcB6UmQve0OBBq6y2IqTYRNELmCtL+OskPw==
+cz-vinyl@1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/cz-vinyl/-/cz-vinyl-1.6.2.tgz#62a0b461874c9108e21e44f67e2230ce386acedf"
+  integrity sha512-fg/BKTF4Ky8n7GfZAdRjCVtjAnOXlFzVAJHA97RByBPOBCf0ATGhVdDi6nP6XI/W1NzdoHTOdgV+lWEJ3iVW2Q==
   dependencies:
     cosmiconfig "7.0.1"
     cosmiconfig-typescript-loader "2.0.1"
