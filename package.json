@@ -63,7 +63,7 @@
 		"commitizen": "4.2.5",
 		"cross-env": "7.0.3",
 		"cypress": "9.7.0",
-		"cz-vinyl": "1.5.0",
+		"cz-vinyl": "1.6.2",
 		"depcheck": "1.4.3",
 		"eslint": "8.26.0",
 		"eslint-config-next": "12.3.3",
